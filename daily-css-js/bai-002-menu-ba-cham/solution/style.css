@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	padding: 24px;
+	background: #f5f5f4;
+	color: #292524;
+	font-family: ui-sans-serif, system-ui, sans-serif;
+	line-height: 1.5;
+}
+
+main {
+	width: 320px;
+}
+
+h1 {
+	margin-bottom: 16px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.card-list {
+	display: grid;
+	gap: 12px;
+}
+
+.card {
+	position: relative;
+	padding: 16px;
+	border-radius: 16px;
+	background: #fff;
+	box-shadow:
+		0 4px 6px -1px rgb(0 0 0 / 0.1),
+		0 2px 4px -2px rgb(0 0 0 / 0.1);
+	transition: translate 200ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+	translate: 0 -2px;
+}
+
+.card[data-open] {
+	z-index: 10;
+}
+
+.card-title {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.card-meta {
+	font-size: 14px;
+	color: #78716c;
+}
+
+.menu-button {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	display: grid;
+	place-items: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	color: #78716c;
+}
+
+.menu-button:hover {
+	background: #f5f5f4;
+}
+
+.menu-button:focus-visible {
+	outline: 2px solid #0284c7;
+	outline-offset: 2px;
+}
+
+.menu {
+	position: absolute;
+	top: 48px;
+	right: 12px;
+	z-index: 50;
+	width: 160px;
+	padding: 4px 0;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow:
+		0 0 0 1px #e7e5e4,
+		0 20px 25px -5px rgb(0 0 0 / 0.1),
+		0 8px 10px -6px rgb(0 0 0 / 0.1);
+	visibility: hidden;
+	opacity: 0;
+	translate: 0 4px;
+	transition:
+		opacity 150ms ease,
+		translate 150ms ease;
+}
+
+.card[data-open] .menu {
+	visibility: visible;
+	opacity: 1;
+	translate: 0 0;
+}
+
+.menu-item {
+	display: block;
+	width: 100%;
+	padding: 8px 12px;
+	text-align: left;
+	font-size: 14px;
+}
+
+.menu-item:hover,
+.menu-item:focus-visible {
+	background: #f5f5f4;
+	outline: none;
+}
+
+.menu-item.danger {
+	color: #dc2626;
+}
+
+.menu-item.danger:hover,
+.menu-item.danger:focus-visible {
+	background: #fef2f2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card,
+	.menu {
+		transition: none;
+	}
+}

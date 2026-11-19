@@ -3,6 +3,8 @@
 Tuần 1, ngày 2/7, vòng 1, độ khó ★★☆☆☆, thời gian ước tính 40 phút.
 
 > Từ bài này dùng **Tailwind CSS v4** thay cho CSS thuần. `starter/index.html` đã gắn sẵn dòng `<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>`: mở file là Tailwind chạy, không cần cài gì, chỉ cần có mạng. Không còn `style.css` và `:root`; màu, khoảng cách, bo góc đều lấy từ class có sẵn của Tailwind. Tra class tại tailwindcss.com/docs.
+>
+> Bạn làm bằng Tailwind, còn lời giải (`solution/`) viết bằng **CSS thuần** trong `solution/style.css`. Làm xong, đặt hai bản cạnh nhau: mỗi class Tailwind bạn đã dùng ra đúng thuộc tính CSS nào. Bảng tra nhanh ở cuối phần gợi ý là cầu nối giữa hai bên.
 
 ## Mục tiêu
 
@@ -114,87 +116,69 @@ Chỉ mở sau khi đã tự làm.
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Bài 002 - Menu ba chấm</title>
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body class="grid min-h-screen place-items-center bg-stone-100 p-6 font-sans text-stone-800">
-		<main class="w-80">
-			<h1 class="mb-4 text-lg font-semibold">Dự án của tôi</h1>
-			<ul class="space-y-3">
+	<body>
+		<main>
+			<h1>Dự án của tôi</h1>
+			<ul class="card-list">
 				<li>
-					<article
-						data-card
-						class="group relative rounded-2xl bg-white p-4 shadow-md transition-transform duration-200 hover:-translate-y-0.5 focus-within:-translate-y-0.5 data-open:z-10 motion-reduce:transition-none"
-					>
-						<h2 class="font-medium">Website quán cà phê</h2>
-						<p class="text-sm text-stone-500">Cập nhật 2 giờ trước</p>
+					<article data-card class="card">
+						<h2 class="card-title">Website quán cà phê</h2>
+						<p class="card-meta">Cập nhật 2 giờ trước</p>
 						<button
 							data-menu-button
 							type="button"
 							aria-expanded="false"
 							aria-label="Menu dự án Website quán cà phê"
-							class="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-stone-500 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+							class="menu-button"
 						>
 							⋯
 						</button>
-						<div
-							data-menu
-							class="invisible absolute top-12 right-3 z-50 w-40 translate-y-1 rounded-xl bg-white py-1 opacity-0 shadow-xl ring-1 ring-stone-200 transition-[opacity,translate] duration-150 group-data-open:visible group-data-open:translate-y-0 group-data-open:opacity-100 motion-reduce:transition-none"
-						>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Đổi tên</button>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Nhân bản</button>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 focus-visible:bg-red-50 focus-visible:outline-none">Xoá</button>
+						<div data-menu class="menu">
+							<button type="button" class="menu-item">Đổi tên</button>
+							<button type="button" class="menu-item">Nhân bản</button>
+							<button type="button" class="menu-item danger">Xoá</button>
 						</div>
 					</article>
 				</li>
 				<li>
-					<article
-						data-card
-						class="group relative rounded-2xl bg-white p-4 shadow-md transition-transform duration-200 hover:-translate-y-0.5 focus-within:-translate-y-0.5 data-open:z-10 motion-reduce:transition-none"
-					>
-						<h2 class="font-medium">App ghi chú</h2>
-						<p class="text-sm text-stone-500">Cập nhật hôm qua</p>
+					<article data-card class="card">
+						<h2 class="card-title">App ghi chú</h2>
+						<p class="card-meta">Cập nhật hôm qua</p>
 						<button
 							data-menu-button
 							type="button"
 							aria-expanded="false"
 							aria-label="Menu dự án App ghi chú"
-							class="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-stone-500 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+							class="menu-button"
 						>
 							⋯
 						</button>
-						<div
-							data-menu
-							class="invisible absolute top-12 right-3 z-50 w-40 translate-y-1 rounded-xl bg-white py-1 opacity-0 shadow-xl ring-1 ring-stone-200 transition-[opacity,translate] duration-150 group-data-open:visible group-data-open:translate-y-0 group-data-open:opacity-100 motion-reduce:transition-none"
-						>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Đổi tên</button>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Nhân bản</button>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 focus-visible:bg-red-50 focus-visible:outline-none">Xoá</button>
+						<div data-menu class="menu">
+							<button type="button" class="menu-item">Đổi tên</button>
+							<button type="button" class="menu-item">Nhân bản</button>
+							<button type="button" class="menu-item danger">Xoá</button>
 						</div>
 					</article>
 				</li>
 				<li>
-					<article
-						data-card
-						class="group relative rounded-2xl bg-white p-4 shadow-md transition-transform duration-200 hover:-translate-y-0.5 focus-within:-translate-y-0.5 data-open:z-10 motion-reduce:transition-none"
-					>
-						<h2 class="font-medium">Landing page khoá học</h2>
-						<p class="text-sm text-stone-500">Cập nhật 3 ngày trước</p>
+					<article data-card class="card">
+						<h2 class="card-title">Landing page khoá học</h2>
+						<p class="card-meta">Cập nhật 3 ngày trước</p>
 						<button
 							data-menu-button
 							type="button"
 							aria-expanded="false"
 							aria-label="Menu dự án Landing page khoá học"
-							class="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-stone-500 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+							class="menu-button"
 						>
 							⋯
 						</button>
-						<div
-							data-menu
-							class="invisible absolute top-12 right-3 z-50 w-40 translate-y-1 rounded-xl bg-white py-1 opacity-0 shadow-xl ring-1 ring-stone-200 transition-[opacity,translate] duration-150 group-data-open:visible group-data-open:translate-y-0 group-data-open:opacity-100 motion-reduce:transition-none"
-						>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Đổi tên</button>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Nhân bản</button>
-							<button type="button" class="block w-full px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 focus-visible:bg-red-50 focus-visible:outline-none">Xoá</button>
+						<div data-menu class="menu">
+							<button type="button" class="menu-item">Đổi tên</button>
+							<button type="button" class="menu-item">Nhân bản</button>
+							<button type="button" class="menu-item danger">Xoá</button>
 						</div>
 					</article>
 				</li>
@@ -203,6 +187,164 @@ Chỉ mở sau khi đã tự làm.
 		<script src="script.js"></script>
 	</body>
 </html>
+```
+
+`solution/style.css`
+
+```css
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	padding: 24px;
+	background: #f5f5f4;
+	color: #292524;
+	font-family: ui-sans-serif, system-ui, sans-serif;
+	line-height: 1.5;
+}
+
+main {
+	width: 320px;
+}
+
+h1 {
+	margin-bottom: 16px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.card-list {
+	display: grid;
+	gap: 12px;
+}
+
+.card {
+	position: relative;
+	padding: 16px;
+	border-radius: 16px;
+	background: #fff;
+	box-shadow:
+		0 4px 6px -1px rgb(0 0 0 / 0.1),
+		0 2px 4px -2px rgb(0 0 0 / 0.1);
+	transition: translate 200ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+	translate: 0 -2px;
+}
+
+.card[data-open] {
+	z-index: 10;
+}
+
+.card-title {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.card-meta {
+	font-size: 14px;
+	color: #78716c;
+}
+
+.menu-button {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	display: grid;
+	place-items: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	color: #78716c;
+}
+
+.menu-button:hover {
+	background: #f5f5f4;
+}
+
+.menu-button:focus-visible {
+	outline: 2px solid #0284c7;
+	outline-offset: 2px;
+}
+
+.menu {
+	position: absolute;
+	top: 48px;
+	right: 12px;
+	z-index: 50;
+	width: 160px;
+	padding: 4px 0;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow:
+		0 0 0 1px #e7e5e4,
+		0 20px 25px -5px rgb(0 0 0 / 0.1),
+		0 8px 10px -6px rgb(0 0 0 / 0.1);
+	visibility: hidden;
+	opacity: 0;
+	translate: 0 4px;
+	transition:
+		opacity 150ms ease,
+		translate 150ms ease;
+}
+
+.card[data-open] .menu {
+	visibility: visible;
+	opacity: 1;
+	translate: 0 0;
+}
+
+.menu-item {
+	display: block;
+	width: 100%;
+	padding: 8px 12px;
+	text-align: left;
+	font-size: 14px;
+}
+
+.menu-item:hover,
+.menu-item:focus-visible {
+	background: #f5f5f4;
+	outline: none;
+}
+
+.menu-item.danger {
+	color: #dc2626;
+}
+
+.menu-item.danger:hover,
+.menu-item.danger:focus-visible {
+	background: #fef2f2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card,
+	.menu {
+		transition: none;
+	}
+}
 ```
 
 `solution/script.js`
@@ -274,10 +416,15 @@ document.addEventListener('keydown', function (event) {
 - `event.key !== 'Escape'` rồi `return`: không phải phím Escape thì thoát hàm luôn ("return sớm"), đỡ phải lồng thêm một tầng `if`.
 - `document.querySelector('[data-card][data-open]')`: hai ngoặc vuông viết liền nhau nghĩa là phần tử phải có **cả hai** thuộc tính. Tìm thẻ đang mở, không có thì `null`.
 
-Các class Tailwind then chốt:
+### Đối chiếu Tailwind của bạn với CSS trong lời giải
 
-- `group` trên thẻ và `group-data-open:*` trên menu: menu đổi giao diện theo trạng thái của thẻ cha mà JS không phải đụng vào menu.
-- `data-open:z-10` trên thẻ: thoát bẫy stacking context bằng cách nâng cả thẻ đang mở lên trên các thẻ anh em.
-- `invisible` cùng `opacity-0`: `opacity-0` làm trong suốt nhưng vẫn bấm và Tab vào được, `invisible` mới thật sự loại menu khỏi tương tác.
-- `transition-[opacity,translate]`: chỉ chuyển động hai thuộc tính này, `visibility` đổi ngay nên `focus()` lúc mở luôn thành công.
-- `focus-within:-translate-y-0.5`: người dùng bàn phím cũng thấy thẻ nhấc lên như khi rê chuột, và cũng gặp đúng bẫy stacking context, nên cách sửa phải chạy cho cả hai.
+- `group` trên thẻ và `group-data-open:visible` trên menu tương ứng `.card[data-open] .menu { visibility: visible; }`. CSS thuần không cần class `group`: selector con cháu (dấu cách giữa `.card[data-open]` và `.menu`) đã nói "menu nằm trong thẻ đang mở".
+- `data-open:z-10` tương ứng `.card[data-open] { z-index: 10; }`. Đây là chỗ thoát bẫy stacking context: nâng cả thẻ đang mở lên trên các thẻ anh em.
+- `hover:-translate-y-0.5 focus-within:-translate-y-0.5` tương ứng `.card:hover, .card:focus-within { translate: 0 -2px; }`. Dấu phẩy giữa hai selector nghĩa là "áp cho cả hai trường hợp". Chính dòng này tạo stacking context mới cho thẻ.
+- `invisible opacity-0 translate-y-1` tương ứng ba dòng `visibility: hidden; opacity: 0; translate: 0 4px;` trong `.menu`. `opacity: 0` chỉ làm trong suốt, vẫn bấm và Tab vào được; `visibility: hidden` mới loại menu khỏi tương tác.
+- `transition-[opacity,translate] duration-150` tương ứng `transition: opacity 150ms ease, translate 150ms ease;`. `visibility` không có trong danh sách nên đổi ngay, `focus()` lúc mở luôn thành công.
+- `ring-1 ring-stone-200` không có thuộc tính CSS riêng: Tailwind vẽ nó bằng `box-shadow: 0 0 0 1px màu`. Trong lời giải, bóng này được ghép chung với bóng của `shadow-xl` trong một `box-shadow`, các lớp bóng cách nhau bằng dấu phẩy.
+- `space-y-3` trên `ul` được thay bằng `display: grid; gap: 12px;` trên `.card-list`. Kết quả giống nhau: các `li` cách nhau 12px.
+- `motion-reduce:transition-none` tương ứng khối `@media (prefers-reduced-motion: reduce) { .card, .menu { transition: none; } }`.
+- Màu: `stone-100` là `#f5f5f4`, `stone-500` là `#78716c`, `stone-800` là `#292524`, `sky-600` là `#0284c7`, `red-600` là `#dc2626`, `red-50` là `#fef2f2`. Tailwind v4 thật ra dùng mã màu `oklch(...)`, mã hex ở đây là giá trị gần đúng.
+- Phần đầu `style.css` (đặt `margin: 0; padding: 0` cho mọi phần tử, xoá kiểu mặc định của `button` và `ul`) làm việc giống "Preflight" mà Tailwind tự chèn sẵn. Thiếu phần này, trang CSS thuần sẽ có lề và cỡ chữ mặc định của trình duyệt.
