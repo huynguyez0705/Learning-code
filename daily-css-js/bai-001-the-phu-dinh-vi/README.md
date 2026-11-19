@@ -71,12 +71,142 @@ Chỉ mở sau khi đã tự làm.
 <details><summary>Xem lời giải</summary>
 
 ```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 001 - Thẻ phủ định vị</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <article class="card">
+    <span class="badge">Mới</span>
+    <h1>Cốc gốm thủ công</h1>
+    <p>Men xanh ngọc, dung tích 300ml.</p>
+    <button class="toggle" type="button" aria-expanded="false">Xem chi tiết</button>
+    <div class="overlay">
+      <p>Giao trong 2 ngày. Bảo hành 12 tháng.</p>
+      <button class="close" type="button">Đóng</button>
+    </div>
+  </article>
+  <script src="script.js"></script>
+</body>
+</html>
 ```
 
 ```css
+:root {
+  --card-w: 320px;
+  --accent: #e4572e;
+  --speed: 300ms;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, sans-serif;
+  background: #f1efe9;
+}
+
+.card {
+  position: relative;
+  width: var(--card-w);
+  padding: 24px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  background: rgb(20 20 30 / 0.92);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: transform var(--speed), opacity var(--speed), visibility var(--speed);
+}
+
+.card.is-open .overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+button {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid #1b6ef3;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    transition: none;
+  }
+}
 ```
 
 ```js
+const card = document.querySelector('.card');
+const toggle = card.querySelector('.toggle');
+const close = card.querySelector('.close');
+
+function capNhatTrangThai(moRa) {
+  card.classList.toggle('is-open', moRa);
+  toggle.setAttribute('aria-expanded', String(moRa));
+  if (moRa) {
+    close.focus();
+  } else {
+    toggle.focus();
+  }
+}
+
+toggle.addEventListener('click', function () {
+  capNhatTrangThai(!card.classList.contains('is-open'));
+});
+
+close.addEventListener('click', function () {
+  capNhatTrangThai(false);
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' && card.classList.contains('is-open')) {
+    capNhatTrangThai(false);
+  }
+});
 ```
 
 </details>
