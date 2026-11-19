@@ -4,17 +4,18 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Bài 002 - Menu ba chấm</title>
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
 	</head>
-	<body>
-		<main>
-			<h1>Dự án của tôi</h1>
-			<ul>
+	<body class="bg-gray-100 flex items-center justify-center min-h-screen p-6 font-sans text-gray-800 leading-normal">
+		<main class="w-80">
+			<h1 class="font-bold mb-4 text-xl">Dự án của tôi</h1>
+			<ul class="grid gap-3">
 				<li>
-					<article data-card>
-						<h2>Website quán cà phê</h2>
-						<p>Cập nhật 2 giờ trước</p>
+					<article data-card class="group relative p-4 bg-white rounded-2xl shadow-lg transition hover:translate-y-[-2px] hover:shadow-xl focus-within:translate-y-[-2px] data-open:z-10 motion-reduce:transition-none">
+						<h2 class="text-base font-medium">Website quán cà phê</h2>
+						<p class="text-sm text-gray-500">Cập nhật 2 giờ trước</p>
 						<button
+							class="absolute top-3 right-3 grid w-8 h-8 rounded-full place-items-center hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 cursor-pointer"
 							data-menu-button
 							type="button"
 							aria-expanded="false"
@@ -22,18 +23,19 @@
 						>
 							⋯
 						</button>
-						<div data-menu>
-							<button type="button">Đổi tên</button>
-							<button type="button">Nhân bản</button>
-							<button type="button">Xoá</button>
+						<div data-menu class="absolute top-12 right-3 z-50 border border-gray-100 rounded-xl w-40 bg-white shadow-xl py-1 transition-opacity invisible opacity-0 group-data-open:visible group-data-open:opacity-100 motion-reduce:transition-none">
+							<button type="button" class="block w-full text-left text-sm py-2 px-3 cursor-pointer hover:bg-gray-100 focus-visible:bg-gray-100">Đổi tên</button>
+							<button type="button" class="block w-full text-left text-sm py-2 px-3 cursor-pointer hover:bg-gray-100 focus-visible:bg-gray-100">Nhân bản</button>
+							<button type="button" class="danger block w-full text-left text-sm py-2 px-3 cursor-pointer focus-visible:bg-gray-100 text-red-500 hover:bg-red-50">Xoá</button>
 						</div>
 					</article>
 				</li>
 				<li>
-					<article data-card>
-						<h2>App ghi chú</h2>
-						<p>Cập nhật hôm qua</p>
+					<article data-card class="group relative p-4 bg-white rounded-2xl shadow-lg transition hover:translate-y-[-2px] hover:shadow-xl focus-within:translate-y-[-2px] data-open:z-10 motion-reduce:transition-none">
+						<h2 class="text-base font-medium">App ghi chú</h2>
+						<p class="text-sm text-gray-500">Cập nhật hôm qua</p>
 						<button
+							class="absolute top-3 right-3 grid w-8 h-8 rounded-full place-items-center hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 cursor-pointer"
 							data-menu-button
 							type="button"
 							aria-expanded="false"
@@ -41,18 +43,19 @@
 						>
 							⋯
 						</button>
-						<div data-menu>
-							<button type="button">Đổi tên</button>
-							<button type="button">Nhân bản</button>
-							<button type="button">Xoá</button>
+						<div data-menu class="absolute top-12 right-3 z-50 border border-gray-100 rounded-xl w-40 bg-white shadow-xl py-1 transition-opacity invisible opacity-0 group-data-open:visible group-data-open:opacity-100 motion-reduce:transition-none">
+							<button type="button" class="block w-full text-left text-sm py-2 px-3 cursor-pointer hover:bg-gray-100 focus-visible:bg-gray-100">Đổi tên</button>
+							<button type="button" class="block w-full text-left text-sm py-2 px-3 cursor-pointer hover:bg-gray-100 focus-visible:bg-gray-100">Nhân bản</button>
+							<button type="button" class="danger block w-full text-left text-sm py-2 px-3 cursor-pointer focus-visible:bg-gray-100 text-red-500 hover:bg-red-50">Xoá</button>
 						</div>
 					</article>
 				</li>
 				<li>
-					<article data-card>
-						<h2>Landing page khoá học</h2>
-						<p>Cập nhật 3 ngày trước</p>
+					<article data-card class="group relative p-4 bg-white rounded-2xl shadow-lg transition hover:translate-y-[-2px] hover:shadow-xl focus-within:translate-y-[-2px] data-open:z-10 motion-reduce:transition-none">
+						<h2 class="text-base font-medium">Landing page khoá học</h2>
+						<p class="text-sm text-gray-500">Cập nhật 3 ngày trước</p>
 						<button
+							class="absolute top-3 right-3 grid w-8 h-8 rounded-full place-items-center hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 cursor-pointer"
 							data-menu-button
 							type="button"
 							aria-expanded="false"
@@ -60,10 +63,10 @@
 						>
 							⋯
 						</button>
-						<div data-menu>
-							<button type="button">Đổi tên</button>
-							<button type="button">Nhân bản</button>
-							<button type="button">Xoá</button>
+						<div data-menu class="absolute top-12 right-3 z-50 border border-gray-100 rounded-xl w-40 bg-white shadow-xl py-1 transition-opacity invisible opacity-0 group-data-open:visible group-data-open:opacity-100 motion-reduce:transition-none">
+							<button type="button" class="block w-full text-left text-sm py-2 px-3 cursor-pointer hover:bg-gray-100 focus-visible:bg-gray-100">Đổi tên</button>
+							<button type="button" class="block w-full text-left text-sm py-2 px-3 cursor-pointer hover:bg-gray-100 focus-visible:bg-gray-100">Nhân bản</button>
+							<button type="button" class="danger block w-full text-left text-sm py-2 px-3 cursor-pointer focus-visible:bg-gray-100 text-red-500 hover:bg-red-50">Xoá</button>
 						</div>
 					</article>
 				</li>

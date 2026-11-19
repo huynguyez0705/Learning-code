@@ -1,0 +1,53 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - heading "Dự án 8" [level=1] [ref=e4]
+    - paragraph [ref=e5]: "Cuộn xuống: thanh này dính ở trên cùng"
+  - list [ref=e6]:
+    - listitem [ref=e7]:
+      - article [ref=e8]:
+        - generic [ref=e9]:
+          - heading "Website quán cà phê" [level=2] [ref=e10]
+          - paragraph [ref=e11]: Cập nhật 2 giờ trước
+        - button "Xoá" [ref=e12]
+    - listitem [ref=e13]:
+      - article [ref=e14]:
+        - generic [ref=e15]:
+          - heading "App ghi chú" [level=2] [ref=e16]
+          - paragraph [ref=e17]: Cập nhật hôm qua
+        - button "Xoá" [ref=e18]
+    - listitem [ref=e19]:
+      - article [ref=e20]:
+        - generic [ref=e21]:
+          - heading "Landing page khoá học" [level=2] [ref=e22]
+          - paragraph [ref=e23]: Cập nhật 3 ngày trước
+        - button "Xoá" [ref=e24]
+    - listitem [ref=e25]:
+      - article [ref=e26]:
+        - generic [ref=e27]:
+          - heading "Blog du lịch" [level=2] [ref=e28]
+          - paragraph [ref=e29]: Cập nhật 1 tuần trước
+        - button "Xoá" [ref=e30]
+    - listitem [ref=e31]:
+      - article [ref=e32]:
+        - generic [ref=e33]:
+          - heading "Trang portfolio" [level=2] [ref=e34]
+          - paragraph [ref=e35]: Cập nhật 2 tuần trước
+        - button "Xoá" [ref=e36]
+    - listitem [ref=e37]:
+      - article [ref=e38]:
+        - generic [ref=e39]:
+          - heading "Shop bánh ngọt" [level=2] [ref=e40]
+          - paragraph [ref=e41]: Cập nhật 3 tuần trước
+        - button "Xoá" [ref=e42]
+    - listitem [ref=e43]:
+      - article [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Dashboard bán hàng" [level=2] [ref=e46]
+          - paragraph [ref=e47]: Cập nhật 1 tháng trước
+        - button "Xoá" [ref=e48]
+    - listitem [ref=e49]:
+      - article [ref=e50]:
+        - generic [ref=e51]:
+          - heading "Game đoán số" [level=2] [ref=e52]
+          - paragraph [ref=e53]: Cập nhật 2 tháng trước
+        - button "Xoá" [ref=e54]

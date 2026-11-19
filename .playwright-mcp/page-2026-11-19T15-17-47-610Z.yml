@@ -1,0 +1,53 @@
+- main [ref=f2e2]:
+  - generic [ref=f2e3]:
+    - heading "Dự án 8" [level=1] [ref=f2e4]
+    - paragraph [ref=f2e5]: "Cuộn xuống: thanh này dính ở trên cùng"
+  - list [ref=f2e6]:
+    - listitem [ref=f2e7]:
+      - article [ref=f2e8]:
+        - generic [ref=f2e9]:
+          - heading "Website quán cà phê" [level=2] [ref=f2e10]
+          - paragraph [ref=f2e11]: Cập nhật 2 giờ trước
+        - button "Xoá" [ref=f2e12]
+    - listitem [ref=f2e13]:
+      - article [ref=f2e14]:
+        - generic [ref=f2e15]:
+          - heading "App ghi chú" [level=2] [ref=f2e16]
+          - paragraph [ref=f2e17]: Cập nhật hôm qua
+        - button "Xoá" [ref=f2e18]
+    - listitem [ref=f2e19]:
+      - article [ref=f2e20]:
+        - generic [ref=f2e21]:
+          - heading "Landing page khoá học" [level=2] [ref=f2e22]
+          - paragraph [ref=f2e23]: Cập nhật 3 ngày trước
+        - button "Xoá" [ref=f2e24]
+    - listitem [ref=f2e25]:
+      - article [ref=f2e26]:
+        - generic [ref=f2e27]:
+          - heading "Blog du lịch" [level=2] [ref=f2e28]
+          - paragraph [ref=f2e29]: Cập nhật 1 tuần trước
+        - button "Xoá" [ref=f2e30]
+    - listitem [ref=f2e31]:
+      - article [ref=f2e32]:
+        - generic [ref=f2e33]:
+          - heading "Trang portfolio" [level=2] [ref=f2e34]
+          - paragraph [ref=f2e35]: Cập nhật 2 tuần trước
+        - button "Xoá" [ref=f2e36]
+    - listitem [ref=f2e37]:
+      - article [ref=f2e38]:
+        - generic [ref=f2e39]:
+          - heading "Shop bánh ngọt" [level=2] [ref=f2e40]
+          - paragraph [ref=f2e41]: Cập nhật 3 tuần trước
+        - button "Xoá" [ref=f2e42]
+    - listitem [ref=f2e43]:
+      - article [ref=f2e44]:
+        - generic [ref=f2e45]:
+          - heading "Dashboard bán hàng" [level=2] [ref=f2e46]
+          - paragraph [ref=f2e47]: Cập nhật 1 tháng trước
+        - button "Xoá" [ref=f2e48]
+    - listitem [ref=f2e49]:
+      - article [ref=f2e50]:
+        - generic [ref=f2e51]:
+          - heading "Game đoán số" [level=2] [ref=f2e52]
+          - paragraph [ref=f2e53]: Cập nhật 2 tháng trước
+        - button "Xoá" [ref=f2e54]

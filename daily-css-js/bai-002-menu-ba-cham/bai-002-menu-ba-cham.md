@@ -2,7 +2,7 @@
 
 Tuần 1, ngày 2/7, vòng 1, độ khó ★★☆☆☆, thời gian ước tính 40 phút.
 
-> Từ bài này dùng **Tailwind CSS v4** thay cho CSS thuần. `starter/index.html` đã gắn sẵn dòng `<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>`: mở file là Tailwind chạy, không cần cài gì, chỉ cần có mạng. Không còn `style.css` và `:root`; màu, khoảng cách, bo góc đều lấy từ class có sẵn của Tailwind. Tra class tại tailwindcss.com/docs.
+> Từ bài này dùng **Tailwind CSS v4** thay cho CSS thuần. Trước khi làm, mở PowerShell ở thư mục `daily-css-js` và chạy `npm run dev` (cách cài lần đầu xem `daily-css-js/README.md`). Lệnh này theo dõi file HTML và sinh CSS vào `daily-css-js/build/tailwind.css`. `starter/index.html` nạp file đó bằng `<link rel="stylesheet" href="../../build/tailwind.css" />`; nếu starter của bạn còn dòng `<script src="https://cdn.jsdelivr.net/...">` thì thay bằng dòng `link` này. Không còn `style.css` và `:root`; màu, khoảng cách, bo góc đều lấy từ class có sẵn của Tailwind. Tra class tại tailwindcss.com/docs.
 >
 > Bạn làm bằng Tailwind, còn lời giải (`solution/`) viết bằng **CSS thuần** trong `solution/style.css`. Làm xong, đặt hai bản cạnh nhau: mỗi class Tailwind bạn đã dùng ra đúng thuộc tính CSS nào. Bảng tra nhanh ở cuối phần gợi ý là cầu nối giữa hai bên.
 

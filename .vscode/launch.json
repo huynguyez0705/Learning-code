@@ -10,6 +10,12 @@
 			"name": "Launch Program",
 			"skipFiles": ["<node_internals>/**"],
 			"program": "${workspaceFolder}\\huy-nguyez.js"
+		},
+		{
+			"type": "chrome",
+			"name": "http://127.0.0.1:3000/daily-css-js/bai-002-menu-ba-cham/solution/index.html",
+			"request": "launch",
+			"url": "http://127.0.0.1:3000/daily-css-js/bai-002-menu-ba-cham/solution/index.html"
 		}
 	]
 }

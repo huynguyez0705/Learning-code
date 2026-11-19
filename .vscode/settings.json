@@ -1,5 +1,7 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
-	"editor.inlineSuggest.showToolbar": "always"
+	"editor.inlineSuggest.showToolbar": "always",
+	"livePreview.defaultPreviewPath": "/daily-css-js/bai-002-menu-ba-cham/starter/index.html",
+	"livePreview.autoRefreshPreview": "On Changes to Saved Files"
 }

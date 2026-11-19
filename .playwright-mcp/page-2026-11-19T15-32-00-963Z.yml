@@ -1,0 +1,53 @@
+- main [ref=f11e2]:
+  - generic [ref=f11e3]:
+    - heading "Dự án 8" [level=1] [ref=f11e4]
+    - paragraph [ref=f11e5]: "Cuộn xuống: thanh này dính ở trên cùng"
+  - list [ref=f11e6]:
+    - listitem [ref=f11e7]:
+      - article [ref=f11e8]:
+        - generic [ref=f11e9]:
+          - heading "Website quán cà phê" [level=2] [ref=f11e10]
+          - paragraph [ref=f11e11]: Cập nhật 2 giờ trước
+        - button "Xoá" [ref=f11e12]
+    - listitem [ref=f11e13]:
+      - article [ref=f11e14]:
+        - generic [ref=f11e15]:
+          - heading "App ghi chú" [level=2] [ref=f11e16]
+          - paragraph [ref=f11e17]: Cập nhật hôm qua
+        - button "Xoá" [ref=f11e18]
+    - listitem [ref=f11e19]:
+      - article [ref=f11e20]:
+        - generic [ref=f11e21]:
+          - heading "Landing page khoá học" [level=2] [ref=f11e22]
+          - paragraph [ref=f11e23]: Cập nhật 3 ngày trước
+        - button "Xoá" [ref=f11e24]
+    - listitem [ref=f11e25]:
+      - article [ref=f11e26]:
+        - generic [ref=f11e27]:
+          - heading "Blog du lịch" [level=2] [ref=f11e28]
+          - paragraph [ref=f11e29]: Cập nhật 1 tuần trước
+        - button "Xoá" [ref=f11e30]
+    - listitem [ref=f11e31]:
+      - article [ref=f11e32]:
+        - generic [ref=f11e33]:
+          - heading "Trang portfolio" [level=2] [ref=f11e34]
+          - paragraph [ref=f11e35]: Cập nhật 2 tuần trước
+        - button "Xoá" [ref=f11e36]
+    - listitem [ref=f11e37]:
+      - article [ref=f11e38]:
+        - generic [ref=f11e39]:
+          - heading "Shop bánh ngọt" [level=2] [ref=f11e40]
+          - paragraph [ref=f11e41]: Cập nhật 3 tuần trước
+        - button "Xoá" [ref=f11e42]
+    - listitem [ref=f11e43]:
+      - article [ref=f11e44]:
+        - generic [ref=f11e45]:
+          - heading "Dashboard bán hàng" [level=2] [ref=f11e46]
+          - paragraph [ref=f11e47]: Cập nhật 1 tháng trước
+        - button "Xoá" [ref=f11e48]
+    - listitem [ref=f11e49]:
+      - article [ref=f11e50]:
+        - generic [ref=f11e51]:
+          - heading "Game đoán số" [level=2] [ref=f11e52]
+          - paragraph [ref=f11e53]: Cập nhật 2 tháng trước
+        - button "Xoá" [ref=f11e54]

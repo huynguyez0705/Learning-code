@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 003 - Hộp thoại xác nhận xoá</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main data-page class="page">
+			<header class="toolbar">
+				<h1 data-heading tabindex="-1" class="toolbar-title">Dự án <span data-count class="count">8</span></h1>
+				<p class="toolbar-hint">Cuộn xuống: thanh này dính ở trên cùng</p>
+			</header>
+			<ul class="card-list">
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">Website quán cà phê</h2>
+							<p class="card-meta">Cập nhật 2 giờ trước</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">App ghi chú</h2>
+							<p class="card-meta">Cập nhật hôm qua</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">Landing page khoá học</h2>
+							<p class="card-meta">Cập nhật 3 ngày trước</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">Blog du lịch</h2>
+							<p class="card-meta">Cập nhật 1 tuần trước</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">Trang portfolio</h2>
+							<p class="card-meta">Cập nhật 2 tuần trước</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">Shop bánh ngọt</h2>
+							<p class="card-meta">Cập nhật 3 tuần trước</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">Dashboard bán hàng</h2>
+							<p class="card-meta">Cập nhật 1 tháng trước</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+				<li>
+					<article data-card class="card">
+						<div>
+							<h2 data-card-name class="card-title">Game đoán số</h2>
+							<p class="card-meta">Cập nhật 2 tháng trước</p>
+						</div>
+						<button data-delete type="button" class="delete-button">Xoá</button>
+					</article>
+				</li>
+			</ul>
+		</main>
+		<div data-dialog class="dialog">
+			<div data-dialog-backdrop class="dialog-backdrop"></div>
+			<div role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-text" class="dialog-panel">
+				<h2 id="dialog-title" class="dialog-title">Xoá dự án?</h2>
+				<p id="dialog-text" class="dialog-text">Bạn sắp xoá <strong data-dialog-name></strong>. Thao tác này không hoàn tác được.</p>
+				<div class="dialog-actions">
+					<button data-dialog-cancel type="button" class="button">Huỷ</button>
+					<button data-dialog-confirm type="button" class="button danger">Xoá dự án</button>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

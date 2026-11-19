@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+h2 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+body {
+	background: #f1f5f9;
+	color: #1e293b;
+	font-family: ui-sans-serif, system-ui, sans-serif;
+	line-height: 1.5;
+}
+
+.page {
+	max-width: 448px;
+	margin: 0 auto;
+	padding: 0 24px 96px;
+}
+
+.toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	padding: 16px 0;
+	background: #f1f5f9;
+}
+
+.toolbar-title {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.toolbar-title:focus {
+	outline: none;
+}
+
+.count {
+	margin-left: 4px;
+	padding: 0 8px;
+	border-radius: 9999px;
+	background: #e0e7ff;
+	color: #4338ca;
+	font-size: 14px;
+}
+
+.toolbar-hint {
+	font-size: 12px;
+	color: #64748b;
+}
+
+.card-list {
+	display: grid;
+	gap: 12px;
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 16px;
+	border-radius: 16px;
+	background: #fff;
+	box-shadow:
+		0 4px 6px -1px rgb(0 0 0 / 0.1),
+		0 2px 4px -2px rgb(0 0 0 / 0.1);
+	transition: translate 200ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+	translate: 0 -2px;
+}
+
+.card-title {
+	font-weight: 500;
+}
+
+.card-meta {
+	font-size: 14px;
+	color: #64748b;
+}
+
+.delete-button {
+	padding: 6px 12px;
+	border-radius: 8px;
+	color: #e11d48;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.delete-button:hover {
+	background: #fff1f2;
+}
+
+.delete-button:focus-visible {
+	outline: 2px solid #e11d48;
+	outline-offset: 2px;
+}
+
+.dialog {
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 200ms ease;
+}
+
+.dialog[data-open] {
+	visibility: visible;
+	opacity: 1;
+}
+
+.dialog-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgb(15 23 42 / 0.5);
+}
+
+.dialog-panel {
+	position: relative;
+	width: 100%;
+	max-width: 384px;
+	padding: 20px;
+	border-radius: 16px;
+	background: #fff;
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	translate: 0 8px;
+	transition: translate 200ms ease;
+}
+
+.dialog[data-open] .dialog-panel {
+	translate: 0 0;
+}
+
+.dialog-title {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.dialog-text {
+	margin-top: 8px;
+	font-size: 14px;
+	color: #475569;
+}
+
+.dialog-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 20px;
+}
+
+.button {
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.button:hover {
+	background: #f1f5f9;
+}
+
+.button:focus-visible {
+	outline: 2px solid #4f46e5;
+	outline-offset: 2px;
+}
+
+.button.danger {
+	background: #e11d48;
+	color: #fff;
+}
+
+.button.danger:hover {
+	background: #be123c;
+}
+
+.button.danger:focus-visible {
+	outline-color: #e11d48;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card,
+	.dialog,
+	.dialog-panel {
+		transition: none;
+	}
+}
