@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 002 - Menu ba chấm</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body>
+		<main>
+			<h1>Dự án của tôi</h1>
+			<ul>
+				<li>
+					<article data-card>
+						<h2>Website quán cà phê</h2>
+						<p>Cập nhật 2 giờ trước</p>
+						<button
+							data-menu-button
+							type="button"
+							aria-expanded="false"
+							aria-label="Menu dự án Website quán cà phê"
+						>
+							⋯
+						</button>
+						<div data-menu>
+							<button type="button">Đổi tên</button>
+							<button type="button">Nhân bản</button>
+							<button type="button">Xoá</button>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article data-card>
+						<h2>App ghi chú</h2>
+						<p>Cập nhật hôm qua</p>
+						<button
+							data-menu-button
+							type="button"
+							aria-expanded="false"
+							aria-label="Menu dự án App ghi chú"
+						>
+							⋯
+						</button>
+						<div data-menu>
+							<button type="button">Đổi tên</button>
+							<button type="button">Nhân bản</button>
+							<button type="button">Xoá</button>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article data-card>
+						<h2>Landing page khoá học</h2>
+						<p>Cập nhật 3 ngày trước</p>
+						<button
+							data-menu-button
+							type="button"
+							aria-expanded="false"
+							aria-label="Menu dự án Landing page khoá học"
+						>
+							⋯
+						</button>
+						<div data-menu>
+							<button type="button">Đổi tên</button>
+							<button type="button">Nhân bản</button>
+							<button type="button">Xoá</button>
+						</div>
+					</article>
+				</li>
+			</ul>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

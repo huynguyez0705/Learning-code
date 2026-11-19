@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 002 - Menu ba chấm</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body class="grid min-h-screen place-items-center bg-stone-100 p-6 font-sans text-stone-800">
+		<main class="w-80">
+			<h1 class="mb-4 text-lg font-semibold">Dự án của tôi</h1>
+			<ul class="space-y-3">
+				<li>
+					<article
+						data-card
+						class="group relative rounded-2xl bg-white p-4 shadow-md transition-transform duration-200 hover:-translate-y-0.5 focus-within:-translate-y-0.5 data-open:z-10 motion-reduce:transition-none"
+					>
+						<h2 class="font-medium">Website quán cà phê</h2>
+						<p class="text-sm text-stone-500">Cập nhật 2 giờ trước</p>
+						<button
+							data-menu-button
+							type="button"
+							aria-expanded="false"
+							aria-label="Menu dự án Website quán cà phê"
+							class="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-stone-500 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+						>
+							⋯
+						</button>
+						<div
+							data-menu
+							class="invisible absolute top-12 right-3 z-50 w-40 translate-y-1 rounded-xl bg-white py-1 opacity-0 shadow-xl ring-1 ring-stone-200 transition-[opacity,translate] duration-150 group-data-open:visible group-data-open:translate-y-0 group-data-open:opacity-100 motion-reduce:transition-none"
+						>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Đổi tên</button>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Nhân bản</button>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 focus-visible:bg-red-50 focus-visible:outline-none">Xoá</button>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article
+						data-card
+						class="group relative rounded-2xl bg-white p-4 shadow-md transition-transform duration-200 hover:-translate-y-0.5 focus-within:-translate-y-0.5 data-open:z-10 motion-reduce:transition-none"
+					>
+						<h2 class="font-medium">App ghi chú</h2>
+						<p class="text-sm text-stone-500">Cập nhật hôm qua</p>
+						<button
+							data-menu-button
+							type="button"
+							aria-expanded="false"
+							aria-label="Menu dự án App ghi chú"
+							class="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-stone-500 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+						>
+							⋯
+						</button>
+						<div
+							data-menu
+							class="invisible absolute top-12 right-3 z-50 w-40 translate-y-1 rounded-xl bg-white py-1 opacity-0 shadow-xl ring-1 ring-stone-200 transition-[opacity,translate] duration-150 group-data-open:visible group-data-open:translate-y-0 group-data-open:opacity-100 motion-reduce:transition-none"
+						>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Đổi tên</button>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Nhân bản</button>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 focus-visible:bg-red-50 focus-visible:outline-none">Xoá</button>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article
+						data-card
+						class="group relative rounded-2xl bg-white p-4 shadow-md transition-transform duration-200 hover:-translate-y-0.5 focus-within:-translate-y-0.5 data-open:z-10 motion-reduce:transition-none"
+					>
+						<h2 class="font-medium">Landing page khoá học</h2>
+						<p class="text-sm text-stone-500">Cập nhật 3 ngày trước</p>
+						<button
+							data-menu-button
+							type="button"
+							aria-expanded="false"
+							aria-label="Menu dự án Landing page khoá học"
+							class="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-stone-500 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+						>
+							⋯
+						</button>
+						<div
+							data-menu
+							class="invisible absolute top-12 right-3 z-50 w-40 translate-y-1 rounded-xl bg-white py-1 opacity-0 shadow-xl ring-1 ring-stone-200 transition-[opacity,translate] duration-150 group-data-open:visible group-data-open:translate-y-0 group-data-open:opacity-100 motion-reduce:transition-none"
+						>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Đổi tên</button>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none">Nhân bản</button>
+							<button type="button" class="block w-full px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 focus-visible:bg-red-50 focus-visible:outline-none">Xoá</button>
+						</div>
+					</article>
+				</li>
+			</ul>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
