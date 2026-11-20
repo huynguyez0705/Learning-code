@@ -6,129 +6,244 @@
 		<title>Bài 004 - Bảng điểm cột dính</title>
 		<link rel="stylesheet" href="../../build/tailwind.css" />
 	</head>
-	<body>
-		<main data-page>
-			<h1>Bảng điểm lớp 12A</h1>
-			<p>Cuộn bảng theo cả hai chiều, bấm nút Ghim để giữ cột tên đứng yên</p>
-			<div>
-				<button data-pin type="button" aria-pressed="false">Ghim cột tên</button>
-				<p data-status aria-live="polite">Chưa chọn học sinh nào</p>
+	<body class="bg-emerald-50 font-sans leading-normal text-emerald-950">
+		<main data-page class="mx-auto max-w-xl px-6 pt-8 pb-24">
+			<h1 class="text-2xl font-bold">Bảng điểm lớp 12A</h1>
+			<p class="mt-1 text-sm text-emerald-800">Cuộn bảng theo cả hai chiều, bấm nút Ghim để giữ cột tên đứng yên</p>
+			<div class="mt-6 flex items-center justify-between gap-4">
+				<button
+					data-pin
+					type="button"
+					aria-pressed="false"
+					class="cursor-pointer rounded-lg border border-emerald-300 bg-white px-3 py-1.5 text-sm font-medium text-emerald-800 transition-colors duration-150 hover:bg-emerald-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700 motion-reduce:transition-none aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white aria-pressed:hover:bg-emerald-800">
+					Ghim cột tên
+				</button>
+				<p data-status aria-live="polite" class="text-sm text-emerald-800">Chưa chọn học sinh nào</p>
 			</div>
-			<div data-table>
-				<div data-scroll tabindex="0" role="region" aria-label="Bảng điểm, dùng phím mũi tên để cuộn">
-					<table>
+			<div data-table class="group mt-4">
+				<div
+					data-scroll
+					tabindex="0"
+					role="region"
+					aria-label="Bảng điểm, dùng phím mũi tên để cuộn"
+					class="rounded-xl border border-slate-200 bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700 max-h-72 overflow-auto">
+					<table class="w-max min-w-full border-separate border-spacing-0 text-sm leading-5">
 						<thead>
 							<tr>
-								<th scope="col">Học sinh</th>
-								<th scope="col">Toán</th>
-								<th scope="col">Văn</th>
-								<th scope="col">Anh</th>
-								<th scope="col">Lý</th>
-								<th scope="col">Hoá</th>
-								<th scope="col">Sinh</th>
-								<th scope="col">Trung bình</th>
+								<th
+									scope="col"
+									class="sticky top-0 bg-emerald-800 px-4 py-2 text-left font-semibold text-white min-w-40 z-30 group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									Học sinh
+								</th>
+								<th scope="col" class="sticky top-0 bg-emerald-700 px-4 py-2 text-center font-semibold text-white min-w-24 z-20">Toán</th>
+								<th scope="col" class="sticky top-0 bg-emerald-700 px-4 py-2 text-center font-semibold text-white min-w-24 z-20">Văn</th>
+								<th scope="col" class="sticky top-0 bg-emerald-700 px-4 py-2 text-center font-semibold text-white min-w-24 z-20">Anh</th>
+								<th scope="col" class="sticky top-0 bg-emerald-700 px-4 py-2 text-center font-semibold text-white min-w-24 z-20">Lý</th>
+								<th scope="col" class="sticky top-0 bg-emerald-700 px-4 py-2 text-center font-semibold text-white min-w-24 z-20">Hoá</th>
+								<th scope="col" class="sticky top-0 bg-emerald-700 px-4 py-2 text-center font-semibold text-white min-w-24 z-20">Sinh</th>
+								<th scope="col" class="sticky top-0 bg-emerald-700 px-4 py-2 text-center font-semibold text-white min-w-24 z-20">Trung bình</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Nguyễn Văn An</button></th>
-								<td>8.5</td>
-								<td>7.0</td>
-								<td>9.0</td>
-								<td>8.0</td>
-								<td>7.5</td>
-								<td>8.0</td>
-								<td>8.0</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Nguyễn Văn An
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">8.0</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Trần Thị Bình</button></th>
-								<td>9.0</td>
-								<td>8.5</td>
-								<td>8.0</td>
-								<td>9.5</td>
-								<td>9.0</td>
-								<td>8.5</td>
-								<td>8.8</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Trần Thị Bình
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">8.8</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Lê Minh Châu</button></th>
-								<td>6.5</td>
-								<td>7.5</td>
-								<td>7.0</td>
-								<td>6.0</td>
-								<td>6.5</td>
-								<td>7.0</td>
-								<td>6.8</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Lê Minh Châu
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">6.8</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Phạm Quốc Dũng</button></th>
-								<td>7.0</td>
-								<td>6.5</td>
-								<td>8.5</td>
-								<td>7.5</td>
-								<td>8.0</td>
-								<td>7.0</td>
-								<td>7.4</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Phạm Quốc Dũng
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">7.4</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Hoàng Thu Hà</button></th>
-								<td>9.5</td>
-								<td>9.0</td>
-								<td>9.5</td>
-								<td>9.0</td>
-								<td>8.5</td>
-								<td>9.0</td>
-								<td>9.1</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Hoàng Thu Hà
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">9.1</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Vũ Đăng Khoa</button></th>
-								<td>5.5</td>
-								<td>6.0</td>
-								<td>6.5</td>
-								<td>5.0</td>
-								<td>6.0</td>
-								<td>5.5</td>
-								<td>5.8</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Vũ Đăng Khoa
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">5.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">5.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">5.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">5.8</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Đặng Mai Lan</button></th>
-								<td>8.0</td>
-								<td>9.0</td>
-								<td>7.5</td>
-								<td>8.5</td>
-								<td>8.0</td>
-								<td>9.0</td>
-								<td>8.3</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Đặng Mai Lan
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">8.3</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Bùi Hoàng Minh</button></th>
-								<td>7.5</td>
-								<td>7.0</td>
-								<td>7.0</td>
-								<td>8.0</td>
-								<td>7.5</td>
-								<td>6.5</td>
-								<td>7.2</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Bùi Hoàng Minh
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">7.2</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Ngô Bảo Ngọc</button></th>
-								<td>8.5</td>
-								<td>8.0</td>
-								<td>9.0</td>
-								<td>7.5</td>
-								<td>8.0</td>
-								<td>8.5</td>
-								<td>8.2</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Ngô Bảo Ngọc
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">9.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">8.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">8.2</td>
 							</tr>
-							<tr data-row>
-								<th scope="row"><button data-select type="button" aria-pressed="false">Đỗ Gia Phúc</button></th>
-								<td>6.0</td>
-								<td>7.0</td>
-								<td>6.5</td>
-								<td>7.0</td>
-								<td>6.5</td>
-								<td>7.5</td>
-								<td>6.8</td>
+							<tr data-row class="bg-white transition-colors duration-150 hover:bg-emerald-50 motion-reduce:transition-none data-selected:bg-emerald-100 data-selected:hover:bg-emerald-100">
+								<th
+									scope="row"
+									class="border-b border-slate-200 text-left font-medium z-10 bg-inherit group-data-pinned:sticky group-data-pinned:left-0 group-data-pinned:group-data-scrolled:shadow-[4px_0_6px_-4px_rgb(0_0_0/0.3)]">
+									<button
+										data-select
+										type="button"
+										aria-pressed="false"
+										class="block w-full cursor-pointer px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-emerald-700 whitespace-nowrap">
+										Đỗ Gia Phúc
+									</button>
+								</th>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.0</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">6.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums">7.5</td>
+								<td class="border-b border-slate-200 px-4 py-2 text-center tabular-nums font-semibold">6.8</td>
 							</tr>
 						</tbody>
 					</table>

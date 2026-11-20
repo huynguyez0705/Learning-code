@@ -1,0 +1,335 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button,
+textarea {
+	font: inherit;
+	color: inherit;
+}
+
+button {
+	border: 0;
+	background: none;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.site {
+	background: #f8fafc;
+	color: #1e293b;
+	font-family: ui-sans-serif, system-ui, sans-serif;
+	line-height: 1.5;
+}
+
+.page {
+	max-width: 672px;
+	margin: 0 auto;
+	padding: 0 24px 64px;
+}
+
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 20px 0;
+	border-bottom: 1px solid #cbd5e1;
+	background: #f8fafc;
+}
+
+.site-name {
+	color: #0f766e;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.site-tag {
+	color: #64748b;
+	font-size: 12px;
+}
+
+.post {
+	padding: 32px 0;
+}
+
+.post-label {
+	color: #0f766e;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.post-title {
+	margin-top: 8px;
+	font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.post-summary {
+	margin-top: 16px;
+	color: #475569;
+}
+
+.thread {
+	border-top: 1px solid #cbd5e1;
+	padding-top: 24px;
+}
+
+.section-heading {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.section-heading:focus {
+	outline: none;
+}
+
+.count {
+	margin-left: 4px;
+	padding: 2px 8px;
+	border-radius: 9999px;
+	background: #ccfbf1;
+	color: #115e59;
+	font-size: 14px;
+}
+
+.section-description,
+.field-help {
+	margin-top: 4px;
+	color: #64748b;
+	font-size: 14px;
+}
+
+.comment-form {
+	margin-top: 24px;
+}
+
+.field-label {
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.comment-input {
+	display: block;
+	width: 100%;
+	margin-top: 8px;
+	padding: 12px;
+	border: 1px solid #94a3b8;
+	border-radius: 8px;
+	background: #fff;
+	resize: vertical;
+}
+
+.comment-input[aria-invalid='true'] {
+	border-color: #e11d48;
+}
+
+.field-help {
+	font-size: 12px;
+}
+
+.field-error {
+	min-height: 20px;
+	margin-top: 4px;
+	color: #be123c;
+	font-size: 14px;
+}
+
+.form-actions {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 8px;
+}
+
+.button {
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.primary {
+	background: #0f766e;
+	color: #fff;
+}
+
+.primary:hover {
+	background: #115e59;
+}
+
+.secondary {
+	background: #f1f5f9;
+}
+
+.secondary:hover {
+	background: #e2e8f0;
+}
+
+.danger {
+	background: #e11d48;
+	color: #fff;
+}
+
+.danger:hover {
+	background: #be123c;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+	outline: 2px solid #0f766e;
+	outline-offset: 2px;
+}
+
+.empty-message {
+	display: none;
+	margin-top: 24px;
+	padding: 20px;
+	border: 1px dashed #94a3b8;
+	border-radius: 8px;
+	color: #475569;
+	font-size: 14px;
+}
+
+.thread[data-empty] .empty-message {
+	display: block;
+}
+
+.comment-list {
+	margin-top: 24px;
+}
+
+.comment {
+	padding: 20px 0;
+	border-top: 1px solid #e2e8f0;
+}
+
+.comment-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.comment-author {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.delete-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 4px 8px;
+	border-radius: 4px;
+	color: #be123c;
+	font-size: 14px;
+}
+
+.delete-button:hover {
+	background: #fff1f2;
+}
+
+.comment-text {
+	margin-top: 8px;
+	color: #475569;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+.dialog {
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 200ms ease;
+}
+
+.dialog[data-open] {
+	visibility: visible;
+	opacity: 1;
+}
+
+.dialog-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgb(15 23 42 / 0.5);
+}
+
+.dialog-panel {
+	position: relative;
+	width: 100%;
+	max-width: 384px;
+	max-height: 100%;
+	overflow-y: auto;
+	padding: 20px;
+	border-radius: 16px;
+	background: #fff;
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	translate: 0 8px;
+	transition: translate 200ms ease;
+}
+
+.dialog[data-open] .dialog-panel {
+	translate: 0 0;
+}
+
+.dialog-title {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.dialog-description {
+	margin-top: 8px;
+	color: #475569;
+	font-size: 14px;
+}
+
+.dialog-preview {
+	max-height: 144px;
+	overflow-y: auto;
+	margin-top: 16px;
+	padding-left: 12px;
+	border-left: 2px solid #5eead4;
+	color: #475569;
+	font-size: 14px;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+.dialog-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dialog,
+	.dialog-panel {
+		transition: none;
+	}
+}

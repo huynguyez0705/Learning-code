@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 005: Bình luận động và nút xoá trên phần tử vừa tạo](bai-005-binh-luan-dong/bai-005-binh-luan-dong.md)
 - [Bài 004: Bảng điểm cuộn hai chiều với tiêu đề và cột đầu dính](bai-004-bang-diem-cot-dinh/bai-004-bang-diem-cot-dinh.md)
 - [Bài 003: Hộp thoại xác nhận xoá và bẫy `fixed` trong phần tử bị nhấc](bai-003-hop-thoai-xac-nhan/bai-003-hop-thoai-xac-nhan.md)
 - [Bài 002: Menu ba chấm và bẫy stacking context](bai-002-menu-ba-cham/bai-002-menu-ba-cham.md)

@@ -47,4 +47,3 @@ document.addEventListener('keydown', e => {
   if (e.key === "Escape" && dDialog.hasAttribute('data-open') === true)
     closeDialog()
 })
-dConfirmButton.addEventListener('click', removeDialog)

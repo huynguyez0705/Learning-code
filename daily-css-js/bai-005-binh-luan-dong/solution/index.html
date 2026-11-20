@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 005 - Bình luận động</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-page class="page">
+			<header class="site-header">
+				<p class="site-name">Góc đọc</p>
+				<span class="site-tag">Chuyện thường ngày</span>
+			</header>
+			<article class="post">
+				<p class="post-label">Một góc nhìn</p>
+				<h1 class="post-title">Đọc chậm giữa một ngày bận rộn</h1>
+				<p class="post-summary">Không cần đọc thật nhiều. Đôi khi, một đoạn ngắn khiến mình dừng lại suy nghĩ đã là đủ. Bạn thường dành lúc nào trong ngày để đọc?</p>
+			</article>
+			<section data-thread aria-labelledby="comments-title" class="thread">
+				<h2 id="comments-title" data-heading tabindex="-1" class="section-heading">Bình luận <span data-count class="count">2</span></h2>
+				<p class="section-description">Chia sẻ một suy nghĩ của bạn.</p>
+				<form data-form class="comment-form">
+					<label for="comment-input" class="field-label">Bình luận của bạn</label>
+					<textarea id="comment-input" data-input rows="3" maxlength="280" aria-invalid="false" aria-describedby="comment-help comment-error" class="comment-input"></textarea>
+					<p id="comment-help" class="field-help">Tối đa 280 ký tự. Bình luận hiển thị dưới tên “Bạn”.</p>
+					<p id="comment-error" data-error aria-live="polite" class="field-error"></p>
+					<div class="form-actions">
+						<button type="submit" class="button primary">Gửi bình luận</button>
+					</div>
+				</form>
+				<p data-empty-message role="status" class="empty-message">Chưa có bình luận. Bạn có thể viết bình luận đầu tiên ở trên.</p>
+				<ul data-list class="comment-list">
+					<li>
+						<article data-comment class="comment">
+							<div class="comment-header">
+								<h3 class="comment-author">An</h3>
+								<button data-delete type="button" aria-label="Xoá bình luận của An" class="delete-button"><span aria-hidden="true">×</span><span>Xoá</span></button>
+							</div>
+							<p data-comment-text class="comment-text">Mình thích đọc vài trang trước khi ngủ. Không nhiều, nhưng đều đặn.</p>
+						</article>
+					</li>
+					<li>
+						<article data-comment class="comment">
+							<div class="comment-header">
+								<h3 class="comment-author">Minh</h3>
+								<button data-delete type="button" aria-label="Xoá bình luận của Minh" class="delete-button"><span aria-hidden="true">×</span><span>Xoá</span></button>
+							</div>
+							<p data-comment-text class="comment-text">Đoạn cuối làm mình nhớ đến cuốn sách đang đọc dở. Tối nay đọc tiếp thôi.</p>
+						</article>
+					</li>
+				</ul>
+			</section>
+			<template data-template>
+				<li>
+					<article data-comment class="comment">
+						<div class="comment-header">
+							<h3 class="comment-author">Bạn</h3>
+							<button data-delete type="button" aria-label="Xoá bình luận của bạn" class="delete-button"><span aria-hidden="true">×</span><span>Xoá</span></button>
+						</div>
+						<p data-comment-text class="comment-text"></p>
+					</article>
+				</li>
+			</template>
+		</main>
+		<div data-dialog class="dialog">
+			<div data-backdrop class="dialog-backdrop"></div>
+			<div role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-description" class="dialog-panel">
+				<h2 id="dialog-title" class="dialog-title">Xoá bình luận?</h2>
+				<p id="dialog-description" class="dialog-description">Bình luận dưới đây sẽ bị xoá. Thao tác này không hoàn tác được.</p>
+				<blockquote data-dialog-text class="dialog-preview"></blockquote>
+				<div class="dialog-actions">
+					<button data-cancel type="button" class="button secondary">Huỷ</button>
+					<button data-confirm type="button" class="button danger">Xoá bình luận</button>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
