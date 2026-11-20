@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 004 - Bảng điểm cột dính</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body>
+		<main data-page>
+			<h1>Bảng điểm lớp 12A</h1>
+			<p>Cuộn bảng theo cả hai chiều, bấm nút Ghim để giữ cột tên đứng yên</p>
+			<div>
+				<button data-pin type="button" aria-pressed="false">Ghim cột tên</button>
+				<p data-status aria-live="polite">Chưa chọn học sinh nào</p>
+			</div>
+			<div data-table>
+				<div data-scroll tabindex="0" role="region" aria-label="Bảng điểm, dùng phím mũi tên để cuộn">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">Học sinh</th>
+								<th scope="col">Toán</th>
+								<th scope="col">Văn</th>
+								<th scope="col">Anh</th>
+								<th scope="col">Lý</th>
+								<th scope="col">Hoá</th>
+								<th scope="col">Sinh</th>
+								<th scope="col">Trung bình</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Nguyễn Văn An</button></th>
+								<td>8.5</td>
+								<td>7.0</td>
+								<td>9.0</td>
+								<td>8.0</td>
+								<td>7.5</td>
+								<td>8.0</td>
+								<td>8.0</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Trần Thị Bình</button></th>
+								<td>9.0</td>
+								<td>8.5</td>
+								<td>8.0</td>
+								<td>9.5</td>
+								<td>9.0</td>
+								<td>8.5</td>
+								<td>8.8</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Lê Minh Châu</button></th>
+								<td>6.5</td>
+								<td>7.5</td>
+								<td>7.0</td>
+								<td>6.0</td>
+								<td>6.5</td>
+								<td>7.0</td>
+								<td>6.8</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Phạm Quốc Dũng</button></th>
+								<td>7.0</td>
+								<td>6.5</td>
+								<td>8.5</td>
+								<td>7.5</td>
+								<td>8.0</td>
+								<td>7.0</td>
+								<td>7.4</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Hoàng Thu Hà</button></th>
+								<td>9.5</td>
+								<td>9.0</td>
+								<td>9.5</td>
+								<td>9.0</td>
+								<td>8.5</td>
+								<td>9.0</td>
+								<td>9.1</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Vũ Đăng Khoa</button></th>
+								<td>5.5</td>
+								<td>6.0</td>
+								<td>6.5</td>
+								<td>5.0</td>
+								<td>6.0</td>
+								<td>5.5</td>
+								<td>5.8</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Đặng Mai Lan</button></th>
+								<td>8.0</td>
+								<td>9.0</td>
+								<td>7.5</td>
+								<td>8.5</td>
+								<td>8.0</td>
+								<td>9.0</td>
+								<td>8.3</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Bùi Hoàng Minh</button></th>
+								<td>7.5</td>
+								<td>7.0</td>
+								<td>7.0</td>
+								<td>8.0</td>
+								<td>7.5</td>
+								<td>6.5</td>
+								<td>7.2</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Ngô Bảo Ngọc</button></th>
+								<td>8.5</td>
+								<td>8.0</td>
+								<td>9.0</td>
+								<td>7.5</td>
+								<td>8.0</td>
+								<td>8.5</td>
+								<td>8.2</td>
+							</tr>
+							<tr data-row>
+								<th scope="row"><button data-select type="button" aria-pressed="false">Đỗ Gia Phúc</button></th>
+								<td>6.0</td>
+								<td>7.0</td>
+								<td>6.5</td>
+								<td>7.0</td>
+								<td>6.5</td>
+								<td>7.5</td>
+								<td>6.8</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
