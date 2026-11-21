@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 006 - Giỏ hàng</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-page class="page">
+			<header class="site-header">
+				<h1 data-heading tabindex="-1" class="title">Giỏ hàng của bạn</h1>
+				<p data-summary aria-live="polite" class="summary"></p>
+			</header>
+			<section data-cart class="cart">
+				<ul data-list class="list">
+					<li data-item data-price="1290000" data-qty="1" class="item">
+						<input data-check type="checkbox" checked aria-label="Chọn Tai nghe Bluetooth chống ồn" class="check" />
+						<div class="body">
+							<h2 class="name">Tai nghe Bluetooth chống ồn</h2>
+							<p class="price">1.290.000&nbsp;₫</p>
+							<div class="row">
+								<div class="stepper">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="step-button">−</button>
+									<output data-qty-text class="qty"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="step-button">+</button>
+								</div>
+								<p data-line-total class="line-total"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Tai nghe Bluetooth chống ồn" class="remove">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+					<li data-item data-price="890000" data-qty="1" class="item">
+						<input data-check type="checkbox" checked aria-label="Chọn Bàn phím cơ 87 phím" class="check" />
+						<div class="body">
+							<h2 class="name">Bàn phím cơ 87 phím</h2>
+							<p class="price">890.000&nbsp;₫</p>
+							<div class="row">
+								<div class="stepper">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="step-button">−</button>
+									<output data-qty-text class="qty"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="step-button">+</button>
+								</div>
+								<p data-line-total class="line-total"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Bàn phím cơ 87 phím" class="remove">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+					<li data-item data-price="99000" data-qty="2" class="item">
+						<input data-check type="checkbox" checked aria-label="Chọn Cáp sạc nhanh USB-C" class="check" />
+						<div class="body">
+							<h2 class="name">Cáp sạc nhanh USB-C mã CAP_SAC_NHANH_USB_C_LIGHTNING_MFI_2M_TRANG_PHIEN_BAN_GIOI_HAN</h2>
+							<p class="price">99.000&nbsp;₫</p>
+							<div class="row">
+								<div class="stepper">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="step-button">−</button>
+									<output data-qty-text class="qty"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="step-button">+</button>
+								</div>
+								<p data-line-total class="line-total"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Cáp sạc nhanh USB-C" class="remove">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+					<li data-item data-price="175000" data-qty="1" class="item">
+						<input data-check type="checkbox" aria-label="Chọn Đế tản nhiệt laptop" class="check" />
+						<div class="body">
+							<h2 class="name">Đế tản nhiệt laptop</h2>
+							<p class="price">175.000&nbsp;₫</p>
+							<div class="row">
+								<div class="stepper">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="step-button">−</button>
+									<output data-qty-text class="qty"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="step-button">+</button>
+								</div>
+								<p data-line-total class="line-total"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Đế tản nhiệt laptop" class="remove">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+				</ul>
+				<p class="empty">Giỏ hàng đang trống</p>
+				<p data-status aria-live="polite" class="status"></p>
+				<div class="bar">
+					<div>
+						<p class="bar-label">Tổng cộng</p>
+						<p data-total class="bar-total"></p>
+					</div>
+					<button data-checkout type="button" class="checkout">Đặt hàng</button>
+				</div>
+			</section>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 006 - Giỏ hàng</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="bg-orange-50 font-sans leading-normal text-orange-950">
+		<main data-page class="mx-auto min-h-screen max-w-xl px-6 pb-8">
+			<header class="sticky top-0 z-10 border-b border-orange-200 bg-orange-50 py-5">
+				<h1 data-heading tabindex="-1" class="text-2xl font-bold focus:outline-none">Giỏ hàng của bạn</h1>
+				<p data-summary aria-live="polite" class="mt-1 text-sm text-orange-800"></p>
+			</header>
+			<section data-cart class="group">
+				<ul data-list class="group-data-empty:hidden">
+					<li data-item data-price="1290000" data-qty="1" class="relative grid gap-3 py-4">
+						<input data-check type="checkbox" checked aria-label="Chọn Tai nghe Bluetooth chống ồn" class="mt-1 size-5 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700" />
+						<div>
+							<h2 class="pr-10 font-semibold leading-tight">Tai nghe Bluetooth chống ồn</h2>
+							<p class="mt-1 text-sm text-orange-800 tabular-nums">1.290.000&nbsp;₫</p>
+							<div class="mt-3 flex items-center justify-between gap-3">
+								<div class="flex items-center gap-1">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">−</button>
+									<output data-qty-text class="min-w-8 text-center tabular-nums"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">+</button>
+								</div>
+								<p data-line-total class="font-semibold tabular-nums"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Tai nghe Bluetooth chống ồn" class="absolute top-3 right-0 size-8 cursor-pointer rounded-full text-xl leading-none text-orange-800 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+					<li data-item data-price="890000" data-qty="1" class="relative grid gap-3 py-4">
+						<input data-check type="checkbox" checked aria-label="Chọn Bàn phím cơ 87 phím" class="mt-1 size-5 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700" />
+						<div>
+							<h2 class="pr-10 font-semibold leading-tight">Bàn phím cơ 87 phím</h2>
+							<p class="mt-1 text-sm text-orange-800 tabular-nums">890.000&nbsp;₫</p>
+							<div class="mt-3 flex items-center justify-between gap-3">
+								<div class="flex items-center gap-1">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">−</button>
+									<output data-qty-text class="min-w-8 text-center tabular-nums"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">+</button>
+								</div>
+								<p data-line-total class="font-semibold tabular-nums"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Bàn phím cơ 87 phím" class="absolute top-3 right-0 size-8 cursor-pointer rounded-full text-xl leading-none text-orange-800 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+					<li data-item data-price="99000" data-qty="2" class="relative grid gap-3 py-4">
+						<input data-check type="checkbox" checked aria-label="Chọn Cáp sạc nhanh USB-C" class="mt-1 size-5 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700" />
+						<div>
+							<h2 class="pr-10 font-semibold leading-tight">Cáp sạc nhanh USB-C mã CAP_SAC_NHANH_USB_C_LIGHTNING_MFI_2M_TRANG_PHIEN_BAN_GIOI_HAN</h2>
+							<p class="mt-1 text-sm text-orange-800 tabular-nums">99.000&nbsp;₫</p>
+							<div class="mt-3 flex items-center justify-between gap-3">
+								<div class="flex items-center gap-1">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">−</button>
+									<output data-qty-text class="min-w-8 text-center tabular-nums"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">+</button>
+								</div>
+								<p data-line-total class="font-semibold tabular-nums"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Cáp sạc nhanh USB-C" class="absolute top-3 right-0 size-8 cursor-pointer rounded-full text-xl leading-none text-orange-800 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+					<li data-item data-price="175000" data-qty="1" class="relative grid gap-3 py-4">
+						<input data-check type="checkbox" aria-label="Chọn Đế tản nhiệt laptop" class="mt-1 size-5 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700" />
+						<div>
+							<h2 class="pr-10 font-semibold leading-tight">Đế tản nhiệt laptop</h2>
+							<p class="mt-1 text-sm text-orange-800 tabular-nums">175.000&nbsp;₫</p>
+							<div class="mt-3 flex items-center justify-between gap-3">
+								<div class="flex items-center gap-1">
+									<button data-decrease type="button" aria-label="Giảm số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">−</button>
+									<output data-qty-text class="min-w-8 text-center tabular-nums"></output>
+									<button data-increase type="button" aria-label="Tăng số lượng" class="size-8 cursor-pointer rounded-lg border border-orange-300 bg-white font-medium text-orange-900 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">+</button>
+								</div>
+								<p data-line-total class="font-semibold tabular-nums"></p>
+							</div>
+						</div>
+						<button data-remove type="button" aria-label="Xoá Đế tản nhiệt laptop" class="absolute top-3 right-0 size-8 cursor-pointer rounded-full text-xl leading-none text-orange-800 transition-colors duration-150 hover:bg-orange-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">
+							<span aria-hidden="true">×</span>
+						</button>
+					</li>
+				</ul>
+				<p class="hidden py-10 text-center text-orange-800 group-data-empty:block">Giỏ hàng đang trống</p>
+				<p data-status aria-live="polite" class="min-h-5 pt-2 text-sm text-orange-800"></p>
+				<div class="mt-2 flex items-center justify-between gap-4 border-t border-orange-300 bg-orange-50 py-4 group-data-empty:hidden">
+					<div>
+						<p class="text-sm text-orange-800">Tổng cộng</p>
+						<p data-total class="text-xl font-bold tabular-nums"></p>
+					</div>
+					<button data-checkout type="button" class="cursor-pointer rounded-lg bg-orange-600 px-4 py-2 font-semibold text-white transition-colors duration-150 hover:bg-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 motion-reduce:transition-none">Đặt hàng</button>
+				</div>
+			</section>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
