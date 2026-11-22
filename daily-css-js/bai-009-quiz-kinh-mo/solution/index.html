@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 009 - Quiz kính mờ</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<div class="stage">
+			<div aria-hidden="true" class="blob blob-pink"></div>
+			<div aria-hidden="true" class="blob blob-blue"></div>
+			<main class="page">
+				<section data-card class="card">
+					<div class="quiz">
+						<p data-counter class="counter"></p>
+						<h1 data-question id="question" tabindex="-1" class="question"></h1>
+						<form data-form novalidate class="form">
+							<fieldset data-fieldset aria-labelledby="question" class="options"></fieldset>
+							<p data-feedback aria-live="polite" class="feedback"></p>
+							<button data-submit type="submit" class="action">Trả lời</button>
+						</form>
+					</div>
+					<div class="done">
+						<h2 data-done-title tabindex="-1" class="done-title">Hoàn thành!</h2>
+						<p data-score aria-live="polite" class="score"></p>
+						<button data-restart type="button" class="action">Làm lại</button>
+					</div>
+				</section>
+			</main>
+		</div>
+		<template data-option-template>
+			<label data-option class="option">
+				<input data-option-input type="radio" name="answer" class="radio" />
+				<span data-option-text></span>
+			</label>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>
