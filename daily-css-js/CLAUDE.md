@@ -4,7 +4,7 @@
 
 ## Thư mục này là gì
 
-Mỗi ngày một bài tập ngắn (30–45 phút) kết hợp giao diện và JavaScript thuần. Người học tự làm bài trong `starter/` bằng **Tailwind CSS v4**, sau đó so với lời giải trong `solution/`. Lời giải viết bằng **CSS thuần** để người học thấy mỗi class Tailwind ra thuộc tính CSS nào.
+Mỗi ngày ba bài tập ngắn (mỗi bài 30–45 phút, khó dần trong ngày) kết hợp giao diện và JavaScript thuần. Bài 001–006 theo lịch cũ một bài mỗi ngày; từ bài 007 là ba bài mỗi ngày. Người học tự làm bài trong `starter/` bằng **Tailwind CSS v4**, sau đó so với lời giải trong `solution/`. Lời giải viết bằng **CSS thuần** để người học thấy mỗi class Tailwind ra thuộc tính CSS nào.
 
 Một routine cloud (Claude Code, chạy 7h sáng giờ Việt Nam) tự tạo bài mới và push thẳng lên `main`. Agent khác tạo bài bằng tay cũng phải theo đúng các quy tắc dưới đây, để bài của routine và bài làm tay giống nhau.
 
@@ -24,7 +24,8 @@ Bài mẫu chuẩn: `bai-003-hop-thoai-xac-nhan/` cho cấu trúc đề và lờ
 - Người học muốn mở rộng kiến thức JavaScript qua bài tập thực tế, chủ đề do agent tự chọn: blog, streaming, bất động sản, giỏ hàng hoặc ứng dụng khác. Không cố định một chủ đề cho cả lộ trình.
 - Mỗi bài tập trung vài API hoặc khái niệm mới, có giải thích tác dụng, tham số, giá trị trả về và cách dùng trong bài. Không nhồi nhiều chủ đề chưa học vào cùng một bài.
 - CSS đã học phải dựng sẵn bằng Tailwind trong starter. CSS mới để người học tự làm và đánh dấu rõ. Lời giải luôn dùng CSS thuần trong style.css; starter/script.js vẫn rỗng.
-- Bảng chủ đề CSS theo tuần bên dưới dùng để ôn hoặc bổ sung khi phù hợp; ưu tiên tăng độ khó JS theo yêu cầu này. Không sửa lại bài cũ.
+- JS nặng hơn CSS: mỗi bài tối đa 2–3 nhóm class CSS mới, phần lớn bước gợi ý là JS. Độ khó JS đi theo bảng cấp độ bên dưới. Không sửa lại bài cũ.
+- Đổi chủ đề liên tục để học nhanh nhiều cái mới: hai bài liền nhau không trùng chủ đề CSS, không trùng loại ứng dụng (blog, giỏ hàng, streaming, bất động sản, đặt lịch, quiz, ghi chú, bảng điều khiển, nhạc, thời tiết...), không trùng API JS trọng tâm.
 - Nói rõ bài có lưu dữ liệu hay không. Bài chưa dùng localStorage hoặc cookie thì tải lại trang sẽ khôi phục dữ liệu mẫu. Dạy lưu trữ trong bài riêng khi có đủ kiến thức nền.
 
 ## Cấu trúc thư mục
@@ -65,13 +66,17 @@ Cách cài lần đầu có trong `README.md`. Nếu chưa cài thì gửi lện
 
 ## Tạo bài mới
 
-### Xác định số bài, tuần, ngày
+### Xác định số bài, ngày học, cấp độ
 
-- N = số dòng dữ liệu trong bảng `PROGRESS.md` + 1. NNN là N viết đủ 3 chữ số.
-- Tuần W = ceil(N / 7). Ngày trong tuần D = ((N - 1) mod 7) + 1. Vòng V = floor((W - 1) / 8) + 1.
-- Chủ đề tuần là dòng ((W - 1) mod 8) + 1 trong bảng dưới. Từ vòng 2 trở đi dùng lại chủ đề nhưng khó hơn rõ rệt, không lặp bài cũ.
+Áp dụng từ bài 007. Hôm nay tính theo giờ Việt Nam (`TZ=Asia/Ho_Chi_Minh date +%F`).
 
-| # | Chủ đề tuần | Kỹ thuật trọng tâm | JS trọng tâm |
+- **Số bài N** = số dòng dữ liệu trong bảng `PROGRESS.md` + 1. NNN là N viết đủ 3 chữ số.
+- **Ngày học K** = số ngày khác nhau ở cột Ngày của `PROGRESS.md`, tính cả hôm nay. Ngày không có bài thì không tính. Ví dụ bài 001–006 nằm ở 3 ngày (19, 20, 21/11), nên ngày 22/11 là K = 4.
+- **Bài P/3** = số dòng có Ngày bằng hôm nay + 1. Mỗi ngày học có đúng 3 bài, P = 1, 2, 3.
+- **Cấp C** = ceil(K / 7), tối đa 5. Cứ 7 ngày học thì lên một cấp JS; từ K = 29 trở đi giữ cấp 5.
+- **Chủ đề CSS** là dòng T = ((N - 6) mod 8) + 1 trong bảng dưới (bài 007 là dòng 2, bài 013 là dòng 8, bài 014 quay lại dòng 1). Chủ đề đã có bài trước thì làm khó hơn rõ rệt, không lặp bài cũ. Nếu dòng T trùng chủ đề CSS của bài ngay trước thì lấy dòng kế tiếp.
+
+| # | Chủ đề CSS | Kỹ thuật trọng tâm | JS gợi ý kèm theo |
 |---|---|---|---|
 | 1 | Định vị & quản lý layer | relative/absolute/fixed/sticky, inset, z-index, stacking context | click, toggleAttribute, mở/đóng |
 | 2 | Gradient | bg-linear-*, bg-radial, bg-conic, from/via/to, nhiều lớp nền | theo dõi chuột, style.setProperty cho --x, --y |
@@ -82,12 +87,29 @@ Cách cài lần đầu có trong `README.md`. Nếu chưa cài thì gửi lện
 | 7 | Glass + 3D + ánh sáng | tilt 3D, highlight theo chuột, bóng động | chuẩn hoá toạ độ chuột, pointerleave, throttle bằng rAF |
 | 8 | Tổng ôn & mini project | trộn mọi kỹ thuật | máy trạng thái nhỏ gom click + kéo + chuột |
 
-Độ khó theo D, luôn khó hơn bài ngay trước (đọc file `.md` của bài trước để so):
-- D=1: làm quen, một kỹ thuật chính, một tương tác.
-- D=2–4: mỗi ngày thêm một biến thể hoặc ràng buộc mới. Nên có một "cái bẫy" thật để người học tự gặp rồi hiểu: bài 002 là stacking context do `translate`, bài 003 là `fixed` bị tổ tiên có `translate` giữ lại.
-- D=5: khó nhất tuần, kết hợp 2–3 kỹ thuật của tuần.
-- D=6: ôn tập, dùng lại ít nhất 2 kỹ thuật từ các tuần trước.
-- D=7: một component hoàn chỉnh, gợi ý ít hơn, tự kiểm tra kỹ hơn.
+Bảng chủ đề CSS chỉ quyết định phần CSS mới (tối đa 2–3 nhóm class). API JS trọng tâm lấy từ bảng cấp độ dưới đây, cột "JS gợi ý kèm theo" ở trên chỉ dùng khi hợp với cấp hiện tại.
+
+#### Bảng cấp độ JS
+
+| Cấp C | Ngày học K | API và khái niệm JS mới của cấp | Mức gợi ý |
+|---|---|---|---|
+| 1 | 1–7 | DOM, sự kiện, uỷ quyền sự kiện, `dataset`, `toggleAttribute`, `template`, mảng (`map`, `find`, `some`, `sort`), chuỗi mẫu, `keydown`, `setTimeout`/`clearTimeout`, `FormData` | Chi tiết: mỗi bước nêu API, tham số, thứ tự làm và cách kiểm tra; API mới được kèm khung code ngắn có chỗ trống |
+| 2 | 8–14 | object làm state + hàm render, `localStorage` + `JSON.stringify`/`JSON.parse`, `Date` và `Intl.DateTimeFormat`, sự kiện `input`, kiểm tra form (`checkValidity`, `setCustomValidity`), debounce | Vừa: mỗi bước nêu API và thứ tự làm, không có khung code |
+| 3 | 15–21 | `fetch` file JSON cục bộ, `async`/`await`, `try`/`catch`, `Promise.all`, `URLSearchParams`, `history.pushState` + `popstate`, `AbortController` | Ít: mỗi bước nêu mục tiêu và tên API cần dùng |
+| 4 | 22–28 | Pointer Events nâng cao, `requestAnimationFrame`, `IntersectionObserver`, `ResizeObserver`, `CustomEvent`, `Map`/`Set` | Rất ít: mỗi bước chỉ nêu mục tiêu và cách kiểm tra |
+| 5 | 29 trở đi | ES module (`import`/`export`), `class`, máy trạng thái, mini project nhiều file | Tối thiểu: chỉ mô tả yêu cầu, phần Tự kiểm tra kỹ hơn |
+
+- Bài nào cũng được dùng lại API của các cấp dưới. Mỗi bài thêm 1–3 API mới của cấp hiện tại; API mới gặp lần đầu luôn được giải thích dù mức gợi ý ít.
+- Bài dùng `fetch` hoặc ES module thì phải chạy qua `python -m http.server`; ghi rõ ở đầu đề, file JSON có trong cả `starter/` lẫn `solution/`.
+
+#### Độ khó theo P
+
+Đọc file `.md` của bài ngay trước và của bài cùng số P ở ngày học trước để so.
+
+- P=1: khởi động, 1–2 API mới, một tương tác chính. Độ khó ★★ đến ★★★.
+- P=2: thêm một ràng buộc mới và một "cái bẫy" thật để người học tự gặp rồi hiểu (JS hoặc CSS). Ví dụ: bài 002 là stacking context do `translate`, bài 006 là `1fr` không co được. Độ khó ★★★ đến ★★★★.
+- P=3: một component hoàn chỉnh, kết hợp 2–3 API của cấp với ít nhất một kỹ thuật cũ, gợi ý ít hơn một mức so với cột "Mức gợi ý". Độ khó ★★★★ đến ★★★★★. JS có thể tới 150 dòng.
+- Bài P=2 và P=3 khó hơn bài ngay trước. Mọi bài không được dễ hơn bài cùng P ở ngày học trước. Bài P=1 được dễ hơn bài P=3 của ngày trước.
 
 ### Starter
 
@@ -96,6 +118,7 @@ Cách cài lần đầu có trong `README.md`. Nếu chưa cài thì gửi lện
   - Chia theo từng class, không theo cả thẻ. Một thẻ có thể có sẵn class cũ, người học chỉ thêm class mới vào.
   - Đã học nghĩa là utility đó đã dùng ở bài trước (xem cột "Kỹ thuật CSS" trong `PROGRESS.md` và file đề các bài cũ), kể cả với giá trị khác hoặc giá trị âm: đã có `max-w-md` thì `max-w-xl` là đã học, đã có `outline-offset-2` thì `-outline-offset-2` là đã học. Utility khác tên là mới, dù na ná: `min-w-*` khác `max-w-*`.
   - Luôn để người học tự làm mọi class tạo ra hoặc sửa **cái bẫy** của bài, kể cả khi utility đã học (ví dụ thứ tự `z-10`/`z-20`/`z-30` ở bài 004). Cũng để trống class mà bước gợi ý bảo thêm rồi đổi (ví dụ `bg-white` rồi đổi thành `bg-inherit`).
+  - Phần tử lặp lại (mục danh sách, thẻ, dòng, nút giống nhau): điền sẵn cả class mới cho các mục đầu, chỉ để trống ở 2 mục cuối (5 mục thì sẵn 3, 4 mục thì sẵn 2, 2–3 mục thì người học làm 1 mục cuối). Mục gây ra cái bẫy phải nằm trong nhóm người học tự làm.
   - Thẻ không có class nào đã học thì không có thuộc tính `class`.
 - Trong `<head>` có đúng dòng `<link rel="stylesheet" href="../../build/tailwind.css" />`. Không dùng CDN Tailwind.
 - Cuối `<body>` có `<script src="script.js"></script>`. `script.js` để rỗng.
@@ -120,13 +143,13 @@ Cách cài lần đầu có trong `README.md`. Nếu chưa cài thì gửi lện
 
 ### File `.md`: thứ tự mục
 
-1. `# Bài NNN: <tên bài>`, rồi một dòng: Tuần W, ngày D/7, vòng V, độ khó (1–5 sao), thời gian ước tính. Rồi khối trích dẫn nhắc chạy `npm run dev`, làm bằng Tailwind, lời giải bằng CSS thuần.
+1. `# Bài NNN: <tên bài>`, rồi một dòng: Ngày học K, bài P/3, cấp C, chủ đề CSS, độ khó (1–5 sao), thời gian ước tính. Rồi khối trích dẫn nhắc chạy `npm run dev`, làm bằng Tailwind, lời giải bằng CSS thuần, và nói rõ bài có lưu dữ liệu hay không.
 2. `## Mục tiêu`: 3–5 gạch đầu dòng cụ thể, đo được.
 3. `## Kết quả mong đợi`: mô tả bằng lời.
 4. `## Tư duy`: vì sao làm vậy, mô hình tư duy, ví dụ đời thường khi khái niệm khó, giải thích cái bẫy.
 5. `## Phân chia trách nhiệm CSS và JS`: bảng 2 cột Tailwind (CSS) | JS, kèm những gì JS không nên làm.
 6. `## Ôn lại`: kỹ thuật cũ dùng lại, ghi tên bài và thư mục.
-7. `## Gợi ý từng bước`: mở đầu bằng khối trích dẫn nói starter đã điền sẵn những nhóm class nào. Sau đó là 5–8 bước đánh số. Ưu tiên hướng dẫn JS; không bắt người học dựng lại CSS đã biết. Ngay sau tên mỗi bước có dòng **Bạn làm:** ghi đúng các class mới phải thêm, hoặc "không có, bước này đã điền sẵn hết", hoặc "cả bước này". Có CSS mới thì ghi đúng class Tailwind cho phần tử nào và cách kiểm tra. API JS gặp lần đầu thì kèm một câu giải thích. Có bước cố tình cho người học gặp cái bẫy. Sau các bước là `### Bảng tra nhanh Tailwind và CSS`.
+7. `## Gợi ý từng bước`: mở đầu bằng khối trích dẫn nói starter đã điền sẵn những nhóm class nào (kể cả các mục lặp đã điền sẵn). Sau đó là 5–8 bước đánh số. Ưu tiên hướng dẫn JS; không bắt người học dựng lại CSS đã biết. Mức chi tiết theo cột "Mức gợi ý" của cấp C (P=3 bớt một mức). Ngay sau tên mỗi bước có dòng **Bạn làm:** ghi đúng các class mới phải thêm và ở phần tử nào (với phần tử lặp lại thì ghi rõ "2 thẻ `<li>` cuối", chép theo các thẻ đầu), hoặc "không có, bước này đã điền sẵn hết", hoặc "toàn bộ JS". Có CSS mới thì ghi đúng class Tailwind cho phần tử nào và cách kiểm tra. API JS gặp lần đầu thì kèm một câu giải thích. Có bước cố tình cho người học gặp cái bẫy. Sau các bước là `### Bảng tra nhanh Tailwind và CSS`.
 8. `## Tự kiểm tra`: checklist `- [ ]` gồm kiểm tra bằng mắt, bằng DevTools (xoá hoặc sửa class để thấy tác dụng), bàn phím, `prefers-reduced-motion`, và 2–3 câu tự hỏi.
 9. `## Thử thách thêm`: 2 biến thể nâng cao có gợi ý class.
 10. `## Mã hoàn chỉnh`: dòng "Chỉ mở sau khi đã tự làm.", rồi `<details><summary>Xem lời giải</summary>` chứa các khối `html`, `css`, `js` giống hệt ba file trong `solution/`, mỗi khối có tên file đứng trước, rồi `</details>`. Sau đó là `### Giải thích từng hàm` và `### Đối chiếu Tailwind của bạn với CSS trong lời giải`.
@@ -138,7 +161,7 @@ Sinh các khối code trong `.md` bằng script đọc file `solution/` rồi ch
 ### Cập nhật file chung
 
 - `README.md`: chỉ thêm một dòng liên kết `bai-NNN-slug/bai-NNN-slug.md` lên đầu danh sách dưới `## Danh sách bài`. Giữ nguyên các mục khác.
-- `PROGRESS.md`: thêm một dòng cuối bảng với đủ 7 cột: Bài, Ngày (YYYY-MM-DD, giờ Việt Nam), Tuần, Chủ đề, Kỹ thuật CSS, Tương tác JS, Thư mục.
+- `PROGRESS.md`: thêm một dòng cuối bảng với đủ 7 cột: Bài, Ngày (YYYY-MM-DD, giờ Việt Nam), Lịch (`Ngày học K, bài P/3, cấp C`), Chủ đề (chủ đề CSS và loại ứng dụng), Kỹ thuật CSS, Tương tác JS, Thư mục.
 
 ## Quy tắc viết code (code của agent)
 
