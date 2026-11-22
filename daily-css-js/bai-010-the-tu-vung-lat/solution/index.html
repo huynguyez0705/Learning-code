@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 010 - Thẻ từ vựng lật</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<h1 class="title">Thẻ từ vựng tiếng Anh</h1>
+			<p data-progress aria-live="polite" class="progress"></p>
+			<ul data-deck class="deck">
+				<li data-card data-active class="card">
+					<div class="card-inner">
+						<div class="face face-front">
+							<div>
+								<p class="label">Từ tiếng Anh</p>
+								<h2 class="word">Serendipity</h2>
+							</div>
+							<span class="badge">Đã thuộc</span>
+						</div>
+						<div class="face face-back">
+							<div>
+								<p class="back-label">Nghĩa</p>
+								<p class="meaning">Sự tình cờ may mắn</p>
+								<p class="example">“Finding this café was pure serendipity.”</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-card class="card">
+					<div class="card-inner">
+						<div class="face face-front">
+							<div>
+								<p class="label">Từ tiếng Anh</p>
+								<h2 class="word">Resilient</h2>
+							</div>
+							<span class="badge">Đã thuộc</span>
+						</div>
+						<div class="face face-back">
+							<div>
+								<p class="back-label">Nghĩa</p>
+								<p class="meaning">Kiên cường, mau hồi phục</p>
+								<p class="example">“Children are often more resilient than adults.”</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-card class="card">
+					<div class="card-inner">
+						<div class="face face-front">
+							<div>
+								<p class="label">Từ tiếng Anh</p>
+								<h2 class="word">Meticulous</h2>
+							</div>
+							<span class="badge">Đã thuộc</span>
+						</div>
+						<div class="face face-back">
+							<div>
+								<p class="back-label">Nghĩa</p>
+								<p class="meaning">Tỉ mỉ, kỹ lưỡng</p>
+								<p class="example">“She keeps meticulous notes in every class.”</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-card class="card">
+					<div class="card-inner">
+						<div class="face face-front">
+							<div>
+								<p class="label">Từ tiếng Anh</p>
+								<h2 class="word">Procrastinate</h2>
+							</div>
+							<span class="badge">Đã thuộc</span>
+						</div>
+						<div class="face face-back">
+							<div>
+								<p class="back-label">Nghĩa</p>
+								<p class="meaning">Trì hoãn, chần chừ</p>
+								<p class="example">“Stop procrastinating and start the exercise.”</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-card class="card">
+					<div class="card-inner">
+						<div class="face face-front">
+							<div>
+								<p class="label">Từ tiếng Anh</p>
+								<h2 class="word">Ubiquitous</h2>
+							</div>
+							<span class="badge">Đã thuộc</span>
+						</div>
+						<div class="face face-back">
+							<div>
+								<p class="back-label">Nghĩa</p>
+								<p class="meaning">Có mặt ở khắp nơi</p>
+								<p class="example">“Smartphones are ubiquitous today.”</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="controls">
+				<button data-prev type="button" aria-label="Thẻ trước" class="nav-button">← Trước</button>
+				<p data-position aria-live="polite" class="position"></p>
+				<button data-next type="button" aria-label="Thẻ sau" class="nav-button">Sau →</button>
+			</div>
+			<div class="actions">
+				<button data-flip type="button" aria-pressed="false" class="action-button">Lật thẻ</button>
+				<button data-known-toggle type="button" aria-pressed="false" class="action-button">Đã thuộc</button>
+			</div>
+			<p data-status aria-live="polite" class="status"></p>
+			<p class="hint">Phím tắt: Space hoặc Enter để lật thẻ, ← và → để chuyển thẻ.</p>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
