@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 008 - Kệ đĩa nhạc</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-slate-100 font-sans leading-normal text-slate-800">
+		<main class="mx-auto max-w-2xl px-4 py-8">
+			<header>
+				<h1 class="text-2xl font-bold">Kệ đĩa nhạc</h1>
+				<p data-now aria-live="polite" class="mt-1 text-sm text-slate-500">Chưa phát đĩa nào</p>
+			</header>
+			<div data-sorter role="group" aria-label="Sắp xếp đĩa" class="mt-4 flex flex-wrap gap-2">
+				<button data-sort="title" type="button" aria-pressed="true" class="cursor-pointer rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:border-indigo-300 aria-pressed:bg-indigo-100 aria-pressed:text-indigo-800 aria-pressed:inset-shadow-sm aria-pressed:inset-shadow-black/30">Theo tên</button>
+				<button data-sort="year" type="button" aria-pressed="false" class="cursor-pointer rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:border-indigo-300 aria-pressed:bg-indigo-100 aria-pressed:text-indigo-800 aria-pressed:inset-shadow-sm aria-pressed:inset-shadow-black/30">Theo năm</button>
+				<button data-sort="minutes" type="button" aria-pressed="false" class="cursor-pointer rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:border-indigo-300 aria-pressed:bg-indigo-100 aria-pressed:text-indigo-800">Theo thời lượng</button>
+				<button data-stop-all type="button" disabled class="ml-auto cursor-pointer rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid disabled:cursor-not-allowed disabled:opacity-40">Dừng tất cả</button>
+			</div>
+			<ul data-shelf class="mt-6 flex gap-4">
+				<li data-album data-title="Ánh trăng" data-year="2019" data-minutes="42" class="w-40 min-w-40 rounded-2xl bg-white p-3 shadow-md transition-[translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-xl motion-reduce:transition-none data-playing:shadow-xl data-playing:shadow-indigo-500/40">
+					<div class="h-32 rounded-xl bg-linear-to-br from-violet-400 to-indigo-600"></div>
+					<h2 class="mt-3 font-semibold">Ánh trăng</h2>
+					<p class="mt-1 text-xs text-slate-500 tabular-nums">2019 · 42 phút</p>
+					<button data-play type="button" aria-pressed="false" class="mt-3 w-full cursor-pointer rounded-lg bg-slate-100 py-1.5 text-sm font-medium hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:bg-indigo-600 aria-pressed:text-white aria-pressed:hover:bg-indigo-700">Phát</button>
+				</li>
+				<li data-album data-title="Biển nhớ" data-year="2016" data-minutes="105" class="w-40 min-w-40 rounded-2xl bg-white p-3 shadow-md transition-[translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-xl motion-reduce:transition-none data-playing:shadow-xl data-playing:shadow-indigo-500/40">
+					<div class="h-32 rounded-xl bg-linear-to-br from-cyan-400 to-blue-600"></div>
+					<h2 class="mt-3 font-semibold">Biển nhớ</h2>
+					<p class="mt-1 text-xs text-slate-500 tabular-nums">2016 · 105 phút</p>
+					<button data-play type="button" aria-pressed="false" class="mt-3 w-full cursor-pointer rounded-lg bg-slate-100 py-1.5 text-sm font-medium hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:bg-indigo-600 aria-pressed:text-white aria-pressed:hover:bg-indigo-700">Phát</button>
+				</li>
+				<li data-album data-title="Cà phê sáng" data-year="2023" data-minutes="61" class="w-40 min-w-40 rounded-2xl bg-white p-3 shadow-md transition-[translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-xl motion-reduce:transition-none data-playing:shadow-xl data-playing:shadow-indigo-500/40">
+					<div class="h-32 rounded-xl bg-linear-to-br from-amber-300 to-red-500"></div>
+					<h2 class="mt-3 font-semibold">Cà phê sáng</h2>
+					<p class="mt-1 text-xs text-slate-500 tabular-nums">2023 · 61 phút</p>
+					<button data-play type="button" aria-pressed="false" class="mt-3 w-full cursor-pointer rounded-lg bg-slate-100 py-1.5 text-sm font-medium hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:bg-indigo-600 aria-pressed:text-white aria-pressed:hover:bg-indigo-700">Phát</button>
+				</li>
+				<li data-album data-title="Đêm Sài Gòn" data-year="2021" data-minutes="9" class="w-40 min-w-40 rounded-2xl bg-white p-3 shadow-md transition-[translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-xl motion-reduce:transition-none">
+					<div class="h-32 rounded-xl bg-linear-to-br from-rose-400 to-orange-500"></div>
+					<h2 class="mt-3 font-semibold">Đêm Sài Gòn</h2>
+					<p class="mt-1 text-xs text-slate-500 tabular-nums">2021 · 9 phút</p>
+					<button data-play type="button" aria-pressed="false" class="mt-3 w-full cursor-pointer rounded-lg bg-slate-100 py-1.5 text-sm font-medium hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:bg-indigo-600 aria-pressed:text-white aria-pressed:hover:bg-indigo-700">Phát</button>
+				</li>
+				<li data-album data-title="Mưa tháng Ba" data-year="2018" data-minutes="30" class="w-40 min-w-40 rounded-2xl bg-white p-3 shadow-md transition-[translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-xl motion-reduce:transition-none">
+					<div class="h-32 rounded-xl bg-linear-to-br from-emerald-400 to-teal-700"></div>
+					<h2 class="mt-3 font-semibold">Mưa tháng Ba</h2>
+					<p class="mt-1 text-xs text-slate-500 tabular-nums">2018 · 30 phút</p>
+					<button data-play type="button" aria-pressed="false" class="mt-3 w-full cursor-pointer rounded-lg bg-slate-100 py-1.5 text-sm font-medium hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid aria-pressed:bg-indigo-600 aria-pressed:text-white aria-pressed:hover:bg-indigo-700">Phát</button>
+				</li>
+			</ul>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

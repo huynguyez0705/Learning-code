@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 008 - Kệ đĩa nhạc</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<header>
+				<h1 class="title">Kệ đĩa nhạc</h1>
+				<p data-now aria-live="polite" class="now">Chưa phát đĩa nào</p>
+			</header>
+			<div data-sorter role="group" aria-label="Sắp xếp đĩa" class="sorter">
+				<button data-sort="title" type="button" aria-pressed="true" class="sort-button">Theo tên</button>
+				<button data-sort="year" type="button" aria-pressed="false" class="sort-button">Theo năm</button>
+				<button data-sort="minutes" type="button" aria-pressed="false" class="sort-button">Theo thời lượng</button>
+				<button data-stop-all type="button" disabled class="sort-button stop">Dừng tất cả</button>
+			</div>
+			<ul data-shelf class="shelf">
+				<li data-album data-title="Ánh trăng" data-year="2019" data-minutes="42" class="album">
+					<div class="cover cover-a"></div>
+					<h2 class="album-title">Ánh trăng</h2>
+					<p class="album-meta">2019 · 42 phút</p>
+					<button data-play type="button" aria-pressed="false" class="play">Phát</button>
+				</li>
+				<li data-album data-title="Biển nhớ" data-year="2016" data-minutes="105" class="album">
+					<div class="cover cover-c"></div>
+					<h2 class="album-title">Biển nhớ</h2>
+					<p class="album-meta">2016 · 105 phút</p>
+					<button data-play type="button" aria-pressed="false" class="play">Phát</button>
+				</li>
+				<li data-album data-title="Cà phê sáng" data-year="2023" data-minutes="61" class="album">
+					<div class="cover cover-d"></div>
+					<h2 class="album-title">Cà phê sáng</h2>
+					<p class="album-meta">2023 · 61 phút</p>
+					<button data-play type="button" aria-pressed="false" class="play">Phát</button>
+				</li>
+				<li data-album data-title="Đêm Sài Gòn" data-year="2021" data-minutes="9" class="album">
+					<div class="cover cover-b"></div>
+					<h2 class="album-title">Đêm Sài Gòn</h2>
+					<p class="album-meta">2021 · 9 phút</p>
+					<button data-play type="button" aria-pressed="false" class="play">Phát</button>
+				</li>
+				<li data-album data-title="Mưa tháng Ba" data-year="2018" data-minutes="30" class="album">
+					<div class="cover cover-e"></div>
+					<h2 class="album-title">Mưa tháng Ba</h2>
+					<p class="album-meta">2018 · 30 phút</p>
+					<button data-play type="button" aria-pressed="false" class="play">Phát</button>
+				</li>
+			</ul>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

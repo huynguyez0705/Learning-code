@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 008: Kệ đĩa nhạc, bóng đổ màu và hai cái bẫy](bai-008-ke-dia-nhac/bai-008-ke-dia-nhac.md)
 - [Bài 007: Thẻ thời tiết đổi màu nền theo thành phố](bai-007-the-thoi-tiet/bai-007-the-thoi-tiet.md)
 - [Bài 006: Giỏ hàng có số lượng, chọn món và tổng tiền](bai-006-gio-hang/bai-006-gio-hang.md)
 - [Bài 005: Bình luận động và nút xoá trên phần tử vừa tạo](bai-005-binh-luan-dong/bai-005-binh-luan-dong.md)
