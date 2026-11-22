@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	border: 0;
+	background: none;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+h1,
+h2 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.site {
+	min-height: 100vh;
+	background: #f1f5f9;
+	color: #1e293b;
+	font-family: ui-sans-serif, system-ui, sans-serif;
+	line-height: 1.5;
+}
+
+.page {
+	max-width: 24rem;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+.title {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 700;
+}
+
+.picker {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.city-button {
+	padding: 0.5rem 1rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 9999px;
+	background: #fff;
+	color: #334155;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 500;
+	transition: background-color 150ms, border-color 150ms, color 150ms;
+}
+
+.city-button:hover {
+	background: #f1f5f9;
+}
+
+.city-button[aria-pressed="true"] {
+	border-color: #0f172a;
+	background: #0f172a;
+	color: #fff;
+}
+
+.city-button[aria-pressed="true"]:hover {
+	background: #1e293b;
+}
+
+.city-button:focus-visible {
+	outline: 2px solid #0284c7;
+	outline-offset: 2px;
+}
+
+.card {
+	margin-top: 1.5rem;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	color: #fff;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	background-image: linear-gradient(to bottom right, #64748b, #334155);
+}
+
+.card[data-weather="sunny"] {
+	background-image: linear-gradient(to bottom right, #fbbf24, #f97316);
+}
+
+.card[data-weather="rain"] {
+	background-image: linear-gradient(to bottom right, #0369a1, #312e81);
+}
+
+.city {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 600;
+}
+
+.temp {
+	margin-top: 0.5rem;
+	font-size: 4.5rem;
+	line-height: 1;
+	font-weight: 700;
+	background-image: linear-gradient(to bottom, #fff, rgb(255 255 255 / 0.5));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.desc {
+	margin-top: 0.5rem;
+	color: rgb(255 255 255 / 0.8);
+}
+
+.stats {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+.stat {
+	padding: 0.75rem;
+	border-radius: 0.75rem;
+	background: rgb(255 255 255 / 0.2);
+}
+
+.stat-label {
+	font-size: 0.75rem;
+	line-height: 1rem;
+	color: rgb(255 255 255 / 0.7);
+}
+
+.stat-value {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 600;
+}
+
+.hint {
+	margin-top: 1rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	color: #64748b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.city-button {
+		transition: none;
+	}
+}

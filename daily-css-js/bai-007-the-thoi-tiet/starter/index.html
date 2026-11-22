@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 007 - Thẻ thời tiết</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-slate-100 font-sans leading-normal text-slate-800">
+		<main class="mx-auto max-w-sm px-4 py-8">
+			<h1 class="text-2xl font-bold">Thời tiết hôm nay</h1>
+			<div data-picker class="mt-4 flex flex-wrap gap-2" role="group" aria-label="Chọn thành phố">
+				<button data-city-id="ha-noi" type="button" aria-pressed="true" class="cursor-pointer rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors duration-150 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 focus-visible:outline-solid motion-reduce:transition-none aria-pressed:border-slate-900 aria-pressed:bg-slate-900 aria-pressed:text-white aria-pressed:hover:bg-slate-800">Hà Nội</button>
+				<button data-city-id="da-nang" type="button" aria-pressed="false" class="cursor-pointer rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors duration-150 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 focus-visible:outline-solid motion-reduce:transition-none aria-pressed:border-slate-900 aria-pressed:bg-slate-900 aria-pressed:text-white aria-pressed:hover:bg-slate-800">Đà Nẵng</button>
+				<button data-city-id="hue" type="button" aria-pressed="false" class="cursor-pointer rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors duration-150 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 focus-visible:outline-solid motion-reduce:transition-none aria-pressed:border-slate-900 aria-pressed:bg-slate-900 aria-pressed:text-white aria-pressed:hover:bg-slate-800">Huế</button>
+				<button data-city-id="sai-gon" type="button" aria-pressed="false" class="cursor-pointer rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors duration-150 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 focus-visible:outline-solid motion-reduce:transition-none aria-pressed:border-slate-900 aria-pressed:bg-slate-900 aria-pressed:text-white aria-pressed:hover:bg-slate-800">Sài Gòn</button>
+			</div>
+			<article data-card data-weather="cloudy" aria-live="polite" class="mt-6 rounded-2xl p-6 text-white shadow-lg">
+				<h2 data-city class="text-lg font-semibold"></h2>
+				<p data-temp class="mt-2 text-7xl leading-none font-bold"></p>
+				<p data-desc class="mt-2 text-white/80"></p>
+				<dl class="mt-6 grid grid-cols-2 gap-3">
+					<div class="rounded-xl bg-white/20 p-3">
+						<dt class="text-xs text-white/70">Độ ẩm</dt>
+						<dd data-humidity class="text-lg font-semibold"></dd>
+					</div>
+					<div class="rounded-xl bg-white/20 p-3">
+						<dt class="text-xs text-white/70">Gió</dt>
+						<dd data-wind class="text-lg font-semibold"></dd>
+					</div>
+				</dl>
+			</article>
+			<p class="mt-4 text-sm text-slate-500">Bấm phím 1 đến 4 để chọn nhanh thành phố.</p>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
