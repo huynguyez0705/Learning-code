@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+button {
+	background: none;
+	cursor: pointer;
+}
+
+ol {
+	list-style: none;
+}
+
+fieldset {
+	border: 0;
+}
+
+h1,
+h2 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.site {
+	background: #020617;
+	color: #f1f5f9;
+	font-family: ui-sans-serif, system-ui, sans-serif;
+	line-height: 1.5;
+}
+
+.page {
+	margin: 0 auto;
+	min-height: 100vh;
+	max-width: 448px;
+	padding: 40px 24px;
+}
+
+.title {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+.subtitle {
+	margin-top: 4px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #94a3b8;
+}
+
+.stage {
+	position: relative;
+	isolation: isolate;
+	margin-top: 32px;
+	overflow: hidden;
+	border-radius: 24px;
+	padding: 32px;
+}
+
+.blob {
+	position: absolute;
+	z-index: -10;
+	border-radius: 9999px;
+}
+
+.blob-a {
+	top: -24px;
+	left: -24px;
+	width: 160px;
+	height: 160px;
+	background: linear-gradient(to bottom right, #d946ef, #fb923c);
+}
+
+.blob-b {
+	right: -24px;
+	bottom: -32px;
+	width: 176px;
+	height: 176px;
+	background: linear-gradient(to bottom right, #22d3ee, #2563eb);
+}
+
+.card-wrap {
+	perspective: 800px;
+}
+
+.card {
+	position: relative;
+	height: 192px;
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgb(255 255 255 / 0.4);
+	border-radius: 16px;
+	color: #ffffff;
+	background: linear-gradient(to bottom right, rgb(203 213 225 / 0.5), rgb(100 116 139 / 0.5));
+	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+	backdrop-filter: blur(12px);
+	transition: transform 500ms;
+}
+
+.card[data-tier="gold"] {
+	background: linear-gradient(to bottom right, rgb(252 211 77 / 0.6), rgb(217 119 6 / 0.6));
+}
+
+.card[data-tier="platinum"] {
+	background: linear-gradient(to bottom right, rgb(165 180 252 / 0.6), rgb(217 70 239 / 0.6));
+}
+
+.card[data-light="left"] {
+	transform: rotateY(-12deg);
+}
+
+.card[data-light="right"] {
+	transform: rotateY(12deg);
+}
+
+.card[data-light="center"] {
+	transform: rotateX(6deg);
+}
+
+.shine {
+	position: absolute;
+	inset: 0;
+	background-image: radial-gradient(at 50% 0%, rgb(255 255 255 / 0.5), transparent 60%);
+}
+
+.card[data-light="left"] .shine {
+	background-image: radial-gradient(at 0% 20%, rgb(255 255 255 / 0.5), transparent 60%);
+}
+
+.card[data-light="right"] .shine {
+	background-image: radial-gradient(at 100% 20%, rgb(255 255 255 / 0.5), transparent 60%);
+}
+
+.card-body {
+	position: relative;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.brand,
+.tier {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+.number {
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+.card-foot {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.holder {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.controls {
+	margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	border: 1px solid #1e293b;
+	border-radius: 16px;
+	background: #0f172a;
+	padding: 20px;
+}
+
+.legend,
+.field-label {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #cbd5e1;
+}
+
+.field-label {
+	display: block;
+}
+
+.radios {
+	margin-top: 8px;
+	display: flex;
+	gap: 16px;
+}
+
+.check {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.control {
+	accent-color: #d946ef;
+}
+
+.select {
+	margin-top: 4px;
+	display: block;
+	width: 100%;
+	border: 1px solid #334155;
+	border-radius: 8px;
+	background: #1e293b;
+	padding: 8px 12px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #f1f5f9;
+}
+
+.reset-button {
+	align-self: flex-start;
+	border: 1px solid #475569;
+	border-radius: 8px;
+	padding: 8px 16px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+.control:focus-visible,
+.select:focus-visible,
+.reset-button:focus-visible {
+	outline: 2px solid #e879f9;
+	outline-offset: 2px;
+}
+
+.summary {
+	margin-top: 16px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 20px;
+	color: #cbd5e1;
+}
+
+.log-title {
+	margin-top: 32px;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+.log {
+	margin-top: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #cbd5e1;
+}
+
+.log-item {
+	border-radius: 8px;
+	background: #0f172a;
+	padding: 8px 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card {
+		transition: none;
+	}
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 012 - Ví thẻ ảo</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="bg-slate-950 font-sans leading-normal text-slate-100">
+		<main class="mx-auto min-h-screen max-w-md px-6 py-10">
+			<h1 class="text-2xl font-bold">Ví thẻ ảo</h1>
+			<p class="mt-1 text-sm text-slate-400">Chọn nguồn sáng và hạng thẻ để xem thẻ đổi hình.</p>
+			<div class="relative isolate mt-8 overflow-hidden rounded-3xl p-8">
+				<div class="absolute -top-6 -left-6 -z-10 size-40 rounded-full bg-linear-to-br from-fuchsia-500 to-orange-400"></div>
+				<div class="absolute -right-6 -bottom-8 -z-10 size-44 rounded-full bg-linear-to-br from-cyan-400 to-blue-600"></div>
+				<div class="perspective-midrange">
+					<article data-card data-light="center" data-tier="silver" data-number="4539 1488 0343 6467" class="group relative h-48 w-full overflow-hidden rounded-2xl border border-white/40 text-white shadow-xl backdrop-blur-md transition-transform duration-500 motion-reduce:transition-none bg-linear-to-br from-slate-300/50 to-slate-500/50 data-[tier=gold]:from-amber-300/60 data-[tier=gold]:to-amber-600/60 data-[tier=platinum]:from-indigo-300/60 data-[tier=platinum]:to-fuchsia-500/60">
+						<div data-shine aria-hidden="true" class="absolute inset-0 from-white/50 to-transparent to-60%"></div>
+						<div class="relative flex h-full flex-col justify-between p-5">
+							<p class="text-sm font-semibold">Lumi Bank</p>
+							<p data-number-text class="text-xl font-semibold tabular-nums"></p>
+							<div class="flex items-end justify-between">
+								<p class="text-sm">NGUYEN VAN AN</p>
+								<p data-tier-text class="text-sm font-semibold"></p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<form data-controls class="mt-6 flex flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-5">
+				<fieldset>
+					<legend class="text-sm font-medium text-slate-300">Nguồn sáng</legend>
+					<div class="mt-2 flex gap-4">
+						<label class="flex items-center gap-2 text-sm"><input type="radio" name="light" value="left" class="accent-fuchsia-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400" />Trái</label>
+						<label class="flex items-center gap-2 text-sm"><input type="radio" name="light" value="center" checked class="accent-fuchsia-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400" />Giữa</label>
+						<label class="flex items-center gap-2 text-sm"><input type="radio" name="light" value="right" class="accent-fuchsia-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400" />Phải</label>
+					</div>
+				</fieldset>
+				<label class="block text-sm font-medium text-slate-300">Hạng thẻ
+					<select name="tier" class="mt-1 block w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400">
+						<option value="silver" selected>Bạc</option>
+						<option value="gold">Vàng</option>
+						<option value="platinum">Bạch kim</option>
+					</select>
+				</label>
+				<label class="flex items-center gap-2 text-sm"><input type="checkbox" name="mask" class="accent-fuchsia-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400" />Ẩn số thẻ</label>
+				<button type="reset" class="self-start rounded-lg border border-slate-600 px-4 py-2 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400">Đặt lại</button>
+			</form>
+			<p data-summary aria-live="polite" class="mt-4 text-center text-sm text-slate-300"></p>
+			<h2 class="mt-8 text-lg font-semibold">Nhật ký thay đổi</h2>
+			<ol data-log class="mt-3 flex flex-col gap-2 text-sm text-slate-300"></ol>
+			<template data-log-template>
+				<li class="rounded-lg bg-slate-900 px-3 py-2"><span data-log-text></span></li>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

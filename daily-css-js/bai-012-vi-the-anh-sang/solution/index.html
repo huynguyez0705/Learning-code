@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 012 - Ví thẻ ảo</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<h1 class="title">Ví thẻ ảo</h1>
+			<p class="subtitle">Chọn nguồn sáng và hạng thẻ để xem thẻ đổi hình.</p>
+			<div class="stage">
+				<div class="blob blob-a"></div>
+				<div class="blob blob-b"></div>
+				<div class="card-wrap">
+					<article data-card data-light="center" data-tier="silver" data-number="4539 1488 0343 6467" class="card">
+						<div data-shine aria-hidden="true" class="shine"></div>
+						<div class="card-body">
+							<p class="brand">Lumi Bank</p>
+							<p data-number-text class="number"></p>
+							<div class="card-foot">
+								<p class="holder">NGUYEN VAN AN</p>
+								<p data-tier-text class="tier"></p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<form data-controls class="controls">
+				<fieldset>
+					<legend class="legend">Nguồn sáng</legend>
+					<div class="radios">
+						<label class="check"><input type="radio" name="light" value="left" class="control" />Trái</label>
+						<label class="check"><input type="radio" name="light" value="center" checked class="control" />Giữa</label>
+						<label class="check"><input type="radio" name="light" value="right" class="control" />Phải</label>
+					</div>
+				</fieldset>
+				<label class="field-label">Hạng thẻ
+					<select name="tier" class="select">
+						<option value="silver" selected>Bạc</option>
+						<option value="gold">Vàng</option>
+						<option value="platinum">Bạch kim</option>
+					</select>
+				</label>
+				<label class="check"><input type="checkbox" name="mask" class="control" />Ẩn số thẻ</label>
+				<button type="reset" class="reset-button">Đặt lại</button>
+			</form>
+			<p data-summary aria-live="polite" class="summary"></p>
+			<h2 class="log-title">Nhật ký thay đổi</h2>
+			<ol data-log class="log"></ol>
+			<template data-log-template>
+				<li class="log-item"><span data-log-text></span></li>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
