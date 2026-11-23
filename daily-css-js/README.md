@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 011: Xem căn hộ trên vòng quay 3D](bai-011-xem-can-ho-3d/bai-011-xem-can-ho-3d.md)
 - [Bài 010: Thẻ từ vựng lật 3D và phím Space bấm hai lần](bai-010-the-tu-vung-lat/bai-010-the-tu-vung-lat.md)
 - [Bài 009: Quiz trên thẻ kính mờ và bẫy lớp nền ẩn](bai-009-quiz-kinh-mo/bai-009-quiz-kinh-mo.md)
 - [Bài 008: Kệ đĩa nhạc, bóng đổ màu và hai cái bẫy](bai-008-ke-dia-nhac/bai-008-ke-dia-nhac.md)
