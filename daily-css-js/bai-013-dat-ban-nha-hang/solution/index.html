@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 013 - Đặt bàn nhà hàng</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<header class="hero">
+			<h1 class="hero-title">Đặt bàn Quán Lá Sen</h1>
+			<p class="hero-sub">Tối nay, sáu khung giờ, mỗi khung giờ một bàn.</p>
+		</header>
+		<main class="page">
+			<form data-form novalidate class="booking-form">
+				<fieldset>
+					<legend class="legend">Chọn khung giờ</legend>
+					<div class="slot-grid">
+						<label class="slot">
+							<input type="radio" name="slot" value="17:30" class="slot-input" />
+							<span class="slot-pill">17:30</span>
+						</label>
+						<label class="slot">
+							<input type="radio" name="slot" value="18:00" class="slot-input" />
+							<span class="slot-pill">18:00</span>
+						</label>
+						<label class="slot">
+							<input type="radio" name="slot" value="18:30" class="slot-input" />
+							<span class="slot-pill">18:30</span>
+						</label>
+						<label class="slot">
+							<input type="radio" name="slot" value="19:00" class="slot-input" />
+							<span class="slot-pill">19:00</span>
+						</label>
+						<label class="slot">
+							<input type="radio" name="slot" value="19:30" class="slot-input" />
+							<span class="slot-pill">19:30</span>
+						</label>
+						<label class="slot">
+							<input type="radio" name="slot" value="20:00" class="slot-input" />
+							<span class="slot-pill">20:00</span>
+						</label>
+					</div>
+				</fieldset>
+				<div>
+					<label for="guest-name" class="field-label">Tên người đặt</label>
+					<input id="guest-name" type="text" name="name" data-name autocomplete="off" class="text-input" />
+				</div>
+				<div class="stepper-row">
+					<span class="field-label">Số khách</span>
+					<div data-stepper class="stepper">
+						<button type="button" data-step="-1" aria-label="Giảm số khách" class="step-button">−</button>
+						<output data-guests-output class="guests-output">2</output>
+						<button type="button" data-step="1" aria-label="Tăng số khách" class="step-button">+</button>
+					</div>
+				</div>
+				<p data-message role="status" class="message"></p>
+				<button type="submit" class="submit-button">Đặt bàn</button>
+			</form>
+			<section>
+				<h2 data-list-title tabindex="-1" class="list-title">Danh sách đặt bàn</h2>
+				<p data-empty class="empty">Chưa có bàn nào được đặt.</p>
+				<ul data-bookings class="booking-list"></ul>
+			</section>
+			<p data-summary aria-live="polite" class="summary"></p>
+		</main>
+		<template data-booking-template>
+			<li data-booking class="booking">
+				<div>
+					<p data-booking-code class="booking-code"></p>
+					<p data-booking-time class="booking-time"></p>
+					<p class="booking-who"><span data-booking-name></span> · <span data-booking-guests></span></p>
+				</div>
+				<button type="button" data-cancel class="cancel-button">Huỷ</button>
+			</li>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>

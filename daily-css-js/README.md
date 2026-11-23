@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 013: Đặt bàn nhà hàng với ô chọn giờ kiểu peer và danh sách tự xếp thứ tự](bai-013-dat-ban-nha-hang/bai-013-dat-ban-nha-hang.md)
 - [Bài 012: Ví thẻ ảo kính mờ, ánh sáng đổi hướng và sự kiện reset](bai-012-vi-the-anh-sang/bai-012-vi-the-anh-sang.md)
 - [Bài 011: Xem căn hộ trên vòng quay 3D](bai-011-xem-can-ho-3d/bai-011-xem-can-ho-3d.md)
 - [Bài 010: Thẻ từ vựng lật 3D và phím Space bấm hai lần](bai-010-the-tu-vung-lat/bai-010-the-tu-vung-lat.md)
