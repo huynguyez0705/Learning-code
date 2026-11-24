@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 015 - Theo dõi uống nước</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<section class="card">
+				<h1 class="title">Uống nước hôm nay</h1>
+				<p class="goal">Mục tiêu 2000 ml</p>
+				<div data-ring class="ring">
+					<div class="hole">
+						<p class="total"><output data-total>0</output> ml</p>
+						<p data-litres class="litres">0.00 L</p>
+						<p data-percent class="percent">0%</p>
+					</div>
+				</div>
+				<p data-status role="status" class="status"></p>
+				<div data-quick class="quick">
+					<button type="button" data-add="150" class="quick-button">+150 ml</button>
+					<button type="button" data-add="250" class="quick-button">+250 ml</button>
+					<button type="button" data-add="500" class="quick-button">+500 ml</button>
+				</div>
+				<form data-form novalidate class="custom">
+					<label for="amount" class="custom-label">Lượng khác (50 đến 1000 ml)</label>
+					<div class="custom-row">
+						<input id="amount" type="text" name="amount" inputmode="numeric" autocomplete="off" class="custom-input" />
+						<button type="submit" class="custom-submit">Thêm</button>
+					</div>
+				</form>
+				<p data-error role="alert" class="error"></p>
+				<div class="log-head">
+					<h2 class="log-title">Năm lần uống gần nhất</h2>
+					<button type="button" data-undo class="undo">Hoàn tác</button>
+				</div>
+				<p data-empty class="empty">Chưa uống ly nào.</p>
+				<ul data-log class="log"></ul>
+			</section>
+		</main>
+		<template data-log-template>
+			<li class="log-item">
+				<span data-log-amount class="log-amount"></span>
+				<span class="log-note">một lần uống</span>
+			</li>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>

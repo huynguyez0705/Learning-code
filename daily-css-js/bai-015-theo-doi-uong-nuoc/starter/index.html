@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 015 - Theo dõi uống nước</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-linear-to-b from-sky-50 to-white font-sans leading-normal text-zinc-900">
+		<main class="mx-auto max-w-md px-6 py-8">
+			<section class="text-center">
+				<h1 class="text-2xl font-bold text-sky-700">Uống nước hôm nay</h1>
+				<p class="text-sm text-zinc-500">Mục tiêu 2000 ml</p>
+				<div data-ring class="mx-auto mt-6 grid size-56 place-items-center rounded-full">
+					<div class="grid size-44 place-items-center content-center rounded-full bg-white">
+						<p class="text-3xl font-bold tabular-nums"><output data-total>0</output> ml</p>
+						<p data-litres class="text-sm text-zinc-500">0.00 L</p>
+						<p data-percent class="text-sm font-semibold text-sky-700">0%</p>
+					</div>
+				</div>
+				<p data-status role="status" class="mt-3 min-h-6 font-semibold text-emerald-700"></p>
+				<div data-quick class="mt-2 grid grid-cols-3 gap-2">
+					<button type="button" data-add="150" class="rounded-lg bg-sky-500 py-2.5 font-semibold text-white transition-colors hover:bg-sky-600 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700">+150 ml</button>
+					<button type="button" data-add="250" class="rounded-lg bg-sky-500 py-2.5 font-semibold text-white transition-colors hover:bg-sky-600 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700">+250 ml</button>
+					<button type="button" data-add="500" class="rounded-lg bg-sky-500 py-2.5 font-semibold text-white transition-colors hover:bg-sky-600 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700">+500 ml</button>
+				</div>
+				<form data-form novalidate class="mt-4 text-left">
+					<label for="amount" class="block text-sm font-semibold">Lượng khác (50 đến 1000 ml)</label>
+					<div class="mt-1 flex gap-2">
+						<input id="amount" type="text" name="amount" inputmode="numeric" autocomplete="off" class="min-w-0 flex-1 rounded-lg border border-zinc-300 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700" />
+						<button type="submit" class="rounded-lg bg-sky-500 px-4 py-2.5 font-semibold text-white transition-colors hover:bg-sky-600 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700">Thêm</button>
+					</div>
+				</form>
+				<p data-error role="alert" class="mt-1 min-h-6 text-left text-sm text-rose-600"></p>
+				<div class="mt-4 flex items-center justify-between text-left">
+					<h2 class="font-semibold">Năm lần uống gần nhất</h2>
+					<button type="button" data-undo class="text-sm text-sky-700 underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:text-zinc-400 disabled:no-underline">Hoàn tác</button>
+				</div>
+				<p data-empty class="mt-2 text-left text-sm text-zinc-500">Chưa uống ly nào.</p>
+				<ul data-log></ul>
+			</section>
+		</main>
+		<template data-log-template>
+			<li class="flex justify-between border-b border-zinc-200 py-2 text-left text-sm last:border-b-0">
+				<span data-log-amount class="font-medium"></span>
+				<span class="text-zinc-500">một lần uống</span>
+			</li>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>
