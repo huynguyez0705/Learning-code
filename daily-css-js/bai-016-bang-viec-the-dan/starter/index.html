@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 016 - Bảng việc thẻ dán</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-zinc-100 font-sans leading-normal text-zinc-900">
+		<main class="mx-auto max-w-4xl px-6 py-8">
+			<h1 class="text-2xl font-bold">Bảng việc nhóm</h1>
+			<form data-form novalidate class="mt-4">
+				<label for="title" class="block text-sm font-semibold">Việc mới</label>
+				<div class="mt-1 flex gap-2">
+					<input id="title" type="text" name="title" data-title-input autocomplete="off" class="min-w-0 flex-1 rounded-lg border border-zinc-300 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900" />
+					<button type="submit" class="rounded-lg bg-zinc-700 px-4 py-2 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900">Thêm vào "Cần làm"</button>
+				</div>
+			</form>
+			<p data-message role="status" class="mt-2 min-h-6 text-sm text-rose-600"></p>
+			<div data-board class="mt-2 grid gap-4 md:grid-cols-3">
+				<section data-column="todo" class="min-w-0 rounded-xl bg-zinc-200 shadow-sm">
+					<h2 data-column-title tabindex="-1" class="rounded-t-xl bg-slate-700 px-3 py-2 font-semibold text-white text-shadow-sm text-shadow-black/50">Cần làm <span data-count class="ml-1 text-sm font-normal">0</span></h2>
+					<ul data-list="todo" class="flex min-h-24 flex-col gap-3 p-3">
+						<li data-card class="drop-shadow-md data-lifted:drop-shadow-xl transition-[filter,translate] duration-300 motion-reduce:transition-none data-lifted:-translate-y-1">
+							<div data-note class="bg-amber-200 p-3 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_16px),calc(100%_-_16px)_100%,0_100%)]">
+								<p data-card-title class="font-medium">Viết báo cáo tuần</p>
+								<div class="mt-2 flex gap-1">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">✕</button>
+								</div>
+							</div>
+						</li>
+						<li data-card class="drop-shadow-md data-lifted:drop-shadow-xl transition-[filter,translate] duration-300 motion-reduce:transition-none data-lifted:-translate-y-1">
+							<div data-note class="bg-amber-200 p-3 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_16px),calc(100%_-_16px)_100%,0_100%)]">
+								<p data-card-title class="font-medium">Đặt phòng họp</p>
+								<div class="mt-2 flex gap-1">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">✕</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section data-column="doing" data-limit="3" class="min-w-0 rounded-xl bg-zinc-200 shadow-sm">
+					<h2 data-column-title tabindex="-1" class="rounded-t-xl bg-amber-600 px-3 py-2 font-semibold text-white text-shadow-sm text-shadow-black/50">Đang làm <span data-count class="ml-1 text-sm font-normal">0</span></h2>
+					<ul data-list="doing" class="flex min-h-24 flex-col gap-3 p-3">
+						<li data-card class="transition-[filter,translate] duration-300 motion-reduce:transition-none data-lifted:-translate-y-1">
+							<div data-note class="bg-amber-200 p-3">
+								<p data-card-title class="font-medium">Thiết kế trang chủ</p>
+								<div class="mt-2 flex gap-1">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">✕</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section data-column="done" class="min-w-0 rounded-xl bg-zinc-200 shadow-sm">
+					<h2 data-column-title tabindex="-1" class="rounded-t-xl bg-emerald-700 px-3 py-2 font-semibold text-white">Xong <span data-count class="ml-1 text-sm font-normal">0</span></h2>
+					<ul data-list="done" class="flex min-h-24 flex-col gap-3 p-3">
+						<li data-card class="transition-[filter,translate] duration-300 motion-reduce:transition-none data-lifted:-translate-y-1">
+							<div data-note class="bg-amber-200 p-3">
+								<p data-card-title class="font-medium">Gửi hoá đơn</p>
+								<div class="mt-2 flex gap-1">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">✕</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+		<template data-card-template>
+			<li data-card class="transition-[filter,translate] duration-300 motion-reduce:transition-none data-lifted:-translate-y-1">
+				<div data-note class="bg-amber-200 p-3">
+					<p data-card-title class="font-medium"></p>
+					<div class="mt-2 flex gap-1">
+						<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">←</button>
+						<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">→</button>
+						<button type="button" data-remove aria-label="Xoá việc" class="rounded px-2 py-0.5 text-sm hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:text-zinc-400">✕</button>
+					</div>
+				</div>
+			</li>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>

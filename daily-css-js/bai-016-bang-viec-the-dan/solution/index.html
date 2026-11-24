@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 016 - Bảng việc thẻ dán</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<h1 class="title">Bảng việc nhóm</h1>
+			<form data-form novalidate class="add-form">
+				<label for="title" class="add-label">Việc mới</label>
+				<div class="add-row">
+					<input id="title" type="text" name="title" data-title-input autocomplete="off" class="add-input" />
+					<button type="submit" class="add-submit">Thêm vào "Cần làm"</button>
+				</div>
+			</form>
+			<p data-message role="status" class="message"></p>
+			<div data-board class="board">
+				<section data-column="todo" class="column">
+					<h2 data-column-title tabindex="-1" class="column-title col-todo">Cần làm <span data-count class="count">0</span></h2>
+					<ul data-list="todo" class="column-list">
+						<li data-card class="card">
+							<div data-note class="note">
+								<p data-card-title class="note-title">Viết báo cáo tuần</p>
+								<div class="note-actions">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="note-button">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="note-button">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="note-button">✕</button>
+								</div>
+							</div>
+						</li>
+						<li data-card class="card">
+							<div data-note class="note">
+								<p data-card-title class="note-title">Đặt phòng họp</p>
+								<div class="note-actions">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="note-button">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="note-button">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="note-button">✕</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section data-column="doing" data-limit="3" class="column">
+					<h2 data-column-title tabindex="-1" class="column-title col-doing">Đang làm <span data-count class="count">0</span></h2>
+					<ul data-list="doing" class="column-list">
+						<li data-card class="card">
+							<div data-note class="note">
+								<p data-card-title class="note-title">Thiết kế trang chủ</p>
+								<div class="note-actions">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="note-button">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="note-button">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="note-button">✕</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section data-column="done" class="column">
+					<h2 data-column-title tabindex="-1" class="column-title col-done">Xong <span data-count class="count">0</span></h2>
+					<ul data-list="done" class="column-list">
+						<li data-card class="card">
+							<div data-note class="note">
+								<p data-card-title class="note-title">Gửi hoá đơn</p>
+								<div class="note-actions">
+									<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="note-button">←</button>
+									<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="note-button">→</button>
+									<button type="button" data-remove aria-label="Xoá việc" class="note-button">✕</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+		<template data-card-template>
+			<li data-card class="card">
+				<div data-note class="note">
+					<p data-card-title class="note-title"></p>
+					<div class="note-actions">
+						<button type="button" data-move="-1" aria-label="Chuyển sang cột trước" class="note-button">←</button>
+						<button type="button" data-move="1" aria-label="Chuyển sang cột sau" class="note-button">→</button>
+						<button type="button" data-remove aria-label="Xoá việc" class="note-button">✕</button>
+					</div>
+				</div>
+			</li>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>
