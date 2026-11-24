@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 014 - Hộp thư huy hiệu</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<header class="top">
+			<div class="top-inner">
+				<h1 class="top-title">Hộp thư</h1>
+				<button type="button" data-bell class="bell" aria-label="Chuông: 3 thư chưa đọc">
+					🔔
+					<span data-badge class="badge">3</span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<div class="toolbar">
+				<div data-tabs class="tabs" role="group" aria-label="Lọc thư">
+					<button type="button" data-filter="all" aria-pressed="true" class="tab">Tất cả</button>
+					<button type="button" data-filter="unread" aria-pressed="false" class="tab">Chưa đọc</button>
+				</div>
+				<button type="button" data-read-all class="read-all">Đọc hết</button>
+			</div>
+			<ul data-list class="mail-list">
+				<li data-mail data-unread class="mail">
+					<button type="button" data-open class="mail-open">
+						<span class="mail-sender">Lan Anh</span>
+						<span class="mail-subject">Họp nhóm chiều thứ Sáu</span>
+					</button>
+				</li>
+				<li data-mail data-unread class="mail">
+					<button type="button" data-open class="mail-open">
+						<span class="mail-sender">Minh Khoa</span>
+						<span class="mail-subject">Hoá đơn tháng 11</span>
+					</button>
+				</li>
+				<li data-mail class="mail">
+					<button type="button" data-open class="mail-open">
+						<span class="mail-sender">Thư viện</span>
+						<span class="mail-subject">Sách bạn mượn sắp đến hạn</span>
+					</button>
+				</li>
+				<li data-mail data-unread class="mail">
+					<button type="button" data-open class="mail-open">
+						<span class="mail-sender">Hà My</span>
+						<span class="mail-subject">Ảnh chuyến đi Đà Lạt</span>
+					</button>
+				</li>
+				<li data-mail class="mail">
+					<button type="button" data-open class="mail-open">
+						<span class="mail-sender">Ban tổ chức</span>
+						<span class="mail-subject">Xác nhận đăng ký workshop</span>
+					</button>
+				</li>
+			</ul>
+			<p data-empty hidden class="empty">Không còn thư chưa đọc.</p>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

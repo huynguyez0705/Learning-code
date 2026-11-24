@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 014: Hộp thư với huy hiệu chưa đọc và vạch báo `before:`](bai-014-hop-thu-huy-hieu/bai-014-hop-thu-huy-hieu.md)
 - [Bài 013: Đặt bàn nhà hàng với ô chọn giờ kiểu peer và danh sách tự xếp thứ tự](bai-013-dat-ban-nha-hang/bai-013-dat-ban-nha-hang.md)
 - [Bài 012: Ví thẻ ảo kính mờ, ánh sáng đổi hướng và sự kiện reset](bai-012-vi-the-anh-sang/bai-012-vi-the-anh-sang.md)
 - [Bài 011: Xem căn hộ trên vòng quay 3D](bai-011-xem-can-ho-3d/bai-011-xem-can-ho-3d.md)

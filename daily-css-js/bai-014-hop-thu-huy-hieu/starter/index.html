@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 014 - Hộp thư huy hiệu</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="bg-slate-50 font-sans leading-normal text-slate-900">
+		<header class="bg-sky-700 text-white">
+			<div class="mx-auto flex max-w-xl items-center justify-between px-6 py-4">
+				<h1 class="text-xl font-bold">Hộp thư</h1>
+				<button type="button" data-bell class="relative size-10 rounded-full bg-sky-600 text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" aria-label="Chuông: 3 thư chưa đọc">
+					🔔
+					<span data-badge class="absolute rounded-full bg-rose-500 px-1 text-center text-xs leading-5 font-bold text-white">3</span>
+				</button>
+			</div>
+		</header>
+		<main class="mx-auto max-w-xl px-6 py-6">
+			<div class="mb-4 flex items-center justify-between">
+				<div data-tabs class="flex gap-2" role="group" aria-label="Lọc thư">
+					<button type="button" data-filter="all" aria-pressed="true" class="rounded-full border border-slate-300 px-3 py-1.5 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 aria-pressed:border-sky-700 aria-pressed:bg-sky-700 aria-pressed:text-white">Tất cả</button>
+					<button type="button" data-filter="unread" aria-pressed="false" class="rounded-full border border-slate-300 px-3 py-1.5 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 aria-pressed:border-sky-700 aria-pressed:bg-sky-700 aria-pressed:text-white">Chưa đọc</button>
+				</div>
+				<button type="button" data-read-all class="text-sm text-sky-700 underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 disabled:cursor-not-allowed disabled:text-slate-400 disabled:no-underline">Đọc hết</button>
+			</div>
+			<ul data-list class="overflow-hidden rounded-xl border border-slate-200">
+				<li data-mail data-unread class="group relative border-b border-slate-200 bg-white last:border-b-0 before:absolute before:inset-y-0 before:left-0 before:w-1 before:bg-sky-500 before:content-[''] before:hidden data-unread:before:block">
+					<button type="button" data-open class="block w-full px-5 py-3 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600">
+						<span class="block text-sm text-slate-600 group-data-unread:font-bold group-data-unread:text-slate-900">Lan Anh</span>
+						<span class="block truncate">Họp nhóm chiều thứ Sáu</span>
+					</button>
+				</li>
+				<li data-mail data-unread class="group relative border-b border-slate-200 bg-white last:border-b-0 before:absolute before:inset-y-0 before:left-0 before:w-1 before:bg-sky-500 before:content-[''] before:hidden data-unread:before:block">
+					<button type="button" data-open class="block w-full px-5 py-3 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600">
+						<span class="block text-sm text-slate-600 group-data-unread:font-bold group-data-unread:text-slate-900">Minh Khoa</span>
+						<span class="block truncate">Hoá đơn tháng 11</span>
+					</button>
+				</li>
+				<li data-mail class="group relative border-b border-slate-200 bg-white last:border-b-0 before:absolute before:inset-y-0 before:left-0 before:w-1 before:bg-sky-500 before:content-[''] before:hidden data-unread:before:block">
+					<button type="button" data-open class="block w-full px-5 py-3 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600">
+						<span class="block text-sm text-slate-600 group-data-unread:font-bold group-data-unread:text-slate-900">Thư viện</span>
+						<span class="block truncate">Sách bạn mượn sắp đến hạn</span>
+					</button>
+				</li>
+				<li data-mail data-unread class="group relative border-b border-slate-200 bg-white last:border-b-0">
+					<button type="button" data-open class="block w-full px-5 py-3 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600">
+						<span class="block text-sm text-slate-600 group-data-unread:font-bold group-data-unread:text-slate-900">Hà My</span>
+						<span class="block truncate">Ảnh chuyến đi Đà Lạt</span>
+					</button>
+				</li>
+				<li data-mail class="group relative border-b border-slate-200 bg-white last:border-b-0">
+					<button type="button" data-open class="block w-full px-5 py-3 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600">
+						<span class="block text-sm text-slate-600 group-data-unread:font-bold group-data-unread:text-slate-900">Ban tổ chức</span>
+						<span class="block truncate">Xác nhận đăng ký workshop</span>
+					</button>
+				</li>
+			</ul>
+			<p data-empty hidden class="mt-4 text-center text-slate-500">Không còn thư chưa đọc.</p>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
