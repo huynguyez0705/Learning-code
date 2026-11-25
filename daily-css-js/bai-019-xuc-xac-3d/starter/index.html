@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 019 - Xúc xắc 3D</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-indigo-950 font-sans leading-normal text-white">
+		<main data-app class="group mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-8">
+			<h1 class="text-2xl font-bold">Xúc xắc 3D</h1>
+			<div class="flex h-64 w-full items-center justify-center perspective-distant">
+				<div data-cube style="--rx: 0deg; --ry: 0deg" class="relative size-32 transform-3d rotate-x-(--rx) rotate-y-(--ry) transition-transform duration-1000 motion-reduce:transition-none">
+					<div class="absolute inset-0 transform-3d">
+						<div data-face="1" class="translate-z-16 grid size-full place-items-center rounded-xl border-2 border-slate-300 bg-white text-6xl font-extrabold text-slate-800">1</div>
+					</div>
+					<div class="absolute inset-0 transform-3d rotate-y-180">
+						<div data-face="6" class="translate-z-16 grid size-full place-items-center rounded-xl border-2 border-slate-300 bg-white text-6xl font-extrabold text-slate-800">6</div>
+					</div>
+					<div class="absolute inset-0 transform-3d rotate-y-90">
+						<div data-face="3" class="translate-z-16 grid size-full place-items-center rounded-xl border-2 border-slate-300 bg-white text-6xl font-extrabold text-slate-800">3</div>
+					</div>
+					<div class="absolute inset-0 transform-3d -rotate-y-90">
+						<div data-face="4" class="translate-z-16 grid size-full place-items-center rounded-xl border-2 border-slate-300 bg-white text-6xl font-extrabold text-slate-800">4</div>
+					</div>
+					<div class="absolute inset-0">
+						<div data-face="2" class="grid size-full place-items-center rounded-xl border-2 border-slate-300 bg-white text-6xl font-extrabold text-slate-800">2</div>
+					</div>
+					<div class="absolute inset-0">
+						<div data-face="5" class="grid size-full place-items-center rounded-xl border-2 border-slate-300 bg-white text-6xl font-extrabold text-slate-800">5</div>
+					</div>
+				</div>
+			</div>
+			<p data-result role="status" class="min-h-7 text-lg font-semibold text-amber-300">Hãy lắc xúc xắc.</p>
+			<div class="flex gap-3">
+				<button type="button" data-roll class="rounded-xl bg-amber-400 px-6 py-3 font-bold text-indigo-950 hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white group-data-rolling:opacity-50">Lắc</button>
+				<button type="button" data-clear class="rounded-xl bg-white/15 px-4 py-3 font-semibold hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white group-data-rolling:opacity-50">Xoá thống kê</button>
+			</div>
+			<p data-history class="min-h-6 text-sm text-white/70"></p>
+			<ul data-stats class="flex w-full flex-col gap-2">
+				<li data-row="1" class="flex items-center gap-3 text-sm">
+					<span class="w-12 shrink-0 text-white/70">Mặt 1</span>
+					<span class="h-2 flex-1 rounded-full bg-white/15"><span data-fill style="--pct: 0%" class="block h-full w-(--pct) rounded-full bg-amber-400 transition-[width] duration-500 motion-reduce:transition-none"></span></span>
+					<span data-count class="w-6 text-right tabular-nums">0</span>
+				</li>
+				<li data-row="2" class="flex items-center gap-3 text-sm">
+					<span class="w-12 shrink-0 text-white/70">Mặt 2</span>
+					<span class="h-2 flex-1 rounded-full bg-white/15"><span data-fill style="--pct: 0%" class="block h-full w-(--pct) rounded-full bg-amber-400 transition-[width] duration-500 motion-reduce:transition-none"></span></span>
+					<span data-count class="w-6 text-right tabular-nums">0</span>
+				</li>
+				<li data-row="3" class="flex items-center gap-3 text-sm">
+					<span class="w-12 shrink-0 text-white/70">Mặt 3</span>
+					<span class="h-2 flex-1 rounded-full bg-white/15"><span data-fill style="--pct: 0%" class="block h-full w-(--pct) rounded-full bg-amber-400 transition-[width] duration-500 motion-reduce:transition-none"></span></span>
+					<span data-count class="w-6 text-right tabular-nums">0</span>
+				</li>
+				<li data-row="4" class="flex items-center gap-3 text-sm">
+					<span class="w-12 shrink-0 text-white/70">Mặt 4</span>
+					<span class="h-2 flex-1 rounded-full bg-white/15"><span data-fill style="--pct: 0%" class="block h-full w-(--pct) rounded-full bg-amber-400 transition-[width] duration-500 motion-reduce:transition-none"></span></span>
+					<span data-count class="w-6 text-right tabular-nums">0</span>
+				</li>
+				<li data-row="5" class="flex items-center gap-3 text-sm">
+					<span class="w-12 shrink-0 text-white/70">Mặt 5</span>
+					<span class="h-2 flex-1 rounded-full bg-white/15"><span data-fill style="--pct: 0%" class="block h-full w-(--pct) rounded-full bg-amber-400 transition-[width] duration-500 motion-reduce:transition-none"></span></span>
+					<span data-count class="w-6 text-right tabular-nums">0</span>
+				</li>
+				<li data-row="6" class="flex items-center gap-3 text-sm">
+					<span class="w-12 shrink-0 text-white/70">Mặt 6</span>
+					<span class="h-2 flex-1 rounded-full bg-white/15"><span data-fill style="--pct: 0%" class="block h-full w-(--pct) rounded-full bg-amber-400 transition-[width] duration-500 motion-reduce:transition-none"></span></span>
+					<span data-count class="w-6 text-right tabular-nums">0</span>
+				</li>
+			</ul>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

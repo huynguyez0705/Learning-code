@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 019 - Xúc xắc 3D</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-app class="page">
+			<h1 class="title">Xúc xắc 3D</h1>
+			<div class="scene">
+				<div data-cube style="--rx: 0deg; --ry: 0deg" class="cube">
+					<div class="turn turn-front">
+						<div data-face="1" class="face">1</div>
+					</div>
+					<div class="turn turn-back">
+						<div data-face="6" class="face">6</div>
+					</div>
+					<div class="turn turn-right">
+						<div data-face="3" class="face">3</div>
+					</div>
+					<div class="turn turn-left">
+						<div data-face="4" class="face">4</div>
+					</div>
+					<div class="turn turn-top">
+						<div data-face="2" class="face">2</div>
+					</div>
+					<div class="turn turn-bottom">
+						<div data-face="5" class="face">5</div>
+					</div>
+				</div>
+			</div>
+			<p data-result role="status" class="result">Hãy lắc xúc xắc.</p>
+			<div class="actions">
+				<button type="button" data-roll class="button button-main">Lắc</button>
+				<button type="button" data-clear class="button">Xoá thống kê</button>
+			</div>
+			<p data-history class="history"></p>
+			<ul data-stats class="stats">
+				<li data-row="1" class="row">
+					<span class="row-label">Mặt 1</span>
+					<span class="bar"><span data-fill style="--pct: 0%" class="bar-fill"></span></span>
+					<span data-count class="row-count">0</span>
+				</li>
+				<li data-row="2" class="row">
+					<span class="row-label">Mặt 2</span>
+					<span class="bar"><span data-fill style="--pct: 0%" class="bar-fill"></span></span>
+					<span data-count class="row-count">0</span>
+				</li>
+				<li data-row="3" class="row">
+					<span class="row-label">Mặt 3</span>
+					<span class="bar"><span data-fill style="--pct: 0%" class="bar-fill"></span></span>
+					<span data-count class="row-count">0</span>
+				</li>
+				<li data-row="4" class="row">
+					<span class="row-label">Mặt 4</span>
+					<span class="bar"><span data-fill style="--pct: 0%" class="bar-fill"></span></span>
+					<span data-count class="row-count">0</span>
+				</li>
+				<li data-row="5" class="row">
+					<span class="row-label">Mặt 5</span>
+					<span class="bar"><span data-fill style="--pct: 0%" class="bar-fill"></span></span>
+					<span data-count class="row-count">0</span>
+				</li>
+				<li data-row="6" class="row">
+					<span class="row-label">Mặt 6</span>
+					<span class="bar"><span data-fill style="--pct: 0%" class="bar-fill"></span></span>
+					<span data-count class="row-count">0</span>
+				</li>
+			</ul>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

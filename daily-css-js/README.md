@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 019: Xúc xắc 3D lăn thật và hai cái bẫy dựng khối lập phương](bai-019-xuc-xac-3d/bai-019-xuc-xac-3d.md)
 - [Bài 018: Két sắt mã PIN với cánh cửa 3D và bẫy bản lề](bai-018-ket-sat-ma-pin/bai-018-ket-sat-ma-pin.md)
 - [Bài 017: Đồng hồ bấm giờ kính mờ và bẫy đếm giờ lệch](bai-017-dong-ho-bam-gio-kinh-mo/bai-017-dong-ho-bam-gio-kinh-mo.md)
 - [Bài 016: Bảng việc thẻ dán với `drop-shadow` và bẫy bóng bị cắt](bai-016-bang-viec-the-dan/bai-016-bang-viec-the-dan.md)
