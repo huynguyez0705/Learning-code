@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 017 - Đồng hồ bấm giờ kính mờ</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-slate-900 font-sans leading-normal text-white">
+		<main data-watch class="group relative isolate flex min-h-screen items-center justify-center overflow-hidden px-4 py-10">
+			<div aria-hidden="true" class="absolute -top-16 -left-16 -z-10 size-72 rounded-full bg-fuchsia-500"></div>
+			<div aria-hidden="true" class="absolute top-1/3 -right-10 -z-10 size-64 rounded-full bg-sky-500"></div>
+			<div aria-hidden="true" class="absolute -bottom-20 left-1/4 -z-10 size-80 rounded-full bg-amber-400"></div>
+			<section data-panel aria-labelledby="watch-title" class="w-full max-w-md rounded-3xl border border-white/30 bg-white/25 p-6 shadow-lg ring-1 ring-white/20 backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-white/15">
+				<div class="flex items-center gap-2">
+					<h1 id="watch-title" class="text-xl font-bold">Bấm giờ</h1>
+					<span aria-hidden="true" class="ml-auto size-3 rounded-full bg-white/40 transition-colors duration-300 motion-reduce:transition-none group-data-running:bg-emerald-400"></span>
+				</div>
+				<p data-display role="timer" class="mt-6 rounded-2xl bg-black/20 py-6 text-center text-5xl leading-none tabular-nums">00:00.00</p>
+				<div class="mt-4 grid grid-cols-3 gap-2">
+					<button type="button" data-toggle class="rounded-xl bg-emerald-500/70 px-3 py-3 font-semibold hover:ring-2 hover:ring-white/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:cursor-not-allowed disabled:opacity-40 group-data-running:bg-amber-500/70">Bắt đầu</button>
+					<button type="button" data-lap disabled class="rounded-xl bg-white/25 px-3 py-3 font-semibold hover:ring-2 hover:ring-white/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:cursor-not-allowed disabled:opacity-40">Vòng</button>
+					<button type="button" data-reset disabled class="rounded-xl bg-white/25 px-3 py-3 font-semibold hover:ring-2 hover:ring-white/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:cursor-not-allowed disabled:opacity-40">Đặt lại</button>
+				</div>
+				<ol data-laps aria-label="Danh sách vòng" class="mt-4 max-h-64 divide-y divide-white/20 overflow-y-auto"></ol>
+			</section>
+		</main>
+		<template data-lap-template>
+			<li data-lap-item class="grid grid-cols-3 gap-2 py-2 text-sm tabular-nums data-best:text-emerald-300 data-worst:text-rose-300">
+				<span data-lap-number></span>
+				<span data-lap-time class="text-center"></span>
+				<span data-lap-total class="text-right text-white/70"></span>
+			</li>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>

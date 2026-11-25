@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 017 - Đồng hồ bấm giờ kính mờ</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-watch class="stage">
+			<div aria-hidden="true" class="blob blob-pink"></div>
+			<div aria-hidden="true" class="blob blob-sky"></div>
+			<div aria-hidden="true" class="blob blob-amber"></div>
+			<section data-panel aria-labelledby="watch-title" class="panel">
+				<div class="panel-head">
+					<h1 id="watch-title" class="panel-title">Bấm giờ</h1>
+					<span aria-hidden="true" class="status-dot"></span>
+				</div>
+				<p data-display role="timer" class="display">00:00.00</p>
+				<div class="controls">
+					<button type="button" data-toggle class="button button-main">Bắt đầu</button>
+					<button type="button" data-lap disabled class="button">Vòng</button>
+					<button type="button" data-reset disabled class="button">Đặt lại</button>
+				</div>
+				<ol data-laps aria-label="Danh sách vòng" class="laps"></ol>
+			</section>
+		</main>
+		<template data-lap-template>
+			<li data-lap-item class="lap">
+				<span data-lap-number class="lap-number"></span>
+				<span data-lap-time class="lap-time"></span>
+				<span data-lap-total class="lap-total"></span>
+			</li>
+		</template>
+		<script src="script.js"></script>
+	</body>
+</html>
