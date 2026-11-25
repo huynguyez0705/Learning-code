@@ -4,7 +4,7 @@
 
 ## Thư mục này là gì
 
-Mỗi ngày ba bài tập ngắn (mỗi bài 30–45 phút, khó dần trong ngày) kết hợp giao diện và JavaScript thuần. Bài 001–006 theo lịch cũ một bài mỗi ngày; từ bài 007 là ba bài mỗi ngày. Người học tự làm bài trong `starter/` bằng **Tailwind CSS v4**, sau đó so với lời giải trong `solution/`. Lời giải viết bằng **CSS thuần** để người học thấy mỗi class Tailwind ra thuộc tính CSS nào.
+Mỗi ngày ba bài tập ngắn (mỗi bài 30–45 phút, khó dần trong ngày) kết hợp giao diện và JavaScript thuần. Bài 001–006 theo lịch cũ một bài mỗi ngày; bài 007–030 là ba bài mỗi ngày; từ bài 031 trở lại một bài mỗi ngày. Người học tự làm bài trong `starter/` bằng **Tailwind CSS v4**, sau đó so với lời giải trong `solution/`. Lời giải viết bằng **CSS thuần** để người học thấy mỗi class Tailwind ra thuộc tính CSS nào.
 
 Một routine cloud (Claude Code, chạy 7h sáng giờ Việt Nam) tự tạo bài mới và push thẳng lên `main`. Agent khác tạo bài bằng tay cũng phải theo đúng các quy tắc dưới đây, để bài của routine và bài làm tay giống nhau.
 
@@ -72,7 +72,8 @@ Cách cài lần đầu có trong `README.md`. Nếu chưa cài thì gửi lện
 
 - **Số bài N** = số dòng dữ liệu trong bảng `PROGRESS.md` + 1. NNN là N viết đủ 3 chữ số.
 - **Ngày học K** = số ngày khác nhau ở cột Ngày của `PROGRESS.md`, tính cả hôm nay. Ngày không có bài thì không tính. Ví dụ bài 001–006 nằm ở 3 ngày (19, 20, 21/11), nên ngày 22/11 là K = 4.
-- **Bài P/3** = số dòng có Ngày bằng hôm nay + 1. Mỗi ngày học có đúng 3 bài, P = 1, 2, 3.
+- **Số bài hôm nay**: L = số dòng dữ liệu trong `PROGRESS.md`, X = số dòng có Ngày bằng hôm nay. Nếu L - X < 30 (đầu ngày chưa tới bài 030) thì tạo min(3 - X, 30 - L) bài, tức tối đa 3 bài nhưng dừng ở bài 030. Nếu L - X ≥ 30 thì tạo 1 - X bài. Kết quả ≤ 0 thì không tạo bài nào.
+- **Bài P/3** = số dòng có Ngày bằng hôm nay + 1. Tới bài 030 mỗi ngày học có tối đa 3 bài, P = 1, 2, 3 (ngày chạm bài 030 có thể ít hơn 3). Từ bài 031 mỗi ngày chỉ một bài, ghi là `bài 1/1` ở đầu đề và cột Lịch.
 - **Cấp C** = ceil(K / 7), tối đa 5. Cứ 7 ngày học thì lên một cấp JS; từ K = 29 trở đi giữ cấp 5.
 - **Chủ đề CSS** là dòng T = ((N - 6) mod 8) + 1 trong bảng dưới (bài 007 là dòng 2, bài 013 là dòng 8, bài 014 quay lại dòng 1). Chủ đề đã có bài trước thì làm khó hơn rõ rệt, không lặp bài cũ. Nếu dòng T trùng chủ đề CSS của bài ngay trước thì lấy dòng kế tiếp.
 
@@ -110,6 +111,7 @@ Bảng chủ đề CSS chỉ quyết định phần CSS mới (tối đa 2–3 n
 - P=2: thêm một ràng buộc mới và một "cái bẫy" thật để người học tự gặp rồi hiểu (JS hoặc CSS). Ví dụ: bài 002 là stacking context do `translate`, bài 006 là `1fr` không co được. Độ khó ★★★ đến ★★★★.
 - P=3: một component hoàn chỉnh, kết hợp 2–3 API của cấp với ít nhất một kỹ thuật cũ, gợi ý ít hơn một mức so với cột "Mức gợi ý". Độ khó ★★★★ đến ★★★★★. JS có thể tới 150 dòng.
 - Bài P=2 và P=3 khó hơn bài ngay trước. Mọi bài không được dễ hơn bài cùng P ở ngày học trước. Bài P=1 được dễ hơn bài P=3 của ngày trước.
+- Từ bài 031 (`bài 1/1`): làm như P=3 và có một cái bẫy thật như P=2. Không dễ hơn bài ngay trước.
 
 ### Starter
 
