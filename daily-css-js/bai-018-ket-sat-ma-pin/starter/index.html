@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 018 - Két sắt mã PIN</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-slate-950 font-sans leading-normal text-white">
+		<main class="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-8">
+			<h1 class="text-2xl font-bold">Két sắt mã PIN</h1>
+			<p class="text-sm text-slate-400">Mã mẫu của bài là 2468. Sai 3 lần, bàn phím khoá 5 giây.</p>
+			<div data-safe data-secret="2468" class="relative h-96 w-72 rounded-2xl border-8 border-slate-500 bg-slate-800 perspective-midrange">
+				<div data-vault inert class="absolute inset-0 grid place-items-center rounded-lg bg-amber-100 p-4 text-center text-amber-900">
+					<p class="text-lg font-semibold">Bên trong két có 3 thỏi vàng.</p>
+				</div>
+				<div data-door class="absolute inset-0 rounded-lg bg-linear-to-br from-slate-600 to-slate-800 p-4 shadow-lg backface-hidden transition-transform duration-1000 motion-reduce:transition-none data-open:-rotate-y-110">
+					<p data-display tabindex="-1" class="mb-3 rounded-lg bg-black/40 py-3 text-center font-mono text-3xl text-emerald-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300">○○○○</p>
+					<fieldset data-keypad class="grid grid-cols-3 gap-2">
+						<legend class="sr-only">Bàn phím số</legend>
+						<button type="button" data-key="1" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">1</button>
+						<button type="button" data-key="2" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">2</button>
+						<button type="button" data-key="3" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">3</button>
+						<button type="button" data-key="4" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">4</button>
+						<button type="button" data-key="5" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">5</button>
+						<button type="button" data-key="6" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">6</button>
+						<button type="button" data-key="7" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">7</button>
+						<button type="button" data-key="8" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">8</button>
+						<button type="button" data-key="9" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">9</button>
+						<button type="button" data-key="back" aria-label="Xoá số cuối" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">⌫</button>
+						<button type="button" data-key="0" class="bg-slate-900/60 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">0</button>
+						<button type="button" data-key="enter" aria-label="Mở két" class="bg-emerald-700 rounded-lg py-3 text-lg font-semibold hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 disabled:cursor-not-allowed disabled:opacity-40">✓</button>
+					</fieldset>
+				</div>
+			</div>
+			<p data-message role="status" class="min-h-6 text-sm text-amber-300"></p>
+			<button type="button" data-close hidden class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Đóng két</button>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

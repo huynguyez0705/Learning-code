@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 018 - Két sắt mã PIN</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<h1 class="title">Két sắt mã PIN</h1>
+			<p class="hint">Mã mẫu của bài là 2468. Sai 3 lần, bàn phím khoá 5 giây.</p>
+			<div data-safe data-secret="2468" class="safe">
+				<div data-vault inert class="vault">
+					<p class="vault-text">Bên trong két có 3 thỏi vàng.</p>
+				</div>
+				<div data-door class="door">
+					<p data-display tabindex="-1" class="display">○○○○</p>
+					<fieldset data-keypad class="keypad">
+						<legend class="sr-only">Bàn phím số</legend>
+						<button type="button" data-key="1" class="key">1</button>
+						<button type="button" data-key="2" class="key">2</button>
+						<button type="button" data-key="3" class="key">3</button>
+						<button type="button" data-key="4" class="key">4</button>
+						<button type="button" data-key="5" class="key">5</button>
+						<button type="button" data-key="6" class="key">6</button>
+						<button type="button" data-key="7" class="key">7</button>
+						<button type="button" data-key="8" class="key">8</button>
+						<button type="button" data-key="9" class="key">9</button>
+						<button type="button" data-key="back" aria-label="Xoá số cuối" class="key">⌫</button>
+						<button type="button" data-key="0" class="key">0</button>
+						<button type="button" data-key="enter" aria-label="Mở két" class="key key-enter">✓</button>
+					</fieldset>
+				</div>
+			</div>
+			<p data-message role="status" class="message"></p>
+			<button type="button" data-close hidden class="close-button">Đóng két</button>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
