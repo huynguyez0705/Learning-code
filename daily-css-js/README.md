@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 020: Ghi chú kính mờ, vệt sáng theo con trỏ và localStorage](bai-020-ghi-chu-kinh-mo/bai-020-ghi-chu-kinh-mo.md)
 - [Bài 019: Xúc xắc 3D lăn thật và hai cái bẫy dựng khối lập phương](bai-019-xuc-xac-3d/bai-019-xuc-xac-3d.md)
 - [Bài 018: Két sắt mã PIN với cánh cửa 3D và bẫy bản lề](bai-018-ket-sat-ma-pin/bai-018-ket-sat-ma-pin.md)
 - [Bài 017: Đồng hồ bấm giờ kính mờ và bẫy đếm giờ lệch](bai-017-dong-ho-bam-gio-kinh-mo/bai-017-dong-ho-bam-gio-kinh-mo.md)

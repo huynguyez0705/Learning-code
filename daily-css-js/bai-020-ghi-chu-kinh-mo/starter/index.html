@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 020 - Ghi chú kính mờ</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-slate-950 font-sans leading-normal text-slate-100">
+		<main class="mx-auto max-w-xl px-4 py-10">
+			<h1 class="text-2xl font-bold">Ghi chú kính mờ</h1>
+			<p class="mt-1 text-sm text-slate-400">Ghi chú được lưu ngay trong trình duyệt của bạn.</p>
+			<div class="relative isolate mt-6 flex flex-col gap-5 overflow-hidden rounded-3xl p-5">
+				<div class="absolute -top-8 -left-8 -z-10 size-40 rounded-full bg-linear-to-br from-fuchsia-500 to-orange-400"></div>
+				<div class="absolute top-64 -right-10 -z-10 size-44 rounded-full bg-linear-to-br from-cyan-400 to-blue-600"></div>
+				<div class="absolute -bottom-10 left-10 -z-10 size-44 rounded-full bg-linear-to-br from-emerald-400 to-teal-600"></div>
+				<form data-form class="flex flex-col gap-3 rounded-2xl border border-white/20 bg-slate-900/60 p-4 backdrop-blur-md">
+					<label for="note-text" class="text-sm font-medium text-slate-200">Nội dung ghi chú</label>
+					<textarea id="note-text" data-input name="text" rows="3" maxlength="120" class="w-full rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400"></textarea>
+					<div class="flex items-center gap-3">
+						<select name="color" aria-label="Màu ghi chú" class="rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400">
+							<option value="amber" selected>Hổ phách</option>
+							<option value="sky">Xanh trời</option>
+							<option value="rose">Hồng</option>
+						</select>
+						<p data-counter class="ml-auto text-sm text-slate-400 data-warning:text-rose-300">0/120</p>
+						<button type="submit" data-add disabled class="rounded-lg bg-teal-500 px-4 py-2 text-sm font-bold text-slate-950 hover:bg-teal-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400 disabled:cursor-not-allowed disabled:opacity-40">Thêm</button>
+					</div>
+				</form>
+				<p data-count class="text-sm text-slate-300"></p>
+				<p data-empty hidden class="rounded-2xl border border-dashed border-white/30 p-6 text-center text-sm text-slate-300">Chưa có ghi chú nào. Hãy viết ghi chú đầu tiên.</p>
+				<ul data-list class="grid grid-cols-2 gap-4"></ul>
+			</div>
+			<template data-note-template>
+				<li data-card data-color="amber" style="--rx: 0deg; --ry: 0deg; --mx: 50%; --my: 50%" class="group perspective-midrange">
+					<article class="relative overflow-hidden rounded-2xl border border-white/30 bg-linear-to-br p-4 shadow-lg backdrop-blur-md rotate-x-(--rx) rotate-y-(--ry) transition-transform duration-200 motion-reduce:transition-none group-data-[color=amber]:from-amber-300/50 group-data-[color=amber]:to-amber-600/30 group-data-[color=sky]:from-sky-300/50 group-data-[color=sky]:to-sky-600/30 group-data-[color=rose]:from-rose-300/50 group-data-[color=rose]:to-rose-600/30">
+						<p data-text class="text-sm wrap-anywhere whitespace-pre-wrap"></p>
+						<div class="mt-4 flex items-center justify-between gap-2">
+							<time data-time class="text-xs text-white/70"></time>
+							<button type="button" data-delete aria-label="Xoá ghi chú" class="rounded-md bg-black/25 px-2 py-1 text-xs font-semibold hover:bg-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Xoá</button>
+						</div>
+						<div aria-hidden="true" class="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 motion-reduce:transition-none"></div>
+					</article>
+				</li>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 020 - Ghi chú kính mờ</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<h1 class="title">Ghi chú kính mờ</h1>
+			<p class="subtitle">Ghi chú được lưu ngay trong trình duyệt của bạn.</p>
+			<div class="stage">
+				<div class="blob blob-a"></div>
+				<div class="blob blob-b"></div>
+				<div class="blob blob-c"></div>
+				<form data-form class="composer">
+					<label for="note-text" class="field-label">Nội dung ghi chú</label>
+					<textarea id="note-text" data-input name="text" rows="3" maxlength="120" class="textarea"></textarea>
+					<div class="composer-foot">
+						<select name="color" aria-label="Màu ghi chú" class="select">
+							<option value="amber" selected>Hổ phách</option>
+							<option value="sky">Xanh trời</option>
+							<option value="rose">Hồng</option>
+						</select>
+						<p data-counter class="counter">0/120</p>
+						<button type="submit" data-add disabled class="add-button">Thêm</button>
+					</div>
+				</form>
+				<p data-count class="count"></p>
+				<p data-empty hidden class="empty">Chưa có ghi chú nào. Hãy viết ghi chú đầu tiên.</p>
+				<ul data-list class="notes"></ul>
+			</div>
+			<template data-note-template>
+				<li data-card data-color="amber" style="--rx: 0deg; --ry: 0deg; --mx: 50%; --my: 50%" class="note">
+					<article class="note-body">
+						<p data-text class="note-text"></p>
+						<div class="note-foot">
+							<time data-time class="note-time"></time>
+							<button type="button" data-delete aria-label="Xoá ghi chú" class="delete-button">Xoá</button>
+						</div>
+						<div aria-hidden="true" class="shine"></div>
+					</article>
+				</li>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
