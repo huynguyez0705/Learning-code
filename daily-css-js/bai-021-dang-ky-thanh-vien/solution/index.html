@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 021 - Đăng ký thành viên</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main class="page">
+			<h1 class="title">Đăng ký thành viên</h1>
+			<p class="subtitle">Câu lạc bộ Đọc sách Mộc, dành cho bạn từ 16 tuổi.</p>
+			<div class="card">
+				<form data-form novalidate class="form">
+					<div class="field">
+						<label for="username" class="label">Tên đăng nhập</label>
+						<input id="username" data-field name="username" type="text" required minlength="4" maxlength="16" pattern="[a-z0-9_]+" autocomplete="username" placeholder="ví dụ: lan_nguyen" aria-describedby="username-error" class="input" />
+						<p id="username-error" data-error-for="username" class="error"></p>
+					</div>
+					<div class="field">
+						<label for="email" class="label">Email</label>
+						<input id="email" data-field name="email" type="email" required autocomplete="email" placeholder="ten@example.com" aria-describedby="email-error" class="input" />
+						<p id="email-error" data-error-for="email" class="error"></p>
+					</div>
+					<div class="field">
+						<label for="birth" class="label">Ngày sinh</label>
+						<input id="birth" data-field name="birth" type="date" required aria-describedby="birth-error" class="input" />
+						<p id="birth-error" data-error-for="birth" class="error"></p>
+					</div>
+					<div class="field">
+						<label for="password" class="label">Mật khẩu</label>
+						<input id="password" data-field name="password" type="password" required minlength="8" autocomplete="new-password" placeholder="Ít nhất 8 ký tự" aria-describedby="password-error" class="input" />
+						<div data-meter data-level="none" style="--pct: 0%" class="meter">
+							<div class="meter-track"><div class="meter-fill"></div></div>
+							<p data-strength-text class="strength-text">Độ mạnh: chưa nhập</p>
+						</div>
+						<p id="password-error" data-error-for="password" class="error"></p>
+					</div>
+					<div class="field">
+						<label for="confirm" class="label">Nhập lại mật khẩu</label>
+						<input id="confirm" data-field name="confirm" type="password" required autocomplete="new-password" placeholder="Gõ lại mật khẩu" aria-describedby="confirm-error" class="input" />
+						<p id="confirm-error" data-error-for="confirm" class="error"></p>
+					</div>
+					<div class="field">
+						<label class="terms">
+							<input id="terms" data-field name="terms" type="checkbox" required aria-describedby="terms-error" class="checkbox" />
+							Tôi đồng ý với nội quy câu lạc bộ
+						</label>
+						<p id="terms-error" data-error-for="terms" class="error"></p>
+					</div>
+					<div class="submit-bar">
+						<p data-remaining aria-live="polite" class="remaining"></p>
+						<button type="submit" class="submit-button">Đăng ký</button>
+					</div>
+				</form>
+				<section data-success hidden tabindex="-1" class="success">
+					<h2 class="success-title">Đăng ký thành công</h2>
+					<p data-success-text class="success-text"></p>
+					<button type="button" data-restart class="restart-button">Đăng ký người khác</button>
+				</section>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

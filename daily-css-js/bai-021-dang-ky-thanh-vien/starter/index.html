@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 021 - Đăng ký thành viên</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-linear-to-b from-slate-900 to-slate-950 font-sans leading-normal text-slate-100">
+		<main class="mx-auto max-w-md px-4 py-8">
+			<h1 class="text-2xl font-bold">Đăng ký thành viên</h1>
+			<p class="mt-1 text-sm text-slate-400">Câu lạc bộ Đọc sách Mộc, dành cho bạn từ 16 tuổi.</p>
+			<div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+				<form data-form novalidate class="flex flex-col gap-4">
+					<div class="flex flex-col gap-1">
+						<label for="username" class="text-sm font-medium text-slate-200">Tên đăng nhập</label>
+						<input id="username" data-field name="username" type="text" required minlength="4" maxlength="16" pattern="[a-z0-9_]+" autocomplete="username" placeholder="ví dụ: lan_nguyen" aria-describedby="username-error" class="w-full rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 data-touched:invalid:border-rose-500 data-touched:valid:border-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400" />
+						<p id="username-error" data-error-for="username" class="min-h-5 text-xs text-rose-300"></p>
+					</div>
+					<div class="flex flex-col gap-1">
+						<label for="email" class="text-sm font-medium text-slate-200">Email</label>
+						<input id="email" data-field name="email" type="email" required autocomplete="email" placeholder="ten@example.com" aria-describedby="email-error" class="w-full rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 data-touched:invalid:border-rose-500 data-touched:valid:border-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400" />
+						<p id="email-error" data-error-for="email" class="min-h-5 text-xs text-rose-300"></p>
+					</div>
+					<div class="flex flex-col gap-1">
+						<label for="birth" class="text-sm font-medium text-slate-200">Ngày sinh</label>
+						<input id="birth" data-field name="birth" type="date" required aria-describedby="birth-error" class="w-full rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 data-touched:invalid:border-rose-500 data-touched:valid:border-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400" />
+						<p id="birth-error" data-error-for="birth" class="min-h-5 text-xs text-rose-300"></p>
+					</div>
+					<div class="flex flex-col gap-1">
+						<label for="password" class="text-sm font-medium text-slate-200">Mật khẩu</label>
+						<input id="password" data-field name="password" type="password" required minlength="8" autocomplete="new-password" placeholder="Ít nhất 8 ký tự" aria-describedby="password-error" class="w-full rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400" />
+						<div data-meter data-level="none" style="--pct: 0%" class="group mt-1">
+							<div class="h-2 overflow-hidden rounded-full bg-slate-700">
+								<div class="h-full w-(--pct) rounded-full bg-slate-500 transition-[width] duration-300 motion-reduce:transition-none group-data-[level=weak]:bg-rose-500 group-data-[level=medium]:bg-amber-400 group-data-[level=strong]:bg-emerald-500"></div>
+							</div>
+							<p data-strength-text class="mt-1 text-xs text-slate-400">Độ mạnh: chưa nhập</p>
+						</div>
+						<p id="password-error" data-error-for="password" class="min-h-5 text-xs text-rose-300"></p>
+					</div>
+					<div class="flex flex-col gap-1">
+						<label for="confirm" class="text-sm font-medium text-slate-200">Nhập lại mật khẩu</label>
+						<input id="confirm" data-field name="confirm" type="password" required autocomplete="new-password" placeholder="Gõ lại mật khẩu" aria-describedby="confirm-error" class="w-full rounded-lg border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400" />
+						<p id="confirm-error" data-error-for="confirm" class="min-h-5 text-xs text-rose-300"></p>
+					</div>
+					<div class="flex flex-col gap-1">
+						<label class="flex items-center gap-2 text-sm">
+							<input id="terms" data-field name="terms" type="checkbox" required aria-describedby="terms-error" class="size-4 accent-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400" />
+							Tôi đồng ý với nội quy câu lạc bộ
+						</label>
+						<p id="terms-error" data-error-for="terms" class="min-h-5 text-xs text-rose-300"></p>
+					</div>
+					<div class="sticky bottom-0 -mx-5 -mb-5 flex items-center justify-between gap-3 rounded-b-2xl border-t border-white/10 bg-slate-900/70 px-5 py-4 backdrop-blur-md">
+						<p data-remaining aria-live="polite" class="text-sm text-slate-300"></p>
+						<button type="submit" class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-bold text-slate-950 hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400">Đăng ký</button>
+					</div>
+				</form>
+				<section data-success hidden tabindex="-1" class="flex flex-col items-center gap-3 text-center">
+					<h2 class="text-xl font-bold text-emerald-300">Đăng ký thành công</h2>
+					<p data-success-text class="text-sm text-slate-300"></p>
+					<button type="button" data-restart class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-bold text-slate-950 hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400">Đăng ký người khác</button>
+				</section>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
