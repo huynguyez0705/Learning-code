@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 022 - Sổ công thức</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<div data-app class="app">
+			<header class="top-bar">
+				<h1 class="title">Sổ công thức</h1>
+				<button type="button" data-only-favorites aria-pressed="false" class="fav-filter">
+					Yêu thích
+					<span data-fav-count hidden class="badge">0</span>
+				</button>
+			</header>
+			<div class="filter-bar">
+				<label for="search" class="sr-only">Tìm công thức</label>
+				<input id="search" data-search type="search" autocomplete="off" placeholder="Tìm món, ví dụ: ga xao" class="search" />
+				<div role="group" aria-label="Lọc theo loại món" class="chips">
+					<button type="button" data-tag="all" aria-pressed="true" class="chip">Tất cả</button>
+					<button type="button" data-tag="an-sang" aria-pressed="false" class="chip">Ăn sáng</button>
+					<button type="button" data-tag="mon-chinh" aria-pressed="false" class="chip">Món chính</button>
+					<button type="button" data-tag="trang-mieng" aria-pressed="false" class="chip">Tráng miệng</button>
+				</div>
+				<p data-status aria-live="polite" class="status"></p>
+			</div>
+			<main class="content">
+				<p data-empty hidden class="empty">Không có công thức nào khớp.</p>
+				<ul data-list class="recipes"></ul>
+			</main>
+			<template data-recipe-template>
+				<li data-card class="recipe">
+					<div class="recipe-head">
+						<h2 class="recipe-title">
+							<button type="button" data-open aria-expanded="false" data-name class="recipe-open"></button>
+						</h2>
+						<button type="button" data-fav aria-pressed="false" class="fav-button"></button>
+					</div>
+					<p data-meta class="meta"></p>
+					<p data-details class="details"></p>
+				</li>
+			</template>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
