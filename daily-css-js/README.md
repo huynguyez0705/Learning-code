@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 023: Lịch tập luyện, gradient ba điểm dừng và cái bẫy cuối tháng của Date](bai-023-lich-tap-luyen/bai-023-lich-tap-luyen.md)
 - [Bài 022: Sổ công thức, thanh lọc dính, tìm kiếm debounce và hai cái bẫy định vị](bai-022-so-cong-thuc/bai-022-so-cong-thuc.md)
 - [Bài 021: Đăng ký thành viên, kiểm tra form bằng validity và cái bẫy setCustomValidity](bai-021-dang-ky-thanh-vien/bai-021-dang-ky-thanh-vien.md)
 - [Bài 020: Ghi chú kính mờ, vệt sáng theo con trỏ và localStorage](bai-020-ghi-chu-kinh-mo/bai-020-ghi-chu-kinh-mo.md)

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 023 - Lịch tập luyện</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-app class="app">
+			<header class="head">
+				<div class="head-row">
+					<button type="button" data-prev aria-label="Tháng trước" class="nav-button">‹</button>
+					<h1 data-title aria-live="polite" class="title"></h1>
+					<button type="button" data-next aria-label="Tháng sau" class="nav-button">›</button>
+				</div>
+				<p data-summary class="summary"></p>
+			</header>
+			<div class="body">
+				<div class="weekdays" aria-hidden="true">
+					<span>T2</span>
+					<span>T3</span>
+					<span>T4</span>
+					<span>T5</span>
+					<span>T6</span>
+					<span>T7</span>
+					<span>CN</span>
+				</div>
+				<div data-grid class="days"></div>
+				<p data-detail aria-live="polite" class="detail">Chọn một ngày để xem chi tiết.</p>
+			</div>
+			<template data-blank-template>
+				<span data-blank aria-hidden="true"></span>
+			</template>
+			<template data-day-template>
+				<button type="button" data-day aria-pressed="false" class="day"></button>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
