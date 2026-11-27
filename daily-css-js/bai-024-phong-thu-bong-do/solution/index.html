@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 024 - Phòng thử bóng đổ</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-app class="app">
+			<section aria-label="Xem trước bóng đổ" class="stage">
+				<div data-arm aria-hidden="true" class="arm">
+					<span class="sun"></span>
+				</div>
+				<div data-card class="card">Thẻ mẫu</div>
+			</section>
+			<section class="panel">
+				<h1 class="heading">Phòng thử bóng đổ</h1>
+				<form data-controls class="controls">
+					<div class="control">
+						<div class="control-head">
+							<label for="angle" class="control-label">Hướng ánh sáng</label>
+							<output data-output="angle" for="angle" class="control-value"></output>
+						</div>
+						<input id="angle" name="angle" type="range" min="0" max="359" step="1" class="range" />
+					</div>
+					<div class="control">
+						<div class="control-head">
+							<label for="distance" class="control-label">Khoảng cách</label>
+							<output data-output="distance" for="distance" class="control-value"></output>
+						</div>
+						<input id="distance" name="distance" type="range" min="0" max="40" step="1" class="range" />
+					</div>
+					<div class="control">
+						<div class="control-head">
+							<label for="blur" class="control-label">Độ nhoè</label>
+							<output data-output="blur" for="blur" class="control-value"></output>
+						</div>
+						<input id="blur" name="blur" type="range" min="0" max="60" step="1" class="range" />
+					</div>
+					<div class="control">
+						<div class="control-head">
+							<label for="opacity" class="control-label">Độ đậm</label>
+							<output data-output="opacity" for="opacity" class="control-value"></output>
+						</div>
+						<input id="opacity" name="opacity" type="range" min="0" max="100" step="1" class="range" />
+					</div>
+				</form>
+				<div role="group" aria-label="Mẫu bóng" class="presets">
+					<button type="button" data-preset="mem" aria-pressed="false" class="preset">Mềm</button>
+					<button type="button" data-preset="cung" aria-pressed="false" class="preset">Cứng</button>
+					<button type="button" data-preset="noi" aria-pressed="false" class="preset">Nổi</button>
+				</div>
+				<p class="reach-text">Bóng lan ra tối đa <strong data-reach class="reach-value"></strong>.</p>
+				<pre class="code"><code data-code></code></pre>
+			</section>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

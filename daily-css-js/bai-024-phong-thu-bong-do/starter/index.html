@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 024 - Phòng thử bóng đổ</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-zinc-100 p-4 font-sans leading-normal text-zinc-900">
+		<main data-app class="mx-auto grid max-w-3xl gap-4 md:grid-cols-2">
+			<section aria-label="Xem trước bóng đổ" class="relative grid h-72 place-items-center rounded-3xl bg-zinc-200">
+				<div data-arm aria-hidden="true" class="pointer-events-none absolute inset-0">
+					<span class="absolute inset-x-0 top-3 mx-auto h-5 w-5 rounded-full bg-amber-300 shadow-md"></span>
+				</div>
+				<div data-card class="grid h-28 w-28 place-items-center rounded-2xl bg-white font-semibold text-zinc-600">Thẻ mẫu</div>
+			</section>
+			<section class="rounded-3xl border border-zinc-200 bg-white p-5">
+				<h1 class="text-xl font-bold">Phòng thử bóng đổ</h1>
+				<form data-controls class="mt-4 grid gap-4">
+					<div class="flex flex-col gap-1">
+						<div class="flex items-center justify-between text-sm">
+							<label for="angle" class="font-medium">Hướng ánh sáng</label>
+							<output data-output="angle" for="angle" class="tabular-nums text-zinc-500"></output>
+						</div>
+						<input id="angle" name="angle" type="range" min="0" max="359" step="1" class="w-full accent-teal-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-600" />
+					</div>
+					<div class="flex flex-col gap-1">
+						<div class="flex items-center justify-between text-sm">
+							<label for="distance" class="font-medium">Khoảng cách</label>
+							<output data-output="distance" for="distance" class="tabular-nums text-zinc-500"></output>
+						</div>
+						<input id="distance" name="distance" type="range" min="0" max="40" step="1" class="w-full accent-teal-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-600" />
+					</div>
+					<div class="flex flex-col gap-1">
+						<div class="flex items-center justify-between text-sm">
+							<label for="blur" class="font-medium">Độ nhoè</label>
+							<output data-output="blur" for="blur" class="tabular-nums text-zinc-500"></output>
+						</div>
+						<input id="blur" name="blur" type="range" min="0" max="60" step="1" class="w-full accent-teal-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-600" />
+					</div>
+					<div class="flex flex-col gap-1">
+						<div class="flex items-center justify-between text-sm">
+							<label for="opacity" class="font-medium">Độ đậm</label>
+							<output data-output="opacity" for="opacity" class="tabular-nums text-zinc-500"></output>
+						</div>
+						<input id="opacity" name="opacity" type="range" min="0" max="100" step="1" class="w-full accent-teal-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-600" />
+					</div>
+				</form>
+				<div role="group" aria-label="Mẫu bóng" class="mt-5 flex gap-2">
+					<button type="button" data-preset="mem" aria-pressed="false" class="rounded-full border border-zinc-300 px-3 py-1 text-sm transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 motion-reduce:transition-none aria-pressed:border-teal-600 aria-pressed:bg-teal-50 aria-pressed:text-teal-800">Mềm</button>
+					<button type="button" data-preset="cung" aria-pressed="false" class="rounded-full border border-zinc-300 px-3 py-1 text-sm transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 motion-reduce:transition-none aria-pressed:border-teal-600 aria-pressed:bg-teal-50 aria-pressed:text-teal-800">Cứng</button>
+					<button type="button" data-preset="noi" aria-pressed="false" class="rounded-full border border-zinc-300 px-3 py-1 text-sm transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 motion-reduce:transition-none aria-pressed:border-teal-600 aria-pressed:bg-teal-50 aria-pressed:text-teal-800">Nổi</button>
+				</div>
+				<p class="mt-5 text-sm text-zinc-600">Bóng lan ra tối đa <strong data-reach class="font-semibold tabular-nums"></strong>.</p>
+				<pre class="mt-3 overflow-x-auto rounded-xl bg-zinc-900 p-3 text-xs text-teal-200"><code data-code></code></pre>
+			</section>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
