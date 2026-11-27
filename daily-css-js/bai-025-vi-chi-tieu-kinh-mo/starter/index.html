@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 025 - Ví chi tiêu kính mờ</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="font-sans leading-normal text-white">
+		<div class="relative min-h-screen overflow-clip bg-linear-to-br from-indigo-950 via-purple-900 to-rose-800 p-4">
+			<div aria-hidden="true" class="absolute -top-16 -left-16 h-64 w-64 rounded-full bg-cyan-400/50"></div>
+			<div aria-hidden="true" class="absolute top-72 -right-20 h-72 w-72 rounded-full bg-fuchsia-500/60"></div>
+			<div aria-hidden="true" class="absolute bottom-10 left-40 h-48 w-48 rounded-full bg-amber-300/40"></div>
+			<main data-app class="relative isolate mx-auto max-w-md rounded-3xl p-5">
+				<div data-glass aria-hidden="true" class="absolute inset-0 -z-10 rounded-3xl border border-white/25 bg-white/15 shadow-xl"></div>
+				<h1 class="text-xl font-bold">Ví chi tiêu</h1>
+				<p data-total aria-live="polite" class="mt-1 text-3xl font-bold tabular-nums"></p>
+				<p data-summary class="text-sm text-white/70"></p>
+				<div role="group" aria-label="Lọc theo nhóm" class="mt-4 flex flex-wrap gap-2">
+					<button type="button" data-filter="all" aria-pressed="true" class="rounded-full border border-white/25 px-3 py-1 text-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none aria-pressed:border-white aria-pressed:bg-white/25">Tất cả</button>
+					<button type="button" data-filter="an-uong" aria-pressed="false" class="rounded-full border border-white/25 px-3 py-1 text-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none aria-pressed:border-white aria-pressed:bg-white/25">Ăn uống</button>
+					<button type="button" data-filter="di-chuyen" aria-pressed="false" class="rounded-full border border-white/25 px-3 py-1 text-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none aria-pressed:border-white aria-pressed:bg-white/25">Di chuyển</button>
+					<button type="button" data-filter="mua-sam" aria-pressed="false" class="rounded-full border border-white/25 px-3 py-1 text-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none aria-pressed:border-white aria-pressed:bg-white/25">Mua sắm</button>
+					<button type="button" data-filter="giai-tri" aria-pressed="false" class="rounded-full border border-white/25 px-3 py-1 text-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none aria-pressed:border-white aria-pressed:bg-white/25">Giải trí</button>
+				</div>
+				<form data-form novalidate class="mt-5 flex flex-col gap-3">
+					<div class="grid grid-cols-2 gap-3">
+						<label class="flex flex-col gap-1 text-xs text-white/70">
+							Số tiền (₫)
+							<input name="amount" type="number" inputmode="numeric" min="1000" step="1000" required placeholder="45000" class="rounded-xl border border-white/25 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" />
+						</label>
+						<label class="flex flex-col gap-1 text-xs text-white/70">
+							Nhóm
+							<select name="category" required class="rounded-xl border border-white/25 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+								<option value="an-uong" class="text-slate-900">Ăn uống</option>
+								<option value="di-chuyen" class="text-slate-900">Di chuyển</option>
+								<option value="mua-sam" class="text-slate-900">Mua sắm</option>
+								<option value="giai-tri" class="text-slate-900">Giải trí</option>
+							</select>
+						</label>
+					</div>
+					<label class="flex flex-col gap-1 text-xs text-white/70">
+						Ghi chú
+						<input name="note" type="text" required minlength="2" maxlength="40" pattern=".*\S.*" placeholder="Cà phê sáng" title="Nhập ít nhất 2 ký tự, không toàn dấu cách" class="rounded-xl border border-white/25 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" />
+					</label>
+					<div class="grid grid-cols-2 items-end gap-3">
+						<label class="flex flex-col gap-1 text-xs text-white/70">
+							Ngày
+							<input name="date" type="date" required class="rounded-xl border border-white/25 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" />
+						</label>
+						<button type="submit" class="rounded-xl bg-white/90 px-4 py-2 text-sm font-semibold text-indigo-950 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none">Thêm khoản chi</button>
+					</div>
+				</form>
+				<p data-empty hidden class="mt-5 text-center text-sm text-white/60">Chưa có khoản chi nào.</p>
+				<ul data-list class="mt-5 flex flex-col gap-2"></ul>
+				<div data-toast role="status" hidden class="fixed inset-x-4 bottom-4 mx-auto flex max-w-sm items-center justify-between gap-3 rounded-2xl border border-white/25 bg-white/20 px-4 py-3 text-sm shadow-xl">
+					<span data-toast-text></span>
+					<button type="button" data-undo hidden class="rounded-full border border-white/40 px-3 py-1 text-xs font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Hoàn tác</button>
+				</div>
+				<template data-item-template>
+					<li data-item class="group flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-3 py-2">
+						<span aria-hidden="true" class="h-3 w-3 shrink-0 rounded-full bg-white/60 group-data-[category=an-uong]:bg-amber-300 group-data-[category=di-chuyen]:bg-cyan-300 group-data-[category=mua-sam]:bg-fuchsia-300 group-data-[category=giai-tri]:bg-lime-300"></span>
+						<div class="min-w-0 flex-1">
+							<p data-note class="truncate font-medium"></p>
+							<p data-meta class="text-xs text-white/60"></p>
+						</div>
+						<p data-amount class="font-semibold tabular-nums"></p>
+						<button type="button" data-remove class="rounded-full px-2 py-1 text-white/70 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none">✕</button>
+					</li>
+				</template>
+			</main>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

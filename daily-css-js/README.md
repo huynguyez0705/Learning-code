@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 025: Ví chi tiêu kính mờ, kính lồng kính và localStorage đồng bộ hai tab](bai-025-vi-chi-tieu-kinh-mo/bai-025-vi-chi-tieu-kinh-mo.md)
 - [Bài 024: Phòng thử bóng đổ, nguồn sáng xoay và hai cái bẫy của thanh trượt](bai-024-phong-thu-bong-do/bai-024-phong-thu-bong-do.md)
 - [Bài 023: Lịch tập luyện, gradient ba điểm dừng và cái bẫy cuối tháng của Date](bai-023-lich-tap-luyen/bai-023-lich-tap-luyen.md)
 - [Bài 022: Sổ công thức, thanh lọc dính, tìm kiếm debounce và hai cái bẫy định vị](bai-022-so-cong-thuc/bai-022-so-cong-thuc.md)

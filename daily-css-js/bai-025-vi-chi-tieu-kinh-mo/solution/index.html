@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 025 - Ví chi tiêu kính mờ</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<div class="backdrop">
+			<div aria-hidden="true" class="blob blob-cyan"></div>
+			<div aria-hidden="true" class="blob blob-fuchsia"></div>
+			<div aria-hidden="true" class="blob blob-amber"></div>
+			<main data-app class="app">
+				<div data-glass aria-hidden="true" class="glass"></div>
+				<h1 class="title">Ví chi tiêu</h1>
+				<p data-total aria-live="polite" class="total"></p>
+				<p data-summary class="summary"></p>
+				<div role="group" aria-label="Lọc theo nhóm" class="chips">
+					<button type="button" data-filter="all" aria-pressed="true" class="chip">Tất cả</button>
+					<button type="button" data-filter="an-uong" aria-pressed="false" class="chip">Ăn uống</button>
+					<button type="button" data-filter="di-chuyen" aria-pressed="false" class="chip">Di chuyển</button>
+					<button type="button" data-filter="mua-sam" aria-pressed="false" class="chip">Mua sắm</button>
+					<button type="button" data-filter="giai-tri" aria-pressed="false" class="chip">Giải trí</button>
+				</div>
+				<form data-form novalidate class="form">
+					<div class="form-row">
+						<label class="field">
+							Số tiền (₫)
+							<input name="amount" type="number" inputmode="numeric" min="1000" step="1000" required placeholder="45000" class="input" />
+						</label>
+						<label class="field">
+							Nhóm
+							<select name="category" required class="input">
+								<option value="an-uong" class="option">Ăn uống</option>
+								<option value="di-chuyen" class="option">Di chuyển</option>
+								<option value="mua-sam" class="option">Mua sắm</option>
+								<option value="giai-tri" class="option">Giải trí</option>
+							</select>
+						</label>
+					</div>
+					<label class="field">
+						Ghi chú
+						<input name="note" type="text" required minlength="2" maxlength="40" pattern=".*\S.*" placeholder="Cà phê sáng" title="Nhập ít nhất 2 ký tự, không toàn dấu cách" class="input" />
+					</label>
+					<div class="form-row">
+						<label class="field">
+							Ngày
+							<input name="date" type="date" required class="input" />
+						</label>
+						<button type="submit" class="submit">Thêm khoản chi</button>
+					</div>
+				</form>
+				<p data-empty hidden class="empty">Chưa có khoản chi nào.</p>
+				<ul data-list class="list"></ul>
+				<div data-toast role="status" hidden class="toast">
+					<span data-toast-text></span>
+					<button type="button" data-undo hidden class="undo">Hoàn tác</button>
+				</div>
+				<template data-item-template>
+					<li data-item class="item">
+						<span aria-hidden="true" class="dot"></span>
+						<div class="item-text">
+							<p data-note class="note"></p>
+							<p data-meta class="meta"></p>
+						</div>
+						<p data-amount class="amount"></p>
+						<button type="button" data-remove class="remove">✕</button>
+					</li>
+				</template>
+			</main>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
