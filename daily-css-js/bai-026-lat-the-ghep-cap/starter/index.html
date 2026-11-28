@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 026 - Lật thẻ ghép cặp</title>
+		<link rel="stylesheet" href="../../build/tailwind.css" />
+	</head>
+	<body class="min-h-screen bg-linear-to-br from-sky-950 to-teal-800 p-4 font-sans text-white">
+		<main data-app class="mx-auto max-w-sm">
+			<h1 class="text-xl font-bold">Lật thẻ ghép cặp</h1>
+			<p data-status aria-live="polite" class="mt-1 text-sm text-teal-100">Lật hai thẻ giống nhau để ghép cặp.</p>
+			<p class="mt-3 flex justify-between text-sm tabular-nums text-teal-100">
+				<span>Lượt: <strong data-moves class="text-white">0</strong></span>
+				<span>Kỷ lục: <strong data-best class="text-white">--</strong></span>
+			</p>
+			<div data-board role="group" aria-label="Bàn chơi" class="mt-4 grid grid-cols-4 gap-3"></div>
+			<button type="button" data-restart class="mt-5 w-full rounded-xl bg-white/90 px-4 py-2 text-sm font-semibold text-teal-950 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none">Chơi lại</button>
+			<template data-card-template>
+				<button type="button" data-card class="group perspective-midrange cursor-pointer rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+					<span data-inner class="relative block size-full transform-3d transition-transform duration-500 group-data-flipped:rotate-y-180 motion-reduce:transition-none">
+						<span aria-hidden="true" class="absolute inset-0 grid place-items-center rounded-xl border border-white/30 bg-linear-to-br from-sky-500 to-indigo-600 text-2xl font-bold backface-hidden">?</span>
+						<span data-face class="absolute inset-0 grid rotate-y-180 place-items-center rounded-xl bg-white text-3xl backface-hidden group-data-matched:bg-emerald-200 group-data-matched:ring-2 group-data-matched:ring-emerald-300"></span>
+					</span>
+				</button>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

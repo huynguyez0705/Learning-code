@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 026 - Lật thẻ ghép cặp</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-app class="app">
+			<h1 class="title">Lật thẻ ghép cặp</h1>
+			<p data-status aria-live="polite" class="status">Lật hai thẻ giống nhau để ghép cặp.</p>
+			<p class="score">
+				<span>Lượt: <strong data-moves>0</strong></span>
+				<span>Kỷ lục: <strong data-best>--</strong></span>
+			</p>
+			<div data-board role="group" aria-label="Bàn chơi" class="board"></div>
+			<button type="button" data-restart class="restart">Chơi lại</button>
+			<template data-card-template>
+				<button type="button" data-card class="card">
+					<span data-inner class="inner">
+						<span aria-hidden="true" class="face front">?</span>
+						<span data-face class="face back"></span>
+					</span>
+				</button>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
