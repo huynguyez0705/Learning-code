@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 028 - Thẻ đeo hội thảo</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<div aria-hidden="true" class="blob blob-cyan"></div>
+		<div aria-hidden="true" class="blob blob-pink"></div>
+		<main data-app class="app">
+			<h1 class="title">Thẻ đeo hội thảo</h1>
+			<p class="hint">Rê chuột lên thẻ để nghiêng 3D, bấm "Lật thẻ" để xem mặt sau.</p>
+			<div data-stage class="stage">
+				<article data-card aria-label="Xem trước thẻ đeo" class="badge">
+					<div class="flipper">
+						<section data-side="front" class="side front">
+							<div aria-hidden="true" class="holo"></div>
+							<div aria-hidden="true" class="glare"></div>
+							<div class="content">
+								<p class="event">DevFest Đà Nẵng 2026</p>
+								<p data-bind="role" class="role"></p>
+								<p data-bind="holder" class="holder"></p>
+								<p data-bind="code" class="code"></p>
+							</div>
+						</section>
+						<section data-side="back" class="side back">
+							<div aria-hidden="true" class="glare"></div>
+							<div class="content">
+								<p class="event">Quét tại cổng vào</p>
+								<div data-barcode aria-hidden="true" class="barcode"></div>
+								<p data-bind="code" class="code"></p>
+								<p data-expiry class="expiry"></p>
+							</div>
+						</section>
+					</div>
+				</article>
+			</div>
+			<button type="button" data-flip aria-pressed="false" class="flip">Lật thẻ</button>
+			<form data-form novalidate class="form">
+				<label class="field">
+					Họ và tên
+					<input name="holder" required minlength="2" maxlength="24" autocomplete="off" class="input" />
+					<span data-error="holder" class="error"></span>
+				</label>
+				<label class="field">
+					Vai trò
+					<select name="role" class="input">
+						<option value="Diễn giả" class="option">Diễn giả</option>
+						<option value="Tình nguyện viên" class="option">Tình nguyện viên</option>
+						<option value="Người tham dự" class="option">Người tham dự</option>
+					</select>
+				</label>
+				<label class="field">
+					Mã vé (ví dụ DEV-1236)
+					<input name="code" required maxlength="8" autocomplete="off" class="input mono" />
+					<span data-error="code" class="error"></span>
+				</label>
+			</form>
+			<template data-bar-template>
+				<span data-bar class="bar"></span>
+			</template>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

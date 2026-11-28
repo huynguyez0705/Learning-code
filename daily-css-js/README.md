@@ -26,6 +26,7 @@ Trong `daily-css-js` cần có thêm:
 
 ## Danh sách bài
 
+- [Bài 028: Thẻ đeo hội thảo kính mờ, nghiêng 3D, ánh sáng theo chuột và form xem trước trực tiếp](bai-028-the-deo-hoi-thao/bai-028-the-deo-hoi-thao.md)
 - [Bài 027: Vòng quay thực đơn 3D, phép chia dư âm và bộ lọc làm phẳng 3D](bai-027-vong-quay-thuc-don/bai-027-vong-quay-thuc-don.md)
 - [Bài 026: Lật thẻ ghép cặp, xáo bài Fisher–Yates và cập nhật thay vì vẽ lại](bai-026-lat-the-ghep-cap/bai-026-lat-the-ghep-cap.md)
 - [Bài 025: Ví chi tiêu kính mờ, kính lồng kính và localStorage đồng bộ hai tab](bai-025-vi-chi-tieu-kinh-mo/bai-025-vi-chi-tieu-kinh-mo.md)
