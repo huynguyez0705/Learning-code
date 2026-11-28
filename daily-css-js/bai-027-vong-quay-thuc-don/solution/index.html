@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bài 027 - Vòng quay thực đơn</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="site">
+		<main data-app class="app">
+			<h1 class="title">Thực đơn cả tuần</h1>
+			<p data-today-note class="today-note"></p>
+			<div class="stage">
+				<ul data-ring aria-label="Thực đơn theo ngày" class="ring">
+					<li data-day data-name="Thứ Hai" data-dish="Bún chả" data-kcal="620" class="day">
+						<div class="face">
+							<p class="face-day">Thứ Hai</p>
+							<p class="face-emoji">🍜</p>
+							<p class="face-dish">Bún chả</p>
+							<span class="today-badge">Hôm nay</span>
+						</div>
+					</li>
+					<li data-day data-name="Thứ Ba" data-dish="Canh chua cá" data-kcal="480" class="day">
+						<div class="face">
+							<p class="face-day">Thứ Ba</p>
+							<p class="face-emoji">🍲</p>
+							<p class="face-dish">Canh chua cá</p>
+							<span class="today-badge">Hôm nay</span>
+						</div>
+					</li>
+					<li data-day data-name="Thứ Tư" data-dish="Cơm gà xối mỡ" data-kcal="710" class="day">
+						<div class="face">
+							<p class="face-day">Thứ Tư</p>
+							<p class="face-emoji">🍛</p>
+							<p class="face-dish">Cơm gà xối mỡ</p>
+							<span class="today-badge">Hôm nay</span>
+						</div>
+					</li>
+					<li data-day data-name="Thứ Năm" data-dish="Gỏi cuốn" data-kcal="390" class="day">
+						<div class="face">
+							<p class="face-day">Thứ Năm</p>
+							<p class="face-emoji">🥗</p>
+							<p class="face-dish">Gỏi cuốn</p>
+							<span class="today-badge">Hôm nay</span>
+						</div>
+					</li>
+					<li data-day data-name="Thứ Sáu" data-dish="Tôm rim" data-kcal="520" class="day">
+						<div class="face">
+							<p class="face-day">Thứ Sáu</p>
+							<p class="face-emoji">🍤</p>
+							<p class="face-dish">Tôm rim</p>
+							<span class="today-badge">Hôm nay</span>
+						</div>
+					</li>
+					<li data-day data-name="Thứ Bảy" data-dish="Lẩu nấm" data-kcal="450" class="day">
+						<div class="face">
+							<p class="face-day">Thứ Bảy</p>
+							<p class="face-emoji">🥘</p>
+							<p class="face-dish">Lẩu nấm</p>
+							<span class="today-badge">Hôm nay</span>
+						</div>
+					</li>
+					<li data-day data-name="Chủ nhật" data-dish="Bò nướng lá lốt" data-kcal="560" class="day">
+						<div class="face">
+							<p class="face-day">Chủ nhật</p>
+							<p class="face-emoji">🥩</p>
+							<p class="face-dish">Bò nướng lá lốt</p>
+							<span class="today-badge">Hôm nay</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p data-detail aria-live="polite" class="detail"></p>
+			<div class="controls">
+				<button type="button" data-step="-1" aria-label="Ngày trước" class="arrow">←</button>
+				<div role="group" aria-label="Chọn ngày" class="chips">
+					<button type="button" data-jump="0" aria-pressed="false" aria-label="Thứ Hai" class="chip">T2</button>
+					<button type="button" data-jump="1" aria-pressed="false" aria-label="Thứ Ba" class="chip">T3</button>
+					<button type="button" data-jump="2" aria-pressed="false" aria-label="Thứ Tư" class="chip">T4</button>
+					<button type="button" data-jump="3" aria-pressed="false" aria-label="Thứ Năm" class="chip">T5</button>
+					<button type="button" data-jump="4" aria-pressed="false" aria-label="Thứ Sáu" class="chip">T6</button>
+					<button type="button" data-jump="5" aria-pressed="false" aria-label="Thứ Bảy" class="chip">T7</button>
+					<button type="button" data-jump="6" aria-pressed="false" aria-label="Chủ nhật" class="chip">CN</button>
+				</div>
+				<button type="button" data-step="1" aria-label="Ngày sau" class="arrow">→</button>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
